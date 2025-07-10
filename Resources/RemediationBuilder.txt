@@ -1,0 +1,978 @@
+// ipsw swift-dump --all --demangle xpr_adload > RemediationBuilder.txt
+// XProtectRemediatorAdload version 147
+
+struct RemediationBuilder.AnyServiceCondition {
+    var constraint: Any
+    let _assess: Swift.Bool XPPluginAPI.XProtectLaunchdDaemonAgentProtocol function type (escaping)
+}
+
+struct RemediationBuilder.AnyProcessCondition {
+    var constraint: Any
+    let _assess: Swift.Bool XPPluginAPI.XPProcessProtocol function type (escaping)
+}
+
+struct RemediationBuilder.ArgumentCount {
+    var constraint: Int
+}
+
+struct RemediationBuilder.Arguments {
+    var constraint: Dictionary empty-list Int RemediationBuilder.Value
+}
+
+struct RemediationBuilder.KeyValue {
+    var constraint: Dictionary empty-list String RemediationBuilder.Value
+}
+
+struct RemediationBuilder.ExecutableYara {
+    var constraint: XPPluginAPI.YaraMatcherProtocol
+}
+
+struct RemediationBuilder.ExecutablePath {
+    var constraint: RemediationBuilder.Value
+}
+
+struct RemediationBuilder.ExecutableIsUntrusted {
+    var constraint: Swift.Bool
+    let logger: XPPluginAPI.XPLogger
+}
+
+struct RemediationBuilder.ExecutableRevoked {
+    var constraint: Swift.Bool
+    let logger: XPPluginAPI.XPLogger
+}
+
+struct RemediationBuilder.AnyFileCondition {
+    var constraint: Any
+    let _assess: Swift.Bool XPPluginAPI.XPPluginPathProtocol function type (escaping)
+}
+
+struct RemediationBuilder.FileYara {
+    var constraint: XPPluginAPI.YaraMatcherProtocol
+}
+
+struct RemediationBuilder.FilePath {
+    var constraint: RemediationBuilder.Value
+}
+
+struct RemediationBuilder.FileMime {
+    var constraint: RemediationBuilder.Value
+}
+
+struct RemediationBuilder.FileMagic {
+    var constraint: RemediationBuilder.Value
+}
+
+struct RemediationBuilder.FileMacho {
+    var constraint: Swift.Bool
+    let logger: XPPluginAPI.XPLogger
+}
+
+struct RemediationBuilder.FileNotarised {
+    var constraint: Swift.Bool
+    let logger: XPPluginAPI.XPLogger
+}
+
+struct RemediationBuilder.FileSingleByteXor {
+    var constraint: Array -> RemediationBuilder.AnyFileCondition
+    var xor_key: (private) ?
+    let logger: XPPluginAPI.XPLogger
+}
+
+struct RemediationBuilder.MaxFileSize {
+    var constraint: Int
+}
+
+struct RemediationBuilder.MinFileSize {
+    var constraint: Int
+}
+
+struct RemediationBuilder.FileSHA256 {
+    var constraint: String
+}
+
+struct RemediationBuilder.FileCDHash {
+    var constraint: String
+    let logger: XPPluginAPI.XPLogger
+}
+
+struct RemediationBuilder.AnySafariAppExtensionCondition {
+    var constraint: Any
+    let _assess: Swift.Bool XPPluginAPI.XPRegisteredPlugin function type (escaping)
+}
+
+struct RemediationBuilder.ExtensionBinaryYara {
+    var constraint: XPPluginAPI.YaraMatcherProtocol
+}
+
+struct RemediationBuilder.JavaScriptYara {
+    var constraint: XPPluginAPI.YaraMatcherProtocol
+}
+
+struct RemediationBuilder.ProcessName {
+    var constraint: RemediationBuilder.Value
+}
+
+struct RemediationBuilder.ProcessCDHash {
+    var constraint: String
+}
+
+struct RemediationBuilder.ProcessIsNotarised {
+    var constraint: Swift.Bool
+}
+
+struct RemediationBuilder.ProcessIsAppleSigned {
+    var constraint: Swift.Bool
+}
+
+struct RemediationBuilder.ProcessMainExecutable {
+    var constraint: Array -> RemediationBuilder.AnyFileCondition
+}
+
+struct RemediationBuilder.ServiceExecutable {
+    var constraint: Array -> RemediationBuilder.AnyFileCondition
+}
+
+struct RemediationBuilder.ProcessHasBackingFile {
+    var constraint: Swift.Bool
+}
+
+struct RemediationBuilder.HasLoadedLibrary {
+    var constraint: RemediationBuilder.Value
+}
+
+struct RemediationBuilder.ProxyRemediation {
+    var tag: String?
+    var reportOnly: Swift.Bool
+    var followUpRemediations: Array -> RemediationBuilder.Remediation
+    let hosts: [String]
+    let ports: [Int]
+}
+
+struct RemediationBuilder.ServiceRemediation {
+    var tag: String?
+    var reportOnly: Swift.Bool
+    var unloadOnly: Swift.Bool
+    var deleteBundleToo: Swift.Bool
+    var conditions: Array -> RemediationBuilder.AnyServiceCondition
+    var followUpRemediations: Array -> RemediationBuilder.Remediation
+    var onMatchCallbacks: Array empty-list Array -> RemediationBuilder.RemediationConvertible _$s_pG XPPluginAPI.XProtectLaunchdDaemonAgentProtocol function type (escaping)
+}
+
+struct RemediationBuilder.FileRemediation {
+    var tag: String?
+    var reportOnly: Swift.Bool
+    var followUpRemediations: Array -> RemediationBuilder.Remediation
+    var conditions: Array -> RemediationBuilder.AnyFileCondition
+    var filepath: XPPluginAPI.XPPluginPathProtocol
+}
+
+struct RemediationBuilder.SafariAppExtensionRemediation {
+    var tag: String?
+    var reportOnly: Swift.Bool
+    var followUpRemediations: Array -> RemediationBuilder.Remediation
+    var conditions: Array -> RemediationBuilder.AnySafariAppExtensionCondition
+}
+
+struct RemediationBuilder.ProcessRemediation {
+    var tag: String?
+    var reportOnly: Swift.Bool
+    var deleteExecutable: Swift.Bool
+    var includePlatform: Swift.Bool
+    var followUpRemediations: Array -> RemediationBuilder.Remediation
+    var conditions: Array -> RemediationBuilder.AnyProcessCondition
+}
+
+enum RemediationBuilder.RemediationArrayBuilder {}
+
+struct RemediationBuilder.Remediations {
+    var content: Array -> RemediationBuilder.Remediation
+}
+
+enum RemediationBuilder.ServiceRemediationBuilder {}
+
+struct RemediationBuilder.Service {
+    var content: RemediationBuilder.ServiceRemediation
+    var unloadOnlyBool: Swift.Bool
+}
+
+struct RemediationBuilder.Proxy {
+    var hosts: [String]
+    var ports: [Int]
+}
+
+enum RemediationBuilder.FileRemediationBuilder {}
+
+struct RemediationBuilder.File {
+    var paths: Array -> XPPluginAPI.XPPluginPathProtocol
+    var predicate: NSPredicate?
+    var searchDir: String?
+    var searchDepth: Int?
+    var regexpArray: [String]
+    var isFileSearchRemediation: Swift.Bool
+    var isPredicateSearchRemediation: Swift.Bool
+    var reportOnlyBool: Swift.Bool
+    var conditions: Array -> RemediationBuilder.AnyFileCondition
+}
+
+enum RemediationBuilder.SafariAppExtensionRemediationBuilder {}
+
+struct RemediationBuilder.SafariAppExtension {
+    var conditions: Array -> RemediationBuilder.AnySafariAppExtensionCondition
+    var reportOnlyBool: Swift.Bool
+}
+
+struct RemediationBuilder.Process {
+    var processConditions: Array -> RemediationBuilder.AnyProcessCondition
+    var reportOnlyBool: Swift.Bool
+    var deleteExecutableBool: Swift.Bool
+    var includePlatformBool: Swift.Bool
+}
+
+enum RemediationBuilder.ProcessRemediationBuilder {}
+
+enum RemediationBuilder.Value {
+    case Pattern: String
+    case String: String
+    case Bool: Swift.Bool
+    case Int: Int
+    case PatternGroup: [String]
+    case StringGroup: [String]
+    case IntGroup: [Int]
+    case StringPrefix: String
+    case StringSuffix: String
+    case StringContains: String
+    case Wildcard
+}
+
+protocol RemediationBuilder.Condition: Subject {
+  /* requirements */
+    // <stripped> associated type access function
+    // <stripped> func method (instance|func_impl)
+}
+
+protocol RemediationBuilder.ServiceCondition: Constraint {
+  /* signature requirements */
+    A: RemediationBuilder.Condition // key_arg: true, extra_arg: false, kind: protocol
+    A: RemediationBuilder.ServiceConditionConvertible // key_arg: true, extra_arg: false, kind: protocol
+    RemediationBuilder.Condition.Subject ==: XPPluginAPI.XProtectLaunchdDaemonAgentProtocol // key_arg: false, extra_arg: false, kind: same-type
+  /* requirements */
+    // <stripped> base protocol
+    // <stripped> base protocol
+    // <stripped> associated type access function
+    // <stripped> func getter (instance|func_impl)
+    // <stripped> func setter (instance|func_impl)
+    // <stripped> func modify coroutine (instance|func_impl)
+}
+
+protocol RemediationBuilder.ProcessCondition: Constraint {
+  /* signature requirements */
+    A: RemediationBuilder.Condition // key_arg: true, extra_arg: false, kind: protocol
+    A: RemediationBuilder.ProcessConditionConvertible // key_arg: true, extra_arg: false, kind: protocol
+    RemediationBuilder.Condition.Subject ==: XPPluginAPI.XPProcessProtocol // key_arg: false, extra_arg: false, kind: same-type
+  /* requirements */
+    // <stripped> base protocol
+    // <stripped> base protocol
+    // <stripped> associated type access function
+    // <stripped> func getter (instance|func_impl)
+    // <stripped> func setter (instance|func_impl)
+    // <stripped> func modify coroutine (instance|func_impl)
+}
+
+protocol RemediationBuilder.FileCondition: Constraint {
+  /* signature requirements */
+    A: RemediationBuilder.Condition // key_arg: true, extra_arg: false, kind: protocol
+    A: RemediationBuilder.FileConditionConvertible // key_arg: true, extra_arg: false, kind: protocol
+    RemediationBuilder.Condition.Subject ==: XPPluginAPI.XPPluginPathProtocol // key_arg: false, extra_arg: false, kind: same-type
+  /* requirements */
+    // <stripped> base protocol
+    // <stripped> base protocol
+    // <stripped> associated type access function
+    // <stripped> func getter (instance|func_impl)
+    // <stripped> func setter (instance|func_impl)
+    // <stripped> func modify coroutine (instance|func_impl)
+}
+
+protocol RemediationBuilder.SafariAppExtensionCondition: Constraint {
+  /* signature requirements */
+    A: RemediationBuilder.Condition // key_arg: true, extra_arg: false, kind: protocol
+    A: RemediationBuilder.SafariAppExtensionConditionConvertible // key_arg: true, extra_arg: false, kind: protocol
+    RemediationBuilder.Condition.Subject ==: XPPluginAPI.XPRegisteredPlugin // key_arg: false, extra_arg: false, kind: same-type
+  /* requirements */
+    // <stripped> base protocol
+    // <stripped> base protocol
+    // <stripped> associated type access function
+    // <stripped> func getter (instance|func_impl)
+    // <stripped> func setter (instance|func_impl)
+    // <stripped> func modify coroutine (instance|func_impl)
+}
+
+protocol RemediationBuilder.Remediation {
+  /* signature requirements */
+    A: RemediationBuilder.RemediationConvertible // key_arg: true, extra_arg: false, kind: protocol
+  /* requirements */
+    // <stripped> base protocol
+    // <stripped> func getter (instance|func_impl)
+    // <stripped> func setter (instance|func_impl)
+    // <stripped> func modify coroutine (instance|func_impl)
+    // <stripped> func getter (instance|func_impl)
+    // <stripped> func setter (instance|func_impl)
+    // <stripped> func modify coroutine (instance|func_impl)
+    // <stripped> func getter (instance|func_impl)
+}
+
+protocol RemediationBuilder.OnMatchable: Subject {
+  /* requirements */
+    // <stripped> associated type access function
+    // <stripped> func getter (instance|func_impl)
+    // <stripped> func setter (instance|func_impl)
+    // <stripped> func modify coroutine (instance|func_impl)
+}
+
+protocol RemediationBuilder.RemediationConvertible {
+  /* requirements */
+    // <stripped> func method (instance|func_impl)
+}
+
+protocol RemediationBuilder.ServiceConditionConvertible {
+  /* requirements */
+    // <stripped> func method (instance|func_impl)
+}
+
+protocol RemediationBuilder.ProcessConditionConvertible {
+  /* requirements */
+    // <stripped> func method (instance|func_impl)
+}
+
+protocol RemediationBuilder.FileConditionConvertible {
+  /* requirements */
+    // <stripped> func method (instance|func_impl)
+}
+
+protocol RemediationBuilder.SafariAppExtensionConditionConvertible {
+  /* requirements */
+    // <stripped> func method (instance|func_impl)
+}
+
+protocol RemediationBuilder.Remediator {
+  /* requirements */
+    // <stripped> func getter (instance|func_impl)
+    // <stripped> func setter (instance|func_impl)
+    // <stripped> func modify coroutine (instance|func_impl)
+    // <stripped> func getter (instance|func_impl)
+}
+
+protocol conformance RemediationBuilder.AnyServiceCondition : RemediationBuilder.ServiceCondition {
+}
+
+protocol conformance RemediationBuilder.AnyServiceCondition : RemediationBuilder.ServiceConditionConvertible {
+}
+
+protocol conformance RemediationBuilder.AnyServiceCondition : RemediationBuilder.Condition {
+}
+
+protocol conformance RemediationBuilder.AnyProcessCondition : RemediationBuilder.ProcessCondition {
+}
+
+protocol conformance RemediationBuilder.AnyProcessCondition : RemediationBuilder.ProcessConditionConvertible {
+}
+
+protocol conformance RemediationBuilder.AnyProcessCondition : RemediationBuilder.Condition {
+}
+
+protocol conformance RemediationBuilder.ArgumentCount : RemediationBuilder.ServiceCondition {
+}
+
+protocol conformance RemediationBuilder.ArgumentCount : RemediationBuilder.ServiceConditionConvertible {
+}
+
+protocol conformance RemediationBuilder.ArgumentCount : RemediationBuilder.Condition {
+}
+
+protocol conformance RemediationBuilder.Arguments : RemediationBuilder.ServiceCondition {
+}
+
+protocol conformance RemediationBuilder.Arguments : RemediationBuilder.ServiceConditionConvertible {
+}
+
+protocol conformance RemediationBuilder.Arguments : RemediationBuilder.Condition {
+}
+
+protocol conformance RemediationBuilder.KeyValue : RemediationBuilder.ServiceCondition {
+}
+
+protocol conformance RemediationBuilder.KeyValue : RemediationBuilder.ServiceConditionConvertible {
+}
+
+protocol conformance RemediationBuilder.KeyValue : RemediationBuilder.Condition {
+}
+
+protocol conformance RemediationBuilder.ExecutableYara : RemediationBuilder.ServiceCondition {
+}
+
+protocol conformance RemediationBuilder.ExecutableYara : RemediationBuilder.ServiceConditionConvertible {
+}
+
+protocol conformance RemediationBuilder.ExecutableYara : RemediationBuilder.Condition {
+}
+
+protocol conformance RemediationBuilder.ExecutablePath : RemediationBuilder.ServiceCondition {
+}
+
+protocol conformance RemediationBuilder.ExecutablePath : RemediationBuilder.ServiceConditionConvertible {
+}
+
+protocol conformance RemediationBuilder.ExecutablePath : RemediationBuilder.Condition {
+}
+
+protocol conformance RemediationBuilder.ExecutableIsUntrusted : RemediationBuilder.ServiceCondition {
+}
+
+protocol conformance RemediationBuilder.ExecutableIsUntrusted : RemediationBuilder.ServiceConditionConvertible {
+}
+
+protocol conformance RemediationBuilder.ExecutableIsUntrusted : RemediationBuilder.Condition {
+}
+
+protocol conformance RemediationBuilder.ExecutableRevoked : RemediationBuilder.ServiceCondition {
+}
+
+protocol conformance RemediationBuilder.ExecutableRevoked : RemediationBuilder.ServiceConditionConvertible {
+}
+
+protocol conformance RemediationBuilder.ExecutableRevoked : RemediationBuilder.Condition {
+}
+
+protocol conformance RemediationBuilder.AnyFileCondition : RemediationBuilder.FileCondition {
+}
+
+protocol conformance RemediationBuilder.AnyFileCondition : RemediationBuilder.FileConditionConvertible {
+}
+
+protocol conformance RemediationBuilder.AnyFileCondition : RemediationBuilder.Condition {
+}
+
+protocol conformance RemediationBuilder.FileYara : RemediationBuilder.FileCondition {
+}
+
+protocol conformance RemediationBuilder.FileYara : RemediationBuilder.FileConditionConvertible {
+}
+
+protocol conformance RemediationBuilder.FileYara : RemediationBuilder.Condition {
+}
+
+protocol conformance RemediationBuilder.FilePath : RemediationBuilder.FileCondition {
+}
+
+protocol conformance RemediationBuilder.FilePath : RemediationBuilder.FileConditionConvertible {
+}
+
+protocol conformance RemediationBuilder.FilePath : RemediationBuilder.Condition {
+}
+
+protocol conformance RemediationBuilder.FileMime : RemediationBuilder.FileCondition {
+}
+
+protocol conformance RemediationBuilder.FileMime : RemediationBuilder.FileConditionConvertible {
+}
+
+protocol conformance RemediationBuilder.FileMime : RemediationBuilder.Condition {
+}
+
+protocol conformance RemediationBuilder.FileMagic : RemediationBuilder.FileCondition {
+}
+
+protocol conformance RemediationBuilder.FileMagic : RemediationBuilder.FileConditionConvertible {
+}
+
+protocol conformance RemediationBuilder.FileMagic : RemediationBuilder.Condition {
+}
+
+protocol conformance RemediationBuilder.FileMacho : RemediationBuilder.FileCondition {
+}
+
+protocol conformance RemediationBuilder.FileMacho : RemediationBuilder.FileConditionConvertible {
+}
+
+protocol conformance RemediationBuilder.FileMacho : RemediationBuilder.Condition {
+}
+
+protocol conformance RemediationBuilder.FileNotarised : RemediationBuilder.FileCondition {
+}
+
+protocol conformance RemediationBuilder.FileNotarised : RemediationBuilder.FileConditionConvertible {
+}
+
+protocol conformance RemediationBuilder.FileNotarised : RemediationBuilder.Condition {
+}
+
+protocol conformance RemediationBuilder.FileSingleByteXor : RemediationBuilder.FileCondition {
+}
+
+protocol conformance RemediationBuilder.FileSingleByteXor : RemediationBuilder.FileConditionConvertible {
+}
+
+protocol conformance RemediationBuilder.FileSingleByteXor : RemediationBuilder.Condition {
+}
+
+protocol conformance RemediationBuilder.MaxFileSize : RemediationBuilder.FileCondition {
+}
+
+protocol conformance RemediationBuilder.MaxFileSize : RemediationBuilder.FileConditionConvertible {
+}
+
+protocol conformance RemediationBuilder.MaxFileSize : RemediationBuilder.Condition {
+}
+
+protocol conformance RemediationBuilder.MinFileSize : RemediationBuilder.FileCondition {
+}
+
+protocol conformance RemediationBuilder.MinFileSize : RemediationBuilder.FileConditionConvertible {
+}
+
+protocol conformance RemediationBuilder.MinFileSize : RemediationBuilder.Condition {
+}
+
+protocol conformance RemediationBuilder.FileSHA256 : RemediationBuilder.FileCondition {
+}
+
+protocol conformance RemediationBuilder.FileSHA256 : RemediationBuilder.FileConditionConvertible {
+}
+
+protocol conformance RemediationBuilder.FileSHA256 : RemediationBuilder.Condition {
+}
+
+protocol conformance RemediationBuilder.FileCDHash : RemediationBuilder.FileCondition {
+}
+
+protocol conformance RemediationBuilder.FileCDHash : RemediationBuilder.FileConditionConvertible {
+}
+
+protocol conformance RemediationBuilder.FileCDHash : RemediationBuilder.Condition {
+}
+
+protocol conformance RemediationBuilder.AnySafariAppExtensionCondition : RemediationBuilder.SafariAppExtensionCondition {
+}
+
+protocol conformance RemediationBuilder.AnySafariAppExtensionCondition : RemediationBuilder.SafariAppExtensionConditionConvertible {
+}
+
+protocol conformance RemediationBuilder.AnySafariAppExtensionCondition : RemediationBuilder.Condition {
+}
+
+protocol conformance RemediationBuilder.ExtensionBinaryYara : RemediationBuilder.SafariAppExtensionCondition {
+}
+
+protocol conformance RemediationBuilder.ExtensionBinaryYara : RemediationBuilder.SafariAppExtensionConditionConvertible {
+}
+
+protocol conformance RemediationBuilder.ExtensionBinaryYara : RemediationBuilder.Condition {
+}
+
+protocol conformance RemediationBuilder.JavaScriptYara : RemediationBuilder.SafariAppExtensionCondition {
+}
+
+protocol conformance RemediationBuilder.JavaScriptYara : RemediationBuilder.SafariAppExtensionConditionConvertible {
+}
+
+protocol conformance RemediationBuilder.JavaScriptYara : RemediationBuilder.Condition {
+}
+
+protocol conformance RemediationBuilder.ProcessName : RemediationBuilder.ProcessCondition {
+}
+
+protocol conformance RemediationBuilder.ProcessName : RemediationBuilder.ProcessConditionConvertible {
+}
+
+protocol conformance RemediationBuilder.ProcessName : RemediationBuilder.Condition {
+}
+
+protocol conformance RemediationBuilder.ProcessCDHash : RemediationBuilder.ProcessCondition {
+}
+
+protocol conformance RemediationBuilder.ProcessCDHash : RemediationBuilder.ProcessConditionConvertible {
+}
+
+protocol conformance RemediationBuilder.ProcessCDHash : RemediationBuilder.Condition {
+}
+
+protocol conformance RemediationBuilder.ProcessIsNotarised : RemediationBuilder.ProcessCondition {
+}
+
+protocol conformance RemediationBuilder.ProcessIsNotarised : RemediationBuilder.ProcessConditionConvertible {
+}
+
+protocol conformance RemediationBuilder.ProcessIsNotarised : RemediationBuilder.Condition {
+}
+
+protocol conformance RemediationBuilder.ProcessIsAppleSigned : RemediationBuilder.ProcessCondition {
+}
+
+protocol conformance RemediationBuilder.ProcessIsAppleSigned : RemediationBuilder.ProcessConditionConvertible {
+}
+
+protocol conformance RemediationBuilder.ProcessIsAppleSigned : RemediationBuilder.Condition {
+}
+
+protocol conformance RemediationBuilder.ProcessMainExecutable : RemediationBuilder.ProcessCondition {
+}
+
+protocol conformance RemediationBuilder.ProcessMainExecutable : RemediationBuilder.ProcessConditionConvertible {
+}
+
+protocol conformance RemediationBuilder.ProcessMainExecutable : RemediationBuilder.Condition {
+}
+
+protocol conformance RemediationBuilder.ServiceExecutable : RemediationBuilder.ServiceCondition {
+}
+
+protocol conformance RemediationBuilder.ServiceExecutable : RemediationBuilder.ServiceConditionConvertible {
+}
+
+protocol conformance RemediationBuilder.ServiceExecutable : RemediationBuilder.Condition {
+}
+
+protocol conformance RemediationBuilder.ProcessHasBackingFile : RemediationBuilder.ProcessCondition {
+}
+
+protocol conformance RemediationBuilder.ProcessHasBackingFile : RemediationBuilder.ProcessConditionConvertible {
+}
+
+protocol conformance RemediationBuilder.ProcessHasBackingFile : RemediationBuilder.Condition {
+}
+
+protocol conformance RemediationBuilder.HasLoadedLibrary : RemediationBuilder.ProcessCondition {
+}
+
+protocol conformance RemediationBuilder.HasLoadedLibrary : RemediationBuilder.ProcessConditionConvertible {
+}
+
+protocol conformance RemediationBuilder.HasLoadedLibrary : RemediationBuilder.Condition {
+}
+
+protocol conformance RemediationBuilder.ProxyRemediation : RemediationBuilder.Remediation {
+}
+
+protocol conformance RemediationBuilder.ProxyRemediation : RemediationBuilder.RemediationConvertible {
+}
+
+protocol conformance RemediationBuilder.ServiceRemediation : RemediationBuilder.Remediation {
+}
+
+protocol conformance RemediationBuilder.ServiceRemediation : RemediationBuilder.OnMatchable {
+}
+
+protocol conformance RemediationBuilder.ServiceRemediation : RemediationBuilder.RemediationConvertible {
+}
+
+protocol conformance RemediationBuilder.FileRemediation : RemediationBuilder.Remediation {
+}
+
+protocol conformance RemediationBuilder.FileRemediation : RemediationBuilder.RemediationConvertible {
+}
+
+protocol conformance RemediationBuilder.SafariAppExtensionRemediation : RemediationBuilder.Remediation {
+}
+
+protocol conformance RemediationBuilder.SafariAppExtensionRemediation : RemediationBuilder.RemediationConvertible {
+}
+
+protocol conformance RemediationBuilder.ProcessRemediation : RemediationBuilder.Remediation {
+}
+
+protocol conformance RemediationBuilder.ProcessRemediation : RemediationBuilder.RemediationConvertible {
+}
+
+protocol conformance nominal type descriptor for Array : RemediationBuilder.RemediationConvertible {
+  /* conditional requirements */
+   < where A: RemediationBuilder.Remediation >}
+
+protocol conformance nominal type descriptor for Array : RemediationBuilder.ServiceConditionConvertible {
+  /* conditional requirements */
+   < where A: RemediationBuilder.AnyServiceCondition >}
+
+protocol conformance RemediationBuilder.Service : RemediationBuilder.RemediationConvertible {
+}
+
+protocol conformance RemediationBuilder.Proxy : RemediationBuilder.RemediationConvertible {
+}
+
+protocol conformance nominal type descriptor for Array : RemediationBuilder.FileConditionConvertible {
+  /* conditional requirements */
+   < where A: RemediationBuilder.AnyFileCondition >}
+
+protocol conformance RemediationBuilder.File : RemediationBuilder.RemediationConvertible {
+}
+
+protocol conformance RemediationBuilder.SafariAppExtension : RemediationBuilder.RemediationConvertible {
+}
+
+protocol conformance RemediationBuilder.Process : RemediationBuilder.RemediationConvertible {
+}
+
+protocol conformance RemediationBuilder.Value : protocol descriptor for Equatable {
+  /* resilient witnesses */
+    method descriptor for static Equatable.== infix(_:_:)
+}
+
+protocol conformance AdloadPlugin.AdloadRemediator : RemediationBuilder.Remediator {
+}
+
+extension RemediationBuilder.AnyServiceCondition: ServiceCondition {
+    typealias Constraint = Any
+}
+
+extension RemediationBuilder.AnyServiceCondition: Condition {
+    typealias Subject = XPPluginAPI.XProtectLaunchdDaemonAgentProtocol
+}
+
+extension RemediationBuilder.AnyProcessCondition: ProcessCondition {
+    typealias Constraint = Any
+}
+
+extension RemediationBuilder.AnyProcessCondition: Condition {
+    typealias Subject = XPPluginAPI.XPProcessProtocol
+}
+
+extension RemediationBuilder.ArgumentCount: ServiceCondition {
+    typealias Constraint = Int
+}
+
+extension RemediationBuilder.ArgumentCount: Condition {
+    typealias Subject = XPPluginAPI.XProtectLaunchdDaemonAgentProtocol
+}
+
+extension RemediationBuilder.Arguments: ServiceCondition {
+    typealias Constraint = Dictionary empty-list Int RemediationBuilder.Value
+}
+
+extension RemediationBuilder.Arguments: Condition {
+    typealias Subject = XPPluginAPI.XProtectLaunchdDaemonAgentProtocol
+}
+
+extension RemediationBuilder.KeyValue: ServiceCondition {
+    typealias Constraint = Dictionary empty-list String RemediationBuilder.Value
+}
+
+extension RemediationBuilder.KeyValue: Condition {
+    typealias Subject = XPPluginAPI.XProtectLaunchdDaemonAgentProtocol
+}
+
+extension RemediationBuilder.ExecutableYara: ServiceCondition {
+    typealias Constraint = XPPluginAPI.YaraMatcherProtocol
+}
+
+extension RemediationBuilder.ExecutableYara: Condition {
+    typealias Subject = XPPluginAPI.XProtectLaunchdDaemonAgentProtocol
+}
+
+extension RemediationBuilder.ExecutablePath: ServiceCondition {
+    typealias Constraint = RemediationBuilder.Value
+}
+
+extension RemediationBuilder.ExecutablePath: Condition {
+    typealias Subject = XPPluginAPI.XProtectLaunchdDaemonAgentProtocol
+}
+
+extension RemediationBuilder.ExecutableIsUntrusted: ServiceCondition {
+    typealias Constraint = Swift.Bool
+}
+
+extension RemediationBuilder.ExecutableIsUntrusted: Condition {
+    typealias Subject = XPPluginAPI.XProtectLaunchdDaemonAgentProtocol
+}
+
+extension RemediationBuilder.ExecutableRevoked: ServiceCondition {
+    typealias Constraint = Swift.Bool
+}
+
+extension RemediationBuilder.ExecutableRevoked: Condition {
+    typealias Subject = XPPluginAPI.XProtectLaunchdDaemonAgentProtocol
+}
+
+extension RemediationBuilder.AnyFileCondition: FileCondition {
+    typealias Constraint = Any
+}
+
+extension RemediationBuilder.AnyFileCondition: Condition {
+    typealias Subject = XPPluginAPI.XPPluginPathProtocol
+}
+
+extension RemediationBuilder.FileYara: FileCondition {
+    typealias Constraint = XPPluginAPI.YaraMatcherProtocol
+}
+
+extension RemediationBuilder.FileYara: Condition {
+    typealias Subject = XPPluginAPI.XPPluginPathProtocol
+}
+
+extension RemediationBuilder.FilePath: FileCondition {
+    typealias Constraint = RemediationBuilder.Value
+}
+
+extension RemediationBuilder.FilePath: Condition {
+    typealias Subject = XPPluginAPI.XPPluginPathProtocol
+}
+
+extension RemediationBuilder.FileMime: FileCondition {
+    typealias Constraint = RemediationBuilder.Value
+}
+
+extension RemediationBuilder.FileMime: Condition {
+    typealias Subject = XPPluginAPI.XPPluginPathProtocol
+}
+
+extension RemediationBuilder.FileMagic: FileCondition {
+    typealias Constraint = RemediationBuilder.Value
+}
+
+extension RemediationBuilder.FileMagic: Condition {
+    typealias Subject = XPPluginAPI.XPPluginPathProtocol
+}
+
+extension RemediationBuilder.FileMacho: FileCondition {
+    typealias Constraint = Swift.Bool
+}
+
+extension RemediationBuilder.FileMacho: Condition {
+    typealias Subject = XPPluginAPI.XPPluginPathProtocol
+}
+
+extension RemediationBuilder.FileNotarised: FileCondition {
+    typealias Constraint = Swift.Bool
+}
+
+extension RemediationBuilder.FileNotarised: Condition {
+    typealias Subject = XPPluginAPI.XPPluginPathProtocol
+}
+
+extension RemediationBuilder.FileSingleByteXor: FileCondition {
+    typealias Constraint = Array -> RemediationBuilder.AnyFileCondition
+}
+
+extension RemediationBuilder.FileSingleByteXor: Condition {
+    typealias Subject = XPPluginAPI.XPPluginPathProtocol
+}
+
+extension RemediationBuilder.MaxFileSize: FileCondition {
+    typealias Constraint = Int
+}
+
+extension RemediationBuilder.MaxFileSize: Condition {
+    typealias Subject = XPPluginAPI.XPPluginPathProtocol
+}
+
+extension RemediationBuilder.MinFileSize: FileCondition {
+    typealias Constraint = Int
+}
+
+extension RemediationBuilder.MinFileSize: Condition {
+    typealias Subject = XPPluginAPI.XPPluginPathProtocol
+}
+
+extension RemediationBuilder.FileSHA256: FileCondition {
+    typealias Constraint = String
+}
+
+extension RemediationBuilder.FileSHA256: Condition {
+    typealias Subject = XPPluginAPI.XPPluginPathProtocol
+}
+
+extension RemediationBuilder.FileCDHash: FileCondition {
+    typealias Constraint = String
+}
+
+extension RemediationBuilder.FileCDHash: Condition {
+    typealias Subject = XPPluginAPI.XPPluginPathProtocol
+}
+
+extension RemediationBuilder.AnySafariAppExtensionCondition: SafariAppExtensionCondition {
+    typealias Constraint = Any
+}
+
+extension RemediationBuilder.AnySafariAppExtensionCondition: Condition {
+    typealias Subject = XPPluginAPI.XPRegisteredPlugin
+}
+
+extension RemediationBuilder.ExtensionBinaryYara: SafariAppExtensionCondition {
+    typealias Constraint = XPPluginAPI.YaraMatcherProtocol
+}
+
+extension RemediationBuilder.ExtensionBinaryYara: Condition {
+    typealias Subject = XPPluginAPI.XPRegisteredPlugin
+}
+
+extension RemediationBuilder.JavaScriptYara: SafariAppExtensionCondition {
+    typealias Constraint = XPPluginAPI.YaraMatcherProtocol
+}
+
+extension RemediationBuilder.JavaScriptYara: Condition {
+    typealias Subject = XPPluginAPI.XPRegisteredPlugin
+}
+
+extension RemediationBuilder.ProcessName: ProcessCondition {
+    typealias Constraint = RemediationBuilder.Value
+}
+
+extension RemediationBuilder.ProcessName: Condition {
+    typealias Subject = XPPluginAPI.XPProcessProtocol
+}
+
+extension RemediationBuilder.ProcessCDHash: ProcessCondition {
+    typealias Constraint = String
+}
+
+extension RemediationBuilder.ProcessCDHash: Condition {
+    typealias Subject = XPPluginAPI.XPProcessProtocol
+}
+
+extension RemediationBuilder.ProcessIsNotarised: ProcessCondition {
+    typealias Constraint = Swift.Bool
+}
+
+extension RemediationBuilder.ProcessIsNotarised: Condition {
+    typealias Subject = XPPluginAPI.XPProcessProtocol
+}
+
+extension RemediationBuilder.ProcessIsAppleSigned: ProcessCondition {
+    typealias Constraint = Swift.Bool
+}
+
+extension RemediationBuilder.ProcessIsAppleSigned: Condition {
+    typealias Subject = XPPluginAPI.XPProcessProtocol
+}
+
+extension RemediationBuilder.ProcessMainExecutable: ProcessCondition {
+    typealias Constraint = Array -> RemediationBuilder.AnyFileCondition
+}
+
+extension RemediationBuilder.ProcessMainExecutable: Condition {
+    typealias Subject = XPPluginAPI.XPProcessProtocol
+}
+
+extension RemediationBuilder.ServiceExecutable: ServiceCondition {
+    typealias Constraint = Array -> RemediationBuilder.AnyFileCondition
+}
+
+extension RemediationBuilder.ServiceExecutable: Condition {
+    typealias Subject = XPPluginAPI.XProtectLaunchdDaemonAgentProtocol
+}
+
+extension RemediationBuilder.ProcessHasBackingFile: ProcessCondition {
+    typealias Constraint = Swift.Bool
+}
+
+extension RemediationBuilder.ProcessHasBackingFile: Condition {
+    typealias Subject = XPPluginAPI.XPProcessProtocol
+}
+
+extension RemediationBuilder.HasLoadedLibrary: ProcessCondition {
+    typealias Constraint = RemediationBuilder.Value
+}
+
+extension RemediationBuilder.HasLoadedLibrary: Condition {
+    typealias Subject = XPPluginAPI.XPProcessProtocol
+}
+
+extension RemediationBuilder.ServiceRemediation: OnMatchable {
+    typealias Subject = XPPluginAPI.XProtectLaunchdDaemonAgentProtocol
+}

@@ -1,0 +1,4106 @@
+// ipsw swift-dump --all --demangle xpr_adload > XPPluginAPI.txt
+// XProtectRemediatorAdload version 147
+
+enum XPPluginAPI.XPLogLevel {
+    case default
+    case debug
+    case info
+    case warning
+    case error
+    case fault
+}
+
+class XPPluginAPI.XPLogger {
+  /* fields */
+    var logger: OS_os_log?
+  /* methods */
+    func logger.getter.sub_1000046b0
+    func logger.setter.sub_1000046f0
+    func logger.modify.sub_100004730
+    static func sub_100004770 // init
+    static func sub_100004900 // init
+    func sub_1000049a0 // method (instance)
+    func sub_100004c40 // method (instance)
+    func sub_100004c50 // method (instance)
+    func sub_100004c70 // method (instance)
+    func sub_100004c80 // method (instance)
+    func sub_100004ca0 // method (instance)
+    func sub_100004cc0 // method (instance)
+    func sub_10000fdc0 // method (instance)
+    func sub_100004ce0 // method (instance)
+    func sub_100004e10 // method (instance)
+    func sub_100004e30 // method (instance)
+}
+
+class XPPluginAPI.XPStructuredLogger: XPPluginAPI.XPLogger {}
+
+enum XPPluginAPI.XPSHA256 {}
+
+struct __C.YR_RULES {
+    var tidx_mask: (private) _$s_A3At
+    var code_start: UnsafePointer -> (private) ?
+    var mutex: __C._opaque_pthread_mutex_t
+    var arena: UnsafeMutablePointer -> __C._YR_ARENA ?
+    var rules_list_head: UnsafeMutablePointer -> __C.YR_RULE ?
+    var externals_list_head: UnsafeMutablePointer -> __C.YR_EXTERNAL_VARIABLE ?
+    var ac_transition_table: UnsafeMutablePointer -> (private) ?
+    var ac_match_table: UnsafeMutablePointer -> __C.YR_AC_MATCH_TABLE_ENTRY ?
+    var ac_tables_size: (private)
+    var time_cost: (private)
+}
+
+struct __C._YR_COMPILER {
+    var errors: (private)
+    var current_line: (private)
+    var last_error: (private)
+    var last_error_line: (private)
+    var error_recovery: (private) _$s_A36At
+    var sz_arena: UnsafeMutablePointer -> __C._YR_ARENA ?
+    var rules_arena: UnsafeMutablePointer -> __C._YR_ARENA ?
+    var strings_arena: UnsafeMutablePointer -> __C._YR_ARENA ?
+    var code_arena: UnsafeMutablePointer -> __C._YR_ARENA ?
+    var re_code_arena: UnsafeMutablePointer -> __C._YR_ARENA ?
+    var compiled_rules_arena: UnsafeMutablePointer -> __C._YR_ARENA ?
+    var externals_arena: UnsafeMutablePointer -> __C._YR_ARENA ?
+    var namespaces_arena: UnsafeMutablePointer -> __C._YR_ARENA ?
+    var metas_arena: UnsafeMutablePointer -> __C._YR_ARENA ?
+    var matches_arena: UnsafeMutablePointer -> __C._YR_ARENA ?
+    var automaton_arena: UnsafeMutablePointer -> __C._YR_ARENA ?
+    var automaton: UnsafeMutablePointer -> __C.YR_AC_AUTOMATON ?
+    var rules_table: UnsafeMutablePointer -> __C._YR_HASH_TABLE ?
+    var objects_table: UnsafeMutablePointer -> __C._YR_HASH_TABLE ?
+    var strings_table: UnsafeMutablePointer -> __C._YR_HASH_TABLE ?
+    var current_namespace: UnsafeMutablePointer -> __C.YR_NAMESPACE ?
+    var current_rule: UnsafeMutablePointer -> __C.YR_RULE ?
+    var fixup_stack_head: UnsafeMutablePointer -> __C._YR_FIXUP ?
+    var namespaces_count: (private)
+    var loop_address: UnsafeMutablePointer -> (private) _$sGSg_A3Ct
+    var loop_identifier: UnsafeMutablePointer -> (private) _$sGSg_A3Ct
+    var loop_depth: (private)
+    var loop_for_of_mem_offset: (private)
+    var file_name_stack: UnsafeMutablePointer -> (private) _$sGSg_A15Ct
+    var file_name_stack_ptr: (private)
+    var last_error_extra_info: (private) _$s_A255At
+    var lex_buf_ptr: UnsafeMutablePointer -> (private) ?
+    var lex_buf_len: (private)
+    var include_base_dir: (private) _$s_A1023At
+    var user_data: UnsafeMutableRawPointer?
+    var incl_clbk_user_data: UnsafeMutableRawPointer?
+    var re_ast_clbk_user_data: UnsafeMutableRawPointer?
+    var callback: (private)  first-element-marker UnsafePointer -> (private) _$sGSgAaDSvSgtXCSg
+    var include_callback: UnsafePointer -> (private) _$sGSgAC_A2CSvSgtXCSg
+    var include_free:  empty-list UnsafePointer -> (private) _$sGSg_SvSgtXCSg
+    var re_ast_callback:  empty-list UnsafePointer -> __C.YR_RULE _$sGSg_SP -> (private) _$sGSgSP -> __C.RE_AST _$sGSgSvSgtXCSg
+    var atoms_config: __C.YR_ATOMS_CONFIG
+}
+
+struct __C.socket_fdinfo {
+    var pfi: __C.proc_fileinfo
+    var psi: __C.socket_info
+}
+
+typealias SCNetworkProtocolRef SCNetworkProtocol
+class __C.SCNetworkProtocolRef {}
+
+typealias SCNetworkInterfaceRef SCNetworkInterface
+class __C.SCNetworkInterfaceRef {}
+
+typealias SCNetworkServiceRef SCNetworkService
+class __C.SCNetworkServiceRef {}
+
+typealias SCPreferencesRef SCPreferences
+class __C.SCPreferencesRef {}
+
+typealias SecCertificateRef SecCertificate
+class __C.SecCertificateRef {}
+
+enum __C.SecCSDigestAlgorithm {}
+
+typealias SecStaticCodeRef SecStaticCode
+class __C.SecStaticCodeRef {}
+
+typealias SecCodeRef SecCode
+class __C.SecCodeRef {}
+
+typealias XProtectPluginCompletionStatus Code
+enum __C.XProtectPluginCompletionStatus {}
+
+struct __C_Synthesized.XProtectPluginCompletionStatus {
+    let _nsError: NSError
+}
+
+typealias CFErrorRef CFError
+class __C.CFErrorRef {}
+
+typealias NSURLResourceKey URLResourceKey
+struct __C.NSURLResourceKey {
+    var _rawValue: NSString
+}
+
+struct __C.audit_token_t {
+    var val: (private) _$s_A7At
+}
+
+typealias CFNumberRef CFNumber
+class __C.CFNumberRef {}
+
+typealias NSFileAttributeKey FileAttributeKey
+struct __C.NSFileAttributeKey {
+    var _rawValue: NSString
+}
+
+struct __C.ProvenanceTrackingAttributes {
+    var version: (private)
+    var flags: (private)
+    var index: (private)
+}
+
+struct __C.proc_vnodepathinfo {
+    var pvi_cdir: __C.vnode_info_path
+    var pvi_rdir: __C.vnode_info_path
+}
+
+struct __C.proc_fdinfo {
+    var proc_fd: (private)
+    var proc_fdtype: (private)
+}
+
+struct __C.vnode_fdinfowithpath {
+    var pfi: __C.proc_fileinfo
+    var pvip: __C.vnode_info_path
+}
+
+struct __C.proc_bsdinfo {
+    var pbi_flags: (private)
+    var pbi_status: (private)
+    var pbi_xstatus: (private)
+    var pbi_pid: (private)
+    var pbi_ppid: (private)
+    var pbi_uid: (private)
+    var pbi_gid: (private)
+    var pbi_ruid: (private)
+    var pbi_rgid: (private)
+    var pbi_svuid: (private)
+    var pbi_svgid: (private)
+    var rfu_1: (private)
+    var pbi_comm: (private) _$s_A15At
+    var pbi_name: (private) _$s_A31At
+    var pbi_nfiles: (private)
+    var pbi_pgid: (private)
+    var pbi_pjobc: (private)
+    var e_tdev: (private)
+    var e_tpgid: (private)
+    var pbi_nice: (private)
+    var pbi_start_tvsec: (private)
+    var pbi_start_tvusec: (private)
+}
+
+typealias CFBooleanRef CFBoolean
+class __C.CFBooleanRef {}
+
+typealias CFStringRef CFString
+class __C.CFStringRef {}
+
+struct __C.YR_AC_MATCH_TABLE_ENTRY {
+    var __Anonymous_field0: __C.YR_AC_MATCH_TABLE_ENTRY.__Unnamed_union___Anonymous_field0
+}
+
+struct __C.YR_EXTERNAL_VARIABLE {
+    var type: (private)
+    var value: __C.YR_EXTERNAL_VARIABLE.__Unnamed_union_value
+    var __Anonymous_field2: __C.YR_EXTERNAL_VARIABLE.__Unnamed_union___Anonymous_field2
+}
+
+struct __C._opaque_pthread_mutex_t {
+    var __sig: Int
+    var __opaque: (private) _$s_A55At
+}
+
+struct __C.YR_ATOMS_CONFIG {
+    var get_atom_quality: (private) UnsafeMutablePointer -> __C.YR_ATOMS_CONFIG _$sGSg_Sp -> __C.YR_ATOM _$sGSgtXCSg
+    var quality_table: UnsafeMutablePointer -> __C.YR_ATOM_QUALITY_TABLE_ENTRY ?
+    var quality_warning_threshold: (private)
+    var quality_table_entries: (private)
+    var free_quality_table: (private)
+}
+
+struct __C.RE_AST {
+    var flags: (private)
+    var root_node: UnsafeMutablePointer -> __C.RE_NODE ?
+}
+
+struct __C._YR_FIXUP {
+    var address: UnsafeMutableRawPointer?
+    var next: UnsafeMutablePointer -> __C._YR_FIXUP ?
+}
+
+struct __C.YR_RULE {
+    var g_flags: (private)
+    var t_flags: (private) _$s_A31At
+    var __Anonymous_field2: __C.YR_RULE.__Unnamed_union___Anonymous_field2
+    var __Anonymous_field3: __C.YR_RULE.__Unnamed_union___Anonymous_field3
+    var __Anonymous_field4: __C.YR_RULE.__Unnamed_union___Anonymous_field4
+    var __Anonymous_field5: __C.YR_RULE.__Unnamed_union___Anonymous_field5
+    var __Anonymous_field6: __C.YR_RULE.__Unnamed_union___Anonymous_field6
+    var num_atoms: (private)
+    var time_cost: (private)
+    var time_cost_per_thread: (private) _$s_A31At
+}
+
+struct __C.YR_NAMESPACE {
+    var t_flags: (private) _$s_A31At
+    var __Anonymous_field1: __C.YR_NAMESPACE.__Unnamed_union___Anonymous_field1
+}
+
+struct __C._YR_HASH_TABLE {
+    var size: (private)
+    var buckets: UnsafeMutablePointer -> __C._YR_HASH_TABLE_ENTRY ?
+}
+
+struct __C.YR_AC_AUTOMATON {
+    var tables_size: (private)
+    var t_table_unused_candidate: (private)
+    var bitmask: UnsafeMutablePointer<UInt>?
+    var t_table: UnsafeMutablePointer -> (private) ?
+    var m_table: UnsafeMutablePointer -> __C.YR_AC_MATCH_TABLE_ENTRY ?
+    var root: UnsafeMutablePointer -> __C.YR_AC_STATE ?
+}
+
+struct __C._YR_ARENA {
+    var flags: (private)
+    var page_list_head: UnsafeMutablePointer -> __C._YR_ARENA_PAGE ?
+    var current_page: UnsafeMutablePointer -> __C._YR_ARENA_PAGE ?
+}
+
+struct __C.socket_info {
+    var soi_stat: __C.vinfo_stat
+    var soi_so: (private)
+    var soi_pcb: (private)
+    var soi_type: (private)
+    var soi_protocol: (private)
+    var soi_family: (private)
+    var soi_options: (private)
+    var soi_linger: (private)
+    var soi_state: (private)
+    var soi_qlen: (private)
+    var soi_incqlen: (private)
+    var soi_qlimit: (private)
+    var soi_timeo: (private)
+    var soi_error: (private)
+    var soi_oobmark: (private)
+    var soi_rcv: __C.sockbuf_info
+    var soi_snd: __C.sockbuf_info
+    var soi_kind: (private)
+    var rfu_1: (private)
+    var soi_proto: __C.socket_info.__Unnamed_union_soi_proto
+}
+
+struct __C.proc_fileinfo {
+    var fi_openflags: (private)
+    var fi_status: (private)
+    var fi_offset: (private)
+    var fi_type: (private)
+    var fi_guardflags: (private)
+}
+
+struct __C.vnode_info_path {
+    var vip_vi: __C.vnode_info
+    var vip_path: (private) _$s_A1023At
+}
+
+struct __C.YR_AC_MATCH_TABLE_ENTRY.__Unnamed_union___Anonymous_field0 {}
+
+struct __C.YR_EXTERNAL_VARIABLE.__Unnamed_union___Anonymous_field2 {}
+
+struct __C.YR_EXTERNAL_VARIABLE.__Unnamed_union_value {}
+
+struct __C.YR_ATOM_QUALITY_TABLE_ENTRY {
+    var atom: (private) _$s_A3At
+    var quality: (private)
+}
+
+struct __C.YR_ATOM {
+    var length: (private)
+    var bytes: (private) _$s_A3At
+    var mask: (private) _$s_A3At
+}
+
+struct __C.RE_NODE {
+    var type: (private)
+    var __Anonymous_field1: __C.RE_NODE.__Unnamed_union___Anonymous_field1
+    var __Anonymous_field2: __C.RE_NODE.__Unnamed_union___Anonymous_field2
+    var greedy: (private)
+    var re_class: UnsafeMutablePointer -> __C.RE_CLASS ?
+    var children_head: UnsafeMutablePointer -> __C.RE_NODE ?
+    var children_tail: UnsafeMutablePointer -> __C.RE_NODE ?
+    var prev_sibling: UnsafeMutablePointer -> __C.RE_NODE ?
+    var next_sibling: UnsafeMutablePointer -> __C.RE_NODE ?
+    var forward_code: UnsafeMutablePointer -> (private) ?
+    var backward_code: UnsafeMutablePointer -> (private) ?
+}
+
+struct __C.YR_RULE.__Unnamed_union___Anonymous_field6 {}
+
+struct __C.YR_RULE.__Unnamed_union___Anonymous_field5 {}
+
+struct __C.YR_RULE.__Unnamed_union___Anonymous_field4 {}
+
+struct __C.YR_RULE.__Unnamed_union___Anonymous_field3 {}
+
+struct __C.YR_RULE.__Unnamed_union___Anonymous_field2 {}
+
+struct __C.YR_NAMESPACE.__Unnamed_union___Anonymous_field1 {}
+
+struct __C._YR_HASH_TABLE_ENTRY {
+    var key: UnsafeMutableRawPointer?
+    var key_length: Int
+    var ns: UnsafeMutablePointer -> (private) ?
+    var value: UnsafeMutableRawPointer?
+    var next: UnsafeMutablePointer -> __C._YR_HASH_TABLE_ENTRY ?
+}
+
+struct __C.YR_AC_STATE {
+    var depth: (private)
+    var input: (private)
+    var t_table_slot: (private)
+    var failure: UnsafeMutablePointer -> __C.YR_AC_STATE ?
+    var first_child: UnsafeMutablePointer -> __C.YR_AC_STATE ?
+    var siblings: UnsafeMutablePointer -> __C.YR_AC_STATE ?
+    var matches: UnsafeMutablePointer -> __C.YR_AC_MATCH ?
+}
+
+struct __C._YR_ARENA_PAGE {
+    var new_address: UnsafeMutablePointer -> (private) ?
+    var address: UnsafeMutablePointer -> (private) ?
+    var size: Int
+    var used: Int
+    var reloc_list_head: UnsafeMutablePointer -> __C._YR_RELOC ?
+    var reloc_list_tail: UnsafeMutablePointer -> __C._YR_RELOC ?
+    var next: UnsafeMutablePointer -> __C._YR_ARENA_PAGE ?
+    var prev: UnsafeMutablePointer -> __C._YR_ARENA_PAGE ?
+}
+
+struct __C.socket_info.__Unnamed_union_soi_proto {}
+
+struct __C.sockbuf_info {
+    var sbi_cc: (private)
+    var sbi_hiwat: (private)
+    var sbi_mbcnt: (private)
+    var sbi_mbmax: (private)
+    var sbi_lowat: (private)
+    var sbi_flags: (private)
+    var sbi_timeo: (private)
+}
+
+struct __C.vinfo_stat {
+    var vst_dev: (private)
+    var vst_mode: (private)
+    var vst_nlink: (private)
+    var vst_ino: (private)
+    var vst_uid: (private)
+    var vst_gid: (private)
+    var vst_atime: (private)
+    var vst_atimensec: (private)
+    var vst_mtime: (private)
+    var vst_mtimensec: (private)
+    var vst_ctime: (private)
+    var vst_ctimensec: (private)
+    var vst_birthtime: (private)
+    var vst_birthtimensec: (private)
+    var vst_size: (private)
+    var vst_blocks: (private)
+    var vst_blksize: (private)
+    var vst_flags: (private)
+    var vst_gen: (private)
+    var vst_rdev: (private)
+    var vst_qspare: (private) _$s_AAt
+}
+
+struct __C.vnode_info {
+    var vi_stat: __C.vinfo_stat
+    var vi_type: (private)
+    var vi_pad: (private)
+    var vi_fsid: __C.fsid
+}
+
+struct __C.RE_CLASS {
+    var negated: (private)
+    var bitmap: (private) _$s_A31At
+}
+
+struct __C.RE_NODE.__Unnamed_union___Anonymous_field2 {}
+
+struct __C.RE_NODE.__Unnamed_union___Anonymous_field1 {}
+
+struct __C.YR_AC_MATCH {
+    var backtrack: (private)
+    var __Anonymous_field1: __C.YR_AC_MATCH.__Unnamed_union___Anonymous_field1
+    var __Anonymous_field2: __C.YR_AC_MATCH.__Unnamed_union___Anonymous_field2
+    var __Anonymous_field3: __C.YR_AC_MATCH.__Unnamed_union___Anonymous_field3
+    var __Anonymous_field4: __C.YR_AC_MATCH.__Unnamed_union___Anonymous_field4
+}
+
+struct __C._YR_RELOC {
+    var offset: (private)
+    var next: UnsafeMutablePointer -> __C._YR_RELOC ?
+}
+
+struct __C.fsid {
+    var val: (private) _$s_AAt
+}
+
+struct __C.YR_AC_MATCH.__Unnamed_union___Anonymous_field4 {}
+
+struct __C.YR_AC_MATCH.__Unnamed_union___Anonymous_field3 {}
+
+struct __C.YR_AC_MATCH.__Unnamed_union___Anonymous_field2 {}
+
+struct __C.YR_AC_MATCH.__Unnamed_union___Anonymous_field1 {}
+
+enum XPPluginAPI.XPCodeSignatureArchitecture {
+    case arm64
+    case arm64e
+    case x86_64
+    case x86_64h
+    case i386
+}
+
+enum XPPluginAPI.XPCodeSignatureError {
+    case Success
+    case GenericFailure
+    case NoSuchPath
+    case Unsigned
+    case AdHocSigned
+    case BadSignature
+    case NotPermitted
+    case Revoked
+    case InternalError
+}
+
+class XPPluginAPI.XProtectPluginCodeSignatureAPI {
+  /* methods */
+    // <stripped> func method (instance)
+    // <stripped> func method (instance)
+    // <stripped> func method (instance)
+    // <stripped> static func init
+}
+
+class XPPluginAPI.XPDynamicCodeSignature: XPPluginAPI.XPStaticCodeSignature {
+  /* fields */
+    var dynamicCode: __C.SecCode
+    let process: XPPluginAPI.XPProcessProtocol
+  /* methods */
+    // <stripped> func dynamicCode.getter 
+    // <stripped> func dynamicCode.setter 
+    // <stripped> func dynamicCode.modify 
+    // <stripped> static func init
+}
+
+class XPPluginAPI.XPOpaqueCodeSignature: XPPluginAPI.XPStaticCodeSignature {
+  /* methods */
+    func sub_1000167f0 // method (instance)
+    func sub_100018500 // method (instance)
+}
+
+class XPPluginAPI.XPStaticCodeSignature {
+  /* fields */
+    var logger: XPPluginAPI.XPLogger
+    let path: XPPluginAPI.XPPluginPathProtocol
+    var staticCode: __C.SecStaticCode
+  /* methods */
+    func sub_100016bf0 // getter (instance)
+    // <stripped> func logger.getter 
+    // <stripped> func logger.setter 
+    // <stripped> func logger.modify 
+    // <stripped> func staticCode.getter 
+    // <stripped> func staticCode.setter 
+    // <stripped> func staticCode.modify 
+    // <stripped> static func init
+    // <stripped> static func init
+    func sub_100011da0 // method (instance)
+    func sub_100016890 // method (instance)
+    func sub_1000168d0 // method (instance)
+    // <stripped> func method (instance)
+    func sub_100012350 // method (instance)
+    func sub_1000126a0 // method (instance)
+    func sub_100012760 // method (instance)
+    func sub_100012d00 // method (instance)
+    func sub_100012d40 // method (instance)
+    func sub_100013030 // method (instance)
+    func sub_1000135a0 // method (instance)
+    func sub_1000135e0 // method (instance)
+    func sub_100013870 // method (instance)
+    // <stripped> func method (instance)
+    func sub_100013dc0 // method (instance)
+    func sub_100014070 // method (instance)
+    func sub_1000142f0 // method (instance)
+    func sub_100014680 // method (instance)
+    func sub_1000146d0 // method (instance)
+    func sub_100014970 // method (instance)
+}
+
+class XPPluginAPI.XPCodeSigningCertificate: XPPluginAPI.XPCertificate {}
+
+class XPPluginAPI.XPCDHash {
+  /* fields */
+    let data: (private)
+    let algorithm: __C.SecCSDigestAlgorithm
+  /* methods */
+    func sub_1000184f0 // getter (instance)
+    static func sub_100016cf0 // init
+    func sub_100017180 // method (instance)
+}
+
+enum XPPluginAPI.ConfigProfileType {
+    case System
+    case User
+}
+
+class XPPluginAPI.XPConfigurationProfile {
+  /* fields */
+    let logger: XPPluginAPI.XPLogger
+    var description: String
+    var payloads: [[String : Any]]
+    var profileType: XPPluginAPI.ConfigProfileType
+    var inner: CPProfile
+  /* methods */
+    // <stripped> func description.getter 
+    // <stripped> func description.setter 
+    // <stripped> func description.modify 
+    // <stripped> func payloads.getter 
+    // <stripped> func payloads.setter 
+    // <stripped> func payloads.modify 
+    // <stripped> func profileType.getter 
+    // <stripped> func profileType.setter 
+    // <stripped> func profileType.modify 
+    // <stripped> func inner.getter 
+    // <stripped> func inner.setter 
+    // <stripped> func inner.modify 
+    // <stripped> func method (instance)
+    // <stripped> static func init
+    func sub_100019020 // method (instance)
+}
+
+class XPPluginAPI.XProtectConfigurationProfiles {
+  /* fields */
+    let logger: XPPluginAPI.XPLogger
+  /* methods */
+    func sub_1000195b0 // method (instance)
+    func sub_1000199d0 // method (instance)
+    func sub_10001a240 // method (instance)
+    // <stripped> static func init
+}
+
+enum XPPluginAPI.XPConfigProfileError {
+    case PayloadError: String
+    case QueryError: String
+}
+
+class XPPluginAPI.XPEventDatabaseAPI {
+  /* fields */
+    let inner: XPPluginAPI.XPEventDb
+    let dbURL: (private)
+    let logger: XPPluginAPI.XPLogger
+  /* methods */
+    // <stripped> static func init
+    func sub_10001b2c0 // method (instance)
+    func sub_10001b2e0 // method (instance)
+}
+
+class XPPluginAPI.XPDb {
+  /* fields */
+    let inner: XPDatabase
+  /* methods */
+    // <stripped> func getter (instance)
+    // <stripped> func getter (instance)
+    // <stripped> func getter (instance)
+    // <stripped> func getter (instance)
+    // <stripped> static func init
+    // <stripped> func method (instance)
+}
+
+class XPPluginAPI.XPProcessMetadata: NSObject {
+  /* fields */
+    var executableURL: (private)
+    var cdhash: String
+    var signingID: String
+    var teamID: String
+    var sha256Hash: String
+    var notarized: Swift.Bool
+  /* methods */
+    func executableURL.getter.sub_10001b6a0
+    func executableURL.setter.sub_10001b6c0
+    func executableURL.modify.sub_10001b6e0
+    func cdhash.getter.sub_10001b720
+    func cdhash.setter.sub_10001b740
+    func cdhash.modify.sub_10001b760
+    func signingID.getter.sub_10001b7a0
+    func signingID.setter.sub_10001b7c0
+    func signingID.modify.sub_10001b7e0
+    func teamID.getter.sub_10001b820
+    func teamID.setter.sub_10001b840
+    func teamID.modify.sub_10001b860
+    func sha256Hash.getter.sub_10001b8a0
+    func sha256Hash.setter.sub_10001b8c0
+    func sha256Hash.modify.sub_10001b8e0
+    func notarized.getter.sub_10001b920
+    func notarized.setter.sub_10001b950
+    func notarized.modify.sub_10001b990
+    static func sub_10001b9d0 // init
+}
+
+class XPPluginAPI.BehaviorEvent: NSObject {
+  /* fields */
+    var rule: String
+    var timestamp: (private)
+    var profileHash: (private)
+    var offenderProcess: XPPluginAPI.XPProcessMetadata
+    var responsibleProcess: XPPluginAPI.XPProcessMetadata
+  /* methods */
+    func rule.getter.sub_10001bcd0
+    func rule.setter.sub_10001bd30
+    func rule.modify.sub_10001bda0
+    func timestamp.getter.sub_10001bde0
+    func timestamp.setter.sub_10001be50
+    func timestamp.modify.sub_10001bee0
+    func profileHash.getter.sub_10001bf20
+    func profileHash.setter.sub_10001bf50
+    func profileHash.modify.sub_10001bf90
+    func offenderProcess.getter.sub_10001bfe0
+    func offenderProcess.setter.sub_10001c000
+    func offenderProcess.modify.sub_10001c020
+    func responsibleProcess.getter.sub_10001c060
+    func responsibleProcess.setter.sub_10001c0b0
+    func responsibleProcess.modify.sub_10001c110
+    static func sub_10001c150 // init
+    func sub_10001c5d0 // method (instance)
+}
+
+class XPPluginAPI.XPEventDb: XPDatabase {
+  /* fields */
+    let logger: XPPluginAPI.XPLogger
+  /* methods */
+    // <stripped> func method (instance)
+    func sub_10001cce0 // method (instance)
+    func sub_10001d710 // method (instance)
+    // <stripped> func method (instance)
+    func sub_10001db40 // method (instance)
+}
+
+class XPPluginAPI.XProtectPluginAPIEvents {
+  /* methods */
+    // <stripped> func method (instance)
+    // <stripped> func method (instance)
+    func sub_10001fa90 // method (instance)
+    // <stripped> func method (instance)
+    // <stripped> func method (instance)
+    // <stripped> func method (instance)
+    // <stripped> static func init
+}
+
+class XPPluginAPI.XPEventCoreAnalytics {
+  /* fields */
+    var eventName: String
+    var logger: XPPluginAPI.XPLogger
+    var structuredLogger: XPPluginAPI.XPStructuredLogger
+    var creationDate: (private)
+    var sentDate: (private) ?
+    var eventPayload: [String : NSObject]
+  /* methods */
+    func sub_10001fec0 // getter (instance)
+    // <stripped> func eventName.getter 
+    // <stripped> func eventName.setter 
+    // <stripped> func eventName.modify 
+    // <stripped> func logger.getter 
+    // <stripped> func logger.setter 
+    // <stripped> func logger.modify 
+    // <stripped> func structuredLogger.getter 
+    // <stripped> func structuredLogger.setter 
+    // <stripped> func structuredLogger.modify 
+    // <stripped> func creationDate.getter 
+    // <stripped> func creationDate.setter 
+    // <stripped> func creationDate.modify 
+    // <stripped> func sentDate.getter 
+    // <stripped> func sentDate.setter 
+    // <stripped> func sentDate.modify 
+    // <stripped> func eventPayload.getter 
+    // <stripped> func eventPayload.setter 
+    // <stripped> func eventPayload.modify 
+    func sub_10001ff80 // method (instance)
+    // <stripped> static func init
+}
+
+class XPPluginAPI.BastionPluginBehavioralDetectionEvent: XPPluginAPI.XPEventCoreAnalytics {
+  /* methods */
+    // <stripped> static func init
+}
+
+class XPPluginAPI.BastionPluginCompletionEvent: XPPluginAPI.XPEventCoreAnalytics {
+  /* fields */
+    var status: __C_Synthesized.XProtectPluginCompletionStatus ?
+    var startTime: (private)
+    var endTime: (private) ?
+  /* methods */
+    // <stripped> func status.getter 
+    // <stripped> func status.setter 
+    // <stripped> func status.modify 
+    // <stripped> func startTime.getter 
+    // <stripped> func startTime.setter 
+    // <stripped> func startTime.modify 
+    // <stripped> func endTime.getter 
+    // <stripped> func endTime.setter 
+    // <stripped> func endTime.modify 
+    // <stripped> static func init
+    // <stripped> func method (instance)
+    func sub_100021f40 // method (instance)
+    func sub_1000220d0 // method (instance)
+    func sub_100022730 // method (instance)
+    func sub_100023360 // method (instance)
+}
+
+enum XPPluginAPI.BastionPathEventAction {
+    case PathDelete
+    case SignatureHit
+    case Report
+}
+
+class XPPluginAPI.BastionProvenanceEvent: XPPluginAPI.XPEventCoreAnalytics {
+  /* fields */
+    let provenanceInfo: XPPluginAPI.XPProvenanceInfoProtocol
+    let path: XPPluginAPI.XPPluginPathProtocol
+  /* methods */
+    // <stripped> static func init
+    func sub_100023eb0 // method (instance)
+}
+
+class XPPluginAPI.BastionPathEvent: XPPluginAPI.XPEventCoreAnalytics {
+  /* fields */
+    var path: XPPluginAPI.XPPluginPathProtocol
+    var status: __C_Synthesized.XProtectPluginCompletionStatus ?
+    var action: XPPluginAPI.BastionPathEventAction
+    let provenance: XPPluginAPI.BastionProvenanceEventProtocol ?
+  /* methods */
+    // <stripped> func path.getter 
+    // <stripped> func path.setter 
+    // <stripped> func path.modify 
+    // <stripped> func status.getter 
+    // <stripped> func status.setter 
+    // <stripped> func status.modify 
+    // <stripped> func action.getter 
+    // <stripped> func action.setter 
+    // <stripped> func action.modify 
+    func sub_100024c80 // method (instance)
+    // <stripped> static func init
+    // <stripped> func method (instance)
+    // <stripped> func method (instance)
+    func sub_100025070 // method (instance)
+}
+
+enum XPPluginAPI.BastionProcessEventAction {
+    case Terminate
+    case Report
+}
+
+class XPPluginAPI.BastionProcessEvent: XPPluginAPI.XPEventCoreAnalytics {
+  /* fields */
+    var pathMetric: XPPluginAPI.BastionPathEventProtocol ?
+    var action: XPPluginAPI.BastionProcessEventAction
+    var status: __C_Synthesized.XProtectPluginCompletionStatus ?
+    let process: XPPluginAPI.XPProcessProtocol
+  /* methods */
+    // <stripped> func pathMetric.getter 
+    // <stripped> func pathMetric.setter 
+    // <stripped> func pathMetric.modify 
+    // <stripped> func action.getter 
+    // <stripped> func action.setter 
+    // <stripped> func action.modify 
+    // <stripped> func status.getter 
+    // <stripped> func status.setter 
+    // <stripped> func status.modify 
+    // <stripped> static func init
+    func sub_100027c40 // method (instance)
+    func sub_100027ec0 // method (instance)
+    // <stripped> func method (instance)
+    // <stripped> func method (instance)
+}
+
+enum XPPluginAPI.BastionLaunchDaemonAgentEventAction {
+    case Unload
+    case RemovePlist
+    case RemoveExecutable
+    case Report
+}
+
+class XPPluginAPI.BastionLaunchDaemonAgentEvent: XPPluginAPI.XPEventCoreAnalytics {
+  /* fields */
+    var action: XPPluginAPI.BastionLaunchDaemonAgentEventAction
+    var status: __C_Synthesized.XProtectPluginCompletionStatus ?
+    let service: XPPluginAPI.XProtectLaunchdDaemonAgentProtocol
+    var executablePathEvent: XPPluginAPI.BastionPathEventProtocol ?
+    var plistPathEvent: XPPluginAPI.BastionPathEventProtocol ?
+    var processEvent: XPPluginAPI.BastionProcessEventProtocol ?
+  /* methods */
+    // <stripped> func action.getter 
+    // <stripped> func action.setter 
+    // <stripped> func action.modify 
+    // <stripped> func status.getter 
+    // <stripped> func status.setter 
+    // <stripped> func status.modify 
+    // <stripped> func executablePathEvent.getter 
+    // <stripped> func executablePathEvent.setter 
+    // <stripped> func executablePathEvent.modify 
+    // <stripped> func plistPathEvent.getter 
+    // <stripped> func plistPathEvent.setter 
+    // <stripped> func plistPathEvent.modify 
+    // <stripped> func processEvent.getter 
+    // <stripped> func processEvent.setter 
+    // <stripped> func processEvent.modify 
+    // <stripped> static func init
+    // <stripped> func method (instance)
+    // <stripped> func method (instance)
+    func sub_100029700 // method (instance)
+    func sub_10002a330 // method (instance)
+}
+
+enum XPPluginAPI.BastionPluginCompletionEvent.CodingKeys {
+    case status_message
+    case status_code
+    case execution_duration
+    case caused_by
+}
+
+enum XPPluginAPI.BastionPathEvent.CodingKeys {
+    case path
+    case status
+    case action
+}
+
+enum XPPluginAPI.BastionProcessEvent.CodingKeys {
+    case process
+    case status
+    case action
+}
+
+enum XPPluginAPI.BastionLaunchDaemonAgentEvent.CodingKeys {
+    case service
+    case status
+    case action
+}
+
+class XPPluginAPI.XPAlertWindow {
+  /* fields */
+    let alert: NSAlert
+    var logger: XPPluginAPI.XPLogger
+  /* methods */
+    // <stripped> func logger.getter 
+    // <stripped> func logger.setter 
+    // <stripped> func logger.modify 
+    // <stripped> static func init
+    // <stripped> func method (instance)
+    // <stripped> func method (instance)
+    // <stripped> func method (instance)
+    // <stripped> func method (instance)
+}
+
+enum XPPluginAPI.XPKeychainError {
+    case Success
+    case NotFound
+    case Unknown
+    case MissingAttribute
+    case InternalError
+    case InvalidCertData
+}
+
+class XPPluginAPI.XProtectPluginKeychainAPI {
+  /* fields */
+    let logger: XPPluginAPI.XPLogger
+  /* methods */
+    // <stripped> func method (instance)
+    // <stripped> func method (instance)
+    // <stripped> func method (instance)
+    func sub_10002fcd0 // method (instance)
+    // <stripped> static func init
+}
+
+class XPPluginAPI.XPCertificate {
+  /* fields */
+    var logger: XPPluginAPI.XPLogger
+    var cert: __C.SecCertificate
+  /* methods */
+    func sub_1000301b0 // getter (instance)
+    // <stripped> func logger.getter 
+    // <stripped> func logger.setter 
+    // <stripped> func logger.modify 
+    // <stripped> func cert.getter 
+    // <stripped> func cert.setter 
+    // <stripped> func cert.modify 
+    // <stripped> static func init
+    func sub_10002d6a0 // method (instance)
+    func sub_10002da80 // method (instance)
+    func sub_10002def0 // method (instance)
+    func sub_10002e110 // method (instance)
+    func sub_10002e420 // method (instance)
+    func sub_10002e560 // method (instance)
+    func sub_10002ed00 // method (instance)
+    func sub_10002ee70 // method (instance)
+}
+
+struct XPPluginAPI.XPRegisteredPlugin {
+    var bundleIdentifier: String
+    var url: XPPluginAPI.XPPluginPathProtocol
+}
+
+class XPPluginAPI.XPLaunchServices {
+  /* fields */
+    var logger: XPPluginAPI.XPLogger
+  /* methods */
+    // <stripped> func logger.getter 
+    // <stripped> func logger.setter 
+    // <stripped> func logger.modify 
+    func sub_100031330 // method (instance)
+    func sub_100031890 // method (instance)
+    func sub_100032190 // method (instance)
+    // <stripped> func method (instance)
+    func sub_100032660 // method (instance)
+    // <stripped> func method (instance)
+    // <stripped> static func init
+}
+
+enum XPPluginAPI.XPLaunchdError {
+    case InvalidPlist: String
+    case Internal: String
+    case JobNotLoaded
+}
+
+class XPPluginAPI.XProtectLaunchdAgent: XPPluginAPI.XProtectLaunchdDaemonAgent {}
+
+class XPPluginAPI.XPLaunchDaemonAgentEncoder {
+  /* fields */
+    let label: String
+    var executable_path: String?
+    var arguments: [String]?
+  /* methods */
+    static func sub_100034120 // init
+}
+
+class XPPluginAPI.XProtectLaunchdDaemonAgent {
+  /* fields */
+    var logger: XPPluginAPI.XPLogger
+    var plist_path: XPPluginAPI.XPPluginPathProtocol ?
+    var plist: [String : Any]
+    var service_label: String
+    var exe: XPPluginAPI.XPPluginPathProtocol ?
+    var args: [String]?
+    var pid: (private) ?
+  /* methods */
+    // <stripped> func logger.getter 
+    // <stripped> func logger.setter 
+    // <stripped> func logger.modify 
+    // <stripped> func plist_path.getter 
+    // <stripped> func plist_path.setter 
+    // <stripped> func plist_path.modify 
+    // <stripped> func plist.getter 
+    // <stripped> func plist.setter 
+    // <stripped> func plist.modify 
+    // <stripped> func service_label.getter 
+    // <stripped> func service_label.setter 
+    // <stripped> func service_label.modify 
+    // <stripped> func exe.getter 
+    // <stripped> func exe.setter 
+    // <stripped> func exe.modify 
+    // <stripped> func args.getter 
+    // <stripped> func args.setter 
+    // <stripped> func args.modify 
+    // <stripped> func pid.getter 
+    // <stripped> func pid.setter 
+    // <stripped> func pid.modify 
+    func sub_100034540 // method (instance)
+    func sub_100034960 // method (instance)
+    // <stripped> static func init
+    // <stripped> static func init
+    func sub_100034c40 // method (instance)
+    func sub_100037900 // method (instance)
+    func sub_100034c70 // method (instance)
+    func sub_100034e30 // method (instance)
+    func sub_100034e60 // method (instance)
+    func sub_100034f30 // method (instance)
+    func sub_100035280 // method (instance)
+    func sub_100035610 // method (instance)
+    func sub_1000359a0 // method (instance)
+    func sub_1000379d0 // method (instance)
+    func sub_100035d30 // method (instance)
+    func sub_100035de0 // method (instance)
+    func sub_100036010 // method (instance)
+    func sub_100036050 // method (instance)
+    func sub_100036190 // getter (instance)
+}
+
+class XPPluginAPI.XProtectPluginLaunchdAPI {
+  /* fields */
+    var logger: XPPluginAPI.XPLogger
+  /* methods */
+    // <stripped> func logger.getter 
+    // <stripped> func logger.setter 
+    // <stripped> func logger.modify 
+    func sub_100037fd0 // method (instance)
+    func sub_100037fe0 // method (instance)
+    func sub_100037ff0 // method (instance)
+    func sub_1000387d0 // method (instance)
+    func sub_100039200 // method (instance)
+    // <stripped> static func init
+}
+
+enum XPPluginAPI.XPLaunchDaemonAgentEncoder.CodingKeys {
+    case label
+    case executable_path
+    case arguments
+}
+
+enum XPPluginAPI.MemErr {
+    case KernErr
+    case BadPtr
+    case BadRegion
+    case BadProcessDescription
+}
+
+struct XPPluginAPI.Protection {
+    let rawValue: (private)
+}
+
+class XPPluginAPI.MachPortReference {
+  /* fields */
+    var logger: XPPluginAPI.XPLogger
+    let inner: (private)
+  /* methods */
+    // <stripped> static func init
+}
+
+class XPPluginAPI.XPProcessMemoryAPI {
+  /* methods */
+    func sub_10003b8a0 // method (instance)
+    func sub_10003b990 // method (instance)
+    // <stripped> static func init
+}
+
+struct XPPluginAPI.XPProcessBinaryImage {
+    var displayName: String
+    var path: String
+}
+
+class XPPluginAPI.XPProcessMemoryRegions {
+  /* fields */
+    var logger: XPPluginAPI.XPLogger
+    var count: Int
+    var inner: Array -> XPPluginAPI.XPMemoryRegion
+    var taskPort: XPPluginAPI.MachPortReference
+  /* methods */
+    // <stripped> func logger.getter 
+    // <stripped> func logger.setter 
+    // <stripped> func logger.modify 
+    // <stripped> func count.getter 
+    // <stripped> func count.setter 
+    // <stripped> func count.modify 
+    // <stripped> func inner.getter 
+    // <stripped> func inner.setter 
+    // <stripped> func inner.modify 
+    // <stripped> func taskPort.getter 
+    // <stripped> func taskPort.setter 
+    // <stripped> func taskPort.modify 
+    static func sub_10003b920 // init
+    func sub_10003c7b0 // getter (instance)
+}
+
+class XPPluginAPI.XPMemoryRegion {
+  /* fields */
+    var logger: XPPluginAPI.XPLogger
+    var rangeStart: (private)
+    var rangeEnd: (private)
+    var path: (private) ?
+    var type: String
+    var regionProtections: XPPluginAPI.Protection
+    var processID: (private)
+    var task: XPPluginAPI.MachPortReference
+  /* methods */
+    // <stripped> func logger.getter 
+    // <stripped> func logger.setter 
+    // <stripped> func logger.modify 
+    // <stripped> func rangeStart.getter 
+    // <stripped> func rangeStart.setter 
+    // <stripped> func rangeStart.modify 
+    // <stripped> func rangeEnd.getter 
+    // <stripped> func rangeEnd.setter 
+    // <stripped> func rangeEnd.modify 
+    // <stripped> func path.getter 
+    // <stripped> func path.setter 
+    // <stripped> func path.modify 
+    // <stripped> func type.getter 
+    // <stripped> func type.setter 
+    // <stripped> func type.modify 
+    // <stripped> func regionProtections.getter 
+    // <stripped> func regionProtections.setter 
+    // <stripped> func regionProtections.modify 
+    // <stripped> func processID.getter 
+    // <stripped> func processID.setter 
+    // <stripped> func processID.modify 
+    // <stripped> func task.getter 
+    // <stripped> func task.setter 
+    // <stripped> func task.modify 
+    static func sub_10003c760 // init
+    static func sub_10003d3e0 // init
+    func sub_10003d650 // method (instance)
+    func sub_10003daf0 // method (instance)
+    func sub_10003db20 // method (instance)
+    func sub_10003db30 // method (instance)
+    func sub_10003db40 // method (instance)
+    func sub_10003db60 // method (instance)
+    func sub_10003db80 // method (instance)
+}
+
+enum XPPluginAPI.XPProxyType {
+    case Unknown
+    case HTTP
+    case HTTPS
+    case SOCKS
+    case ProxyAutoConfiguration
+}
+
+class XPPluginAPI.XProtectPluginAPINetworSettingsAPI {
+  /* methods */
+    // <stripped> func method (instance)
+    // <stripped> func method (instance)
+    // <stripped> func method (instance)
+    // <stripped> static func init
+}
+
+class XPPluginAPI.XPNetworkService {
+  /* fields */
+    var prefs: __C.SCPreferences
+    var service: __C.SCNetworkService
+    var logger: XPPluginAPI.XPLogger
+  /* methods */
+    // <stripped> func prefs.getter 
+    // <stripped> func prefs.setter 
+    // <stripped> func prefs.modify 
+    // <stripped> func service.getter 
+    // <stripped> func service.setter 
+    // <stripped> func service.modify 
+    // <stripped> func logger.getter 
+    // <stripped> func logger.setter 
+    // <stripped> func logger.modify 
+    // <stripped> static func init
+    // <stripped> func method (instance)
+    // <stripped> func method (instance)
+    func sub_10003f830 // method (instance)
+    func sub_100040d00 // method (instance)
+}
+
+class XPPluginAPI.XPNetworkInterface {
+  /* fields */
+    var logger: XPPluginAPI.XPLogger
+    var service: XPPluginAPI.XPNetworkService
+    var interface: __C.SCNetworkInterface
+  /* methods */
+    // <stripped> func logger.getter 
+    // <stripped> func logger.setter 
+    // <stripped> func logger.modify 
+    // <stripped> func service.getter 
+    // <stripped> func service.setter 
+    // <stripped> func service.modify 
+    // <stripped> func interface.getter 
+    // <stripped> func interface.setter 
+    // <stripped> func interface.modify 
+    // <stripped> static func init
+    // <stripped> func method (instance)
+}
+
+class XPPluginAPI.XPNetworkServiceConfigurable {
+  /* fields */
+    var logger: XPPluginAPI.XPLogger
+    var service: XPPluginAPI.XPNetworkService
+    var proto: __C.SCNetworkProtocol
+  /* methods */
+    // <stripped> func logger.getter 
+    // <stripped> func logger.setter 
+    // <stripped> func logger.modify 
+    // <stripped> func service.getter 
+    // <stripped> func service.setter 
+    // <stripped> func service.modify 
+    // <stripped> func proto.getter 
+    // <stripped> func proto.setter 
+    // <stripped> func proto.modify 
+    // <stripped> static func init
+    func sub_100041290 // method (instance)
+    func sub_1000416f0 // method (instance)
+}
+
+class XPPluginAPI.XPHTTPProxySetting: XPPluginAPI.XPNetworkServiceConfigurable {
+  /* methods */
+    // <stripped> func method (instance)
+    func sub_100041fc0 // getter (instance)
+    func sub_100042150 // method (instance)
+    func sub_100042170 // method (instance)
+    func sub_100042190 // method (instance)
+    func sub_1000421b0 // method (instance)
+    func sub_1000421d0 // method (instance)
+}
+
+class XPPluginAPI.XPHTTPSProxySetting: XPPluginAPI.XPNetworkServiceConfigurable {
+  /* methods */
+    // <stripped> func method (instance)
+    func sub_1000422e0 // getter (instance)
+    func sub_100042470 // method (instance)
+    func sub_100042710 // method (instance)
+    func sub_1000428b0 // method (instance)
+    func sub_100042a50 // method (instance)
+    func sub_100042b50 // method (instance)
+}
+
+class XPPluginAPI.XPSOCKSProxy: XPPluginAPI.XPNetworkServiceConfigurable {
+  /* methods */
+    func sub_100042db0 // method (instance)
+    func sub_100042dd0 // method (instance)
+    // <stripped> func method (instance)
+    func sub_100042df0 // method (instance)
+    func sub_100042e10 // getter (instance)
+    func sub_100042fa0 // method (instance)
+    func sub_100042fc0 // method (instance)
+}
+
+class XPPluginAPI.XPDNSServer: XPPluginAPI.XPNetworkServiceConfigurable {
+  /* methods */
+    func sub_1000430d0 // getter (instance)
+    func sub_1000432b0 // method (instance)
+    func sub_100043850 // method (instance)
+    func sub_100043ab0 // method (instance)
+}
+
+class XPPluginAPI.XPProxyAutoConfiguration: XPPluginAPI.XPNetworkServiceConfigurable {
+  /* methods */
+    func sub_100043cc0 // method (instance)
+    func sub_100044250 // method (instance)
+    func sub_100044460 // method (instance)
+    func sub_1000447f0 // method (instance)
+    // <stripped> func method (instance)
+    func sub_100044b20 // method (instance)
+    func sub_100044e50 // method (instance)
+    func sub_100044e70 // method (instance)
+    // <stripped> func getter (instance)
+}
+
+class XPPluginAPI.XProtectPluginAPIPath {
+  /* fields */
+    var logger: XPPluginAPI.XPLogger
+    var totalDeletions: UInt
+    var totalFailedDeletions: UInt
+  /* methods */
+    // <stripped> func logger.getter 
+    // <stripped> func logger.setter 
+    // <stripped> func logger.modify 
+    // <stripped> func totalDeletions.getter 
+    // <stripped> func totalDeletions.setter 
+    // <stripped> func totalDeletions.modify 
+    // <stripped> func totalFailedDeletions.getter 
+    // <stripped> func totalFailedDeletions.setter 
+    // <stripped> func totalFailedDeletions.modify 
+    func sub_100045c90 // method (instance)
+    func sub_100045d30 // method (instance)
+    func sub_100045d60 // method (instance)
+    func sub_100045e60 // method (instance)
+    func sub_100046120 // method (instance)
+    func sub_100046380 // method (instance)
+    func sub_100046620 // method (instance)
+    // <stripped> func method (instance)
+    // <stripped> func method (instance)
+    // <stripped> func method (instance)
+    // <stripped> func method (instance)
+    // <stripped> static func init
+}
+
+struct XPPluginAPI.XPImmutableFlags {
+    let rawValue: Int
+}
+
+enum XPPluginAPI.XPPluginFileError {
+    case noSuchPath: String
+    case notAFile: String
+    case notADirectory: String
+    case notABundle: String
+    case noExtendedAttribute: String
+    case APIError: String
+    case DeleteFailed: String
+}
+
+enum XPPluginAPI.XPPluginPathType {
+    case file
+    case directory
+    case nonExistent
+    case unknown
+}
+
+class XPPluginAPI.XPFileDescriptor {
+  /* fields */
+    let fd: (private)
+  /* methods */
+    func sub_100046cb0 // getter (instance)
+    // <stripped> static func init
+    // <stripped> static func init
+    // <stripped> func method (instance)
+}
+
+class XPPluginAPI.XPPluginPathEncoded {
+  /* fields */
+    var path: String
+    var creationDate: (private)
+    var modificationDate: (private)
+  /* methods */
+    // <stripped> static func init
+}
+
+class XPPluginAPI.EagerFileManagerDelegate: NSObject {
+  /* fields */
+    let logger: XPPluginAPI.XPLogger
+    var already_tried: Array -> (private)
+    var failures: Array -> __C_Synthesized.XProtectPluginCompletionStatus
+  /* methods */
+    // <stripped> func already_tried.getter 
+    // <stripped> func already_tried.setter 
+    // <stripped> func already_tried.modify 
+    // <stripped> func failures.getter 
+    // <stripped> func failures.setter 
+    // <stripped> func failures.modify 
+    // <stripped> func method (instance)
+    // <stripped> func method (instance)
+    // <stripped> func method (instance)
+    // <stripped> func method (instance)
+}
+
+class XPPluginAPI.XPPluginPath {
+  /* fields */
+    let logger: XPPluginAPI.XPLogger
+    var url: (private)
+  /* methods */
+    // <stripped> func url.getter 
+    // <stripped> func url.setter 
+    // <stripped> func url.modify 
+    // <stripped> func getter (instance)
+    // <stripped> func method (instance)
+    func sub_100049360 // method (instance)
+    func sub_1000494a0 // method (instance)
+    func sub_100049590 // method (instance)
+    // <stripped> func method (instance)
+    func sub_100049ef0 // method (instance)
+    func sub_10004af40 // method (instance)
+    func sub_10004bf00 // method (instance)
+    func sub_10004c050 // method (instance)
+    func sub_10004c1e0 // method (instance)
+    func sub_10004c200 // method (instance)
+    // <stripped> func method (instance)
+    func sub_10004c350 // method (instance)
+    func sub_10004c660 // method (instance)
+    static func sub_10004c870 // init
+    // <stripped> static func init
+    func sub_10004c9d0 // method (instance)
+    func sub_10004cba0 // method (instance)
+    func sub_10004cd80 // method (instance)
+    // <stripped> func method (instance)
+    func sub_10004d280 // method (instance)
+    // <stripped> static func method
+    static func sub_10004d720 // method
+    // <stripped> func method (instance)
+    func sub_10004e2f0 // method (instance)
+    func sub_10004e8d0 // method (instance)
+    func sub_10004edb0 // method (instance)
+    func sub_10004ef10 // method (instance)
+    func sub_10004f070 // method (instance)
+    func sub_10004f1c0 // method (instance)
+    // <stripped> func method (instance)
+    func sub_10004f310 // method (instance)
+}
+
+enum XPPluginAPI.QuarantineFlag {
+    case download
+    case sandbox
+    case hard
+    case sandboxExec
+    case sandboxDownload
+    case assessmentOK
+    case userApproved
+    case translocate
+    case doNotTranslocate
+    case track
+}
+
+class XPPluginAPI.XPPluginFile: XPPluginAPI.XPPluginPath {
+  /* fields */
+    let logger: XPPluginAPI.XPLogger
+  /* methods */
+    func sub_100050120 // method (instance)
+    func sub_1000504b0 // method (instance)
+    func sub_100050610 // method (instance)
+    func sub_100050da0 // method (instance)
+    func sub_100051210 // method (instance)
+    func sub_100051220 // method (instance)
+    // <stripped> func method (instance)
+}
+
+class XPPluginAPI.XPPluginOverlayFile: XPPluginAPI.XPPluginFile {
+  /* fields */
+    var content: (private) ?
+  /* methods */
+    // <stripped> func content.getter 
+    // <stripped> func content.setter 
+    // <stripped> func content.modify 
+    // <stripped> static func init
+    // <stripped> static func init
+}
+
+class XPPluginAPI.XPPluginDirectory: XPPluginAPI.XPPluginPath {
+  /* fields */
+    let logger: XPPluginAPI.XPLogger
+  /* methods */
+    func sub_100051910 // method (instance)
+    // <stripped> func method (instance)
+    func sub_100052160 // method (instance)
+    func sub_100052730 // method (instance)
+    // <stripped> func method (instance)
+}
+
+class XPPluginAPI.XPPluginBundle: XPPluginAPI.XPPluginDirectory {
+  /* fields */
+    let logger: XPPluginAPI.XPLogger
+    var lazy bundle: NSBundle??
+  /* methods */
+    func bundle.getter.sub_100053000
+    // <stripped> func bundle.setter 
+    // <stripped> func bundle.modify 
+    // <stripped> func method (instance)
+    func sub_100053060 // method (instance)
+    func sub_1000531a0 // method (instance)
+    func sub_1000534f0 // method (instance)
+    func sub_100053840 // method (instance)
+    func sub_1000539e0 // method (instance)
+}
+
+class XPPluginAPI.XPPluginMagic {
+  /* fields */
+    var logger: XPPluginAPI.XPLogger
+  /* methods */
+    // <stripped> func logger.getter 
+    // <stripped> func logger.setter 
+    // <stripped> func logger.modify 
+    func sub_100053e50 // method (instance)
+    // <stripped> func method (instance)
+    func sub_100054290 // method (instance)
+    func sub_1000546d0 // method (instance)
+    // <stripped> func method (instance)
+    // <stripped> func method (instance)
+    // <stripped> func method (instance)
+    // <stripped> func method (instance)
+    // <stripped> static func init
+}
+
+enum XPPluginAPI.XPPluginPathEncoded.CodingKeys {
+    case path
+    case creationDate
+    case modificationDate
+}
+
+enum XPPluginAPI.XPMagicError {
+    case FailedToInit
+    case FailedToLoad
+    case FailedToGetMagic
+}
+
+enum XPPluginAPI.XProtectPluginAPIPath.APIError {
+    case NotARegularFile
+    case NotASymbolicLink
+    case NotADirectory
+    case SymbolicLinkIsCyclic
+    case URLResourceValueAcquire
+    case NotABundle
+}
+
+enum XPPluginAPI.XPProcessError {
+    case InternalError
+    case APIError
+    case NoName
+    case NoSuchProcess
+    case PidCycled
+    case NoPath
+    case NotPermitted
+}
+
+class XPPluginAPI.XProtectPluginProcessAPI {
+  /* fields */
+    let category: String
+    var logger: XPPluginAPI.XPLogger
+  /* methods */
+    // <stripped> func logger.getter 
+    // <stripped> func logger.setter 
+    // <stripped> func logger.modify 
+    func sub_100058c20 // method (instance)
+    func sub_100058d30 // method (instance)
+    func sub_100059040 // method (instance)
+    // <stripped> static func init
+}
+
+class XPPluginAPI.XPProcessEncoder {
+  /* fields */
+    let pid: (private)
+    let name: String
+    var executable_path: String?
+  /* methods */
+    static func sub_100058a00 // init
+}
+
+class XPPluginAPI.XPProcess {
+  /* fields */
+    let logger: XPPluginAPI.XPLogger
+    let pid: (private)
+  /* methods */
+    func sub_100059c20 // getter (instance)
+    // <stripped> static func init
+    func sub_100059da0 // method (instance)
+    // <stripped> func method (instance)
+    func sub_100059fb0 // method (instance)
+    func sub_10005a080 // method (instance)
+    func sub_10005a1c0 // method (instance)
+    func sub_10005a2f0 // method (instance)
+    func sub_10005a500 // method (instance)
+    func sub_10005a670 // method (instance)
+    func sub_10005abf0 // method (instance)
+    func sub_10005b690 // method (instance)
+    func sub_10005bb80 // method (instance)
+    // <stripped> func method (instance)
+    // <stripped> func method (instance)
+    func sub_10005ca20 // method (instance)
+    func sub_10005d0a0 // method (instance)
+    // <stripped> func method (instance)
+}
+
+enum XPPluginAPI.XPProcessEncoder.CodingKeys {
+    case pid
+    case name
+    case executable_path
+}
+
+struct XPPluginAPI.XPProvenanceInfo {
+    var url: (private)
+    var bundleID: String
+    var teamID: String
+    var signingID: String
+    var cdhash: String
+}
+
+enum XPPluginAPI.XPSocketError {
+    case BadType
+    case APIError
+    case InternalError
+}
+
+enum XPPluginAPI.XPSocketType {
+    case Internet
+    case UNIX
+    case Raw
+    case KernelEvent
+    case Other
+}
+
+enum XPPluginAPI.XPSocketProtocolType {
+    case TCP
+    case UDP
+    case UNIX
+    case Other
+}
+
+enum XPPluginAPI.XPSocketState {
+    case Listening
+    case Established
+    case Closed
+    case Unknown
+}
+
+class XPPluginAPI.XPSocket {
+  /* fields */
+    var logger: XPPluginAPI.XPLogger
+    var info: __C.socket_fdinfo
+  /* methods */
+    // <stripped> func logger.getter 
+    // <stripped> func logger.setter 
+    // <stripped> func logger.modify 
+    func sub_10005ef80 // getter (instance)
+    // <stripped> func info.getter 
+    // <stripped> func info.setter 
+    // <stripped> func info.modify 
+    func sub_10005f0a0 // method (instance)
+    // <stripped> func method (instance)
+    // <stripped> static func init
+    func sub_10005f390 // method (instance)
+    func sub_10005f610 // method (instance)
+    func sub_10005fa10 // method (instance)
+}
+
+class XPPluginAPI.XPInternetSocket: XPPluginAPI.XPSocket {
+  /* methods */
+    func sub_100060510 // method (instance)
+    func sub_100060580 // method (instance)
+    func sub_1000605e0 // method (instance)
+    func sub_100060890 // method (instance)
+}
+
+class XPPluginAPI.XPInternetTCPSocket: XPPluginAPI.XPInternetSocket {
+  /* methods */
+    func sub_100060d50 // method (instance)
+}
+
+class XPPluginAPI.XPInternetHostname {
+  /* fields */
+    var logger: XPPluginAPI.XPLogger
+    let hostname: String
+  /* methods */
+    func sub_100060f60 // getter (instance)
+    // <stripped> func logger.getter 
+    // <stripped> func logger.setter 
+    // <stripped> func logger.modify 
+    // <stripped> static func init
+    // <stripped> func method (instance)
+    func sub_100060f90 // method (instance)
+}
+
+class XPPluginAPI.XPInternetAddress {
+  /* fields */
+    var logger: XPPluginAPI.XPLogger
+    let ip: String
+  /* methods */
+    // <stripped> func logger.getter 
+    // <stripped> func logger.setter 
+    // <stripped> func logger.modify 
+    // <stripped> func method (instance)
+    func sub_100061740 // method (instance)
+    func sub_100061eb0 // getter (instance)
+    // <stripped> static func init
+}
+
+class XPPluginAPI.XPUnixSocket: XPPluginAPI.XPSocket {
+  /* methods */
+    func sub_100062140 // method (instance)
+}
+
+class XPPluginAPI.XPObfuscatedString {
+  /* fields */
+    var obfuscated: (private)
+  /* methods */
+    func obfuscated.getter.sub_100062d90
+    func obfuscated.setter.sub_100062dd0
+    func obfuscated.modify.sub_100062e20
+    static func sub_100062e60 // init
+    static func sub_100063010 // init
+    static func sub_100063180 // init
+    func sub_100063220 // method (instance)
+    static func sub_1000632c0 // init
+    static func sub_1000633b0 // init
+}
+
+class XPPluginAPI.XPSystemPreferences {
+  /* fields */
+    let logger: XPPluginAPI.XPLogger
+    var prefs: __C.SCPreferences
+  /* methods */
+    // <stripped> func prefs.getter 
+    // <stripped> func prefs.setter 
+    // <stripped> func prefs.modify 
+    // <stripped> static func init
+    func sub_100064360 // method (instance)
+}
+
+enum XPPluginAPI.XPSystemPreferencesError {
+    case CouldNotLock
+    case NoPermission
+    case APIError
+    case GenericFailure
+}
+
+class XPPluginAPI.XPAPIHelpers {
+  /* fields */
+    let logger: XPPluginAPI.XPLogger
+    var pluginService: XProtectPluginDispatchProtocol
+    let codeSignature: XPPluginAPI.XProtectPluginCodeSignatureAPIProtocol
+    let file: XPPluginAPI.XProtectPluginAPIPath
+    var launchd: XPPluginAPI.XProtectPluginLaunchdAPIProtocol
+    var launchServices: XPPluginAPI.XPLaunchServicesProtocol
+    var yara: XPPluginAPI.XProtectPluginAPIYaraProtocol
+    let process: XPPluginAPI.XProtectPluginProcessAPIProtocol
+    var event: XPPluginAPI.XProtectPluginAPIEventsProtocol
+    let networkSettings: XPPluginAPI.XProtectPluginAPINetworkSettingsProtocol
+    var keychain: XPPluginAPI.XProtectPluginKeychainAPIProtocol
+    var plugin: XPPluginAPI.XProtectPluginProtocol ?
+    var pipeline: (private) ?
+    var connection: XPPluginAPI.VerifiableXPCConnectionProtocol
+    var configProfiles: XPPluginAPI.XProtectConfigProfilesAPIProtocol
+    var lazy alertGUI: XPPluginAPI.XPAlertGUIProtocol ?
+    var memory: XPPluginAPI.XPProcessMemoryAPI
+    var lazy behavioralEvents: XPPluginAPI.XPEventDatabaseAPIProtocol ??
+  /* methods */
+    func pluginService.getter.sub_100066130
+    func pluginService.setter.sub_100066160
+    func pluginService.modify.sub_1000661a0
+    func launchd.getter.sub_100066210
+    func launchd.setter.sub_100066250
+    func launchd.modify.sub_1000662a0
+    func launchServices.getter.sub_1000662d0
+    func launchServices.setter.sub_100066310
+    func launchServices.modify.sub_100066360
+    func yara.getter.sub_100066390
+    func yara.setter.sub_1000663d0
+    func yara.modify.sub_100066430
+    func event.getter.sub_100066490
+    func event.setter.sub_1000664d0
+    func event.modify.sub_100066530
+    func keychain.getter.sub_100066590
+    func keychain.setter.sub_1000665d0
+    func keychain.modify.sub_100066630
+    func plugin.getter.sub_100066670
+    func plugin.setter.sub_1000666b0
+    func plugin.modify.sub_100066710
+    func pipeline.getter.sub_1000667f0
+    func pipeline.setter.sub_100066830
+    func pipeline.modify.sub_100066890
+    func connection.getter.sub_1000668d0
+    func connection.setter.sub_1000668f0
+    func connection.modify.sub_100066910
+    func sub_100066960 // getter (instance)
+    func configProfiles.getter.sub_100066970
+    func configProfiles.setter.sub_1000669e0
+    func configProfiles.modify.sub_100066a50
+    func alertGUI.getter.sub_100066a90
+    func alertGUI.setter.sub_100066bc0
+    func alertGUI.modify.sub_100066c30
+    func memory.getter.sub_100066d60
+    func memory.setter.sub_100066da0
+    func memory.modify.sub_100066df0
+    func behavioralEvents.getter.sub_100066e30
+    func behavioralEvents.setter.sub_100066f60
+    func behavioralEvents.modify.sub_100066fd0
+    // <stripped> static func init
+}
+
+class XPPluginAPI.XPPluginStatusCollator {
+  /* fields */
+    var statuses: Array -> __C_Synthesized.XProtectPluginCompletionStatus
+    var logger: XPPluginAPI.XPLogger
+  /* methods */
+    // <stripped> func statuses.getter 
+    // <stripped> func statuses.setter 
+    // <stripped> func statuses.modify 
+    // <stripped> func logger.getter 
+    // <stripped> func logger.setter 
+    // <stripped> func logger.modify 
+    static func sub_100068610 // init
+    func sub_1000687f0 // method (instance)
+    func sub_1000688c0 // method (instance)
+    func sub_1000688d0 // method (instance)
+    func sub_100069340 // method (instance)
+    func sub_10006a320 // method (instance)
+    func sub_10006a750 // method (instance)
+}
+
+struct XPPluginAPI.XProtectMultiPluginBuilder {}
+
+enum XPPluginAPI.CodingKeys {
+    case code
+    case description
+    case causedBy
+}
+
+class XPPluginAPI.XProtectPluginAPIYara {
+  /* fields */
+    var api: XPPluginAPI.XPAPIHelpersProtocol ?
+  /* methods */
+    func api.getter.sub_100072d80
+    func api.setter.sub_100072db0
+    func api.modify.sub_100072e00
+    func sub_100072ee0 // method (instance)
+    func sub_100072fa0 // method (instance)
+    // <stripped> static func init
+}
+
+enum XPPluginAPI.YaraError {
+    case FailedToCompile: String
+    case FailedToGetCompiledRules
+    case FailedToScan
+    case InternalError
+    case YaraMetaTypeError
+}
+
+class XPPluginAPI.YaraScanResult {
+  /* fields */
+    var matching: Array -> XPPluginAPI.YaraRuleProtocol
+    var nonMatching: Array -> XPPluginAPI.YaraRuleProtocol
+  /* methods */
+    // <stripped> func matching.getter 
+    // <stripped> func matching.setter 
+    // <stripped> func matching.modify 
+    // <stripped> func nonMatching.getter 
+    // <stripped> func nonMatching.setter 
+    // <stripped> func nonMatching.modify 
+    // <stripped> func method (instance)
+    // <stripped> func method (instance)
+    // <stripped> func method (instance)
+    func sub_100073700 // method (instance)
+    func sub_100073970 // method (instance)
+    func sub_100073b80 // getter (instance)
+    // <stripped> static func init
+}
+
+enum XPPluginAPI.YaraMetaType {
+    case NULL
+    case Integer
+    case String
+    case Boolean
+}
+
+class XPPluginAPI.YaraMeta {
+  /* fields */
+    let logger: XPPluginAPI.XPLogger
+    var identifier: String
+    let type: XPPluginAPI.YaraMetaType
+    let intValue: (private) ?
+    let stringValue: String?
+    let boolValue: Bool?
+  /* methods */
+    func sub_100074130 // getter (instance)
+    func identifier.getter.sub_100074250
+    func identifier.setter.sub_100074290
+    func identifier.modify.sub_1000742d0
+    // <stripped> static func init
+    // <stripped> static func init
+    // <stripped> func method (instance)
+    // <stripped> func method (instance)
+    // <stripped> func method (instance)
+}
+
+class XPPluginAPI.YaraRule {
+  /* fields */
+    var identifier: String
+    var metadata: Array -> XPPluginAPI.YaraMeta
+    var tags: [String]
+  /* methods */
+    // <stripped> func identifier.getter 
+    // <stripped> func identifier.setter 
+    // <stripped> func identifier.modify 
+    // <stripped> func metadata.getter 
+    // <stripped> func metadata.setter 
+    // <stripped> func metadata.modify 
+    // <stripped> func tags.getter 
+    // <stripped> func tags.setter 
+    // <stripped> func tags.modify 
+    // <stripped> static func method
+    // <stripped> static func method
+    // <stripped> static func method
+    // <stripped> static func method
+    // <stripped> static func init
+}
+
+class XPPluginAPI.YaraRuleVariable {
+  /* fields */
+    var logger: XPPluginAPI.XPLogger
+    let identifier: String
+    let type: XPPluginAPI.YaraRuleVariable.VariableType
+    var intValue: (private) ?
+    var floatValue: Double?
+    var boolValue: Bool?
+    var stringValue: String?
+  /* methods */
+    // <stripped> func logger.getter 
+    // <stripped> func logger.setter 
+    // <stripped> func logger.modify 
+    func sub_100074d60 // getter (instance)
+    // <stripped> func intValue.getter 
+    // <stripped> func intValue.setter 
+    // <stripped> func intValue.modify 
+    // <stripped> func floatValue.getter 
+    // <stripped> func floatValue.setter 
+    // <stripped> func floatValue.modify 
+    // <stripped> func boolValue.getter 
+    // <stripped> func boolValue.setter 
+    // <stripped> func boolValue.modify 
+    // <stripped> func stringValue.getter 
+    // <stripped> func stringValue.setter 
+    // <stripped> func stringValue.modify 
+    static func sub_100074e20 // init
+    static func sub_100075030 // init
+    static func sub_100075250 // init
+    static func sub_100075480 // init
+    func sub_1000755f0 // method (instance)
+}
+
+enum XPPluginAPI.YaraRuleVariable.VariableType {
+    case Integer
+    case Float
+    case Boolean
+    case String
+}
+
+class XPPluginAPI.YaraMatcher {
+  /* fields */
+    var description: String
+    var compiler: UnsafeMutablePointer -> __C._YR_COMPILER ?
+    var rules: UnsafeMutablePointer -> __C.YR_RULES ?
+    let signpost_compile_name: (private)
+    let callbackV3: (private) _$sAA_SvSgABtXC
+    let callbackV4: (private) _$sSvSg_Aa2BtXC
+  /* methods */
+    // <stripped> func description.getter 
+    // <stripped> func description.setter 
+    // <stripped> func description.modify 
+    // <stripped> func compiler.getter 
+    // <stripped> func compiler.setter 
+    // <stripped> func compiler.modify 
+    // <stripped> func rules.getter 
+    // <stripped> func rules.setter 
+    // <stripped> func rules.modify 
+    // <stripped> static func init
+    func sub_1000782b0 // method (instance)
+    func sub_100078fa0 // method (instance)
+}
+
+class XPPluginAPI.YaraDispatch {
+  /* fields */
+    let logger: XPPluginAPI.XPLogger
+  /* methods */
+    // <stripped> static func init
+    func sub_10007a550 // method (instance)
+    // <stripped> func method (instance)
+    // <stripped> func method (instance)
+}
+
+
+class AdloadPlugin.AdloadPlugin {
+  /* fields */
+    var name: String
+    var version: UInt
+    var statusReports: XPPluginAPI.XPPluginStatusCollator
+  /* methods */
+    func name.getter.sub_10009a630
+    func name.setter.sub_10009a670
+    func name.modify.sub_10009a6b0
+    func version.getter.sub_10009a6f0
+    func version.setter.sub_10009a720
+    func version.modify.sub_10009a750
+    func statusReports.getter.sub_10009a7b0
+    func statusReports.setter.sub_10009a7e0
+    func statusReports.modify.sub_10009a820
+    static func sub_10009a850 // init
+    func sub_10009a920 // method (instance)
+}
+
+struct AdloadPlugin.AdloadRemediator {
+    var statusReports: XPPluginAPI.XPPluginStatusCollator
+    var remediations: RemediationBuilder.Remediations
+}
+
+protocol XPPluginAPI.XProtectPluginCodeSignatureAPIProtocol {
+  /* requirements */
+    // <stripped> func method (instance|func_impl)
+    // <stripped> func method (instance|func_impl)
+    // <stripped> func method (instance|func_impl)
+}
+
+protocol XPPluginAPI.XPCodeSignatureProtocol {
+  /* signature requirements */
+    A: protocol descriptor for CustomStringConvertible // key_arg: true, extra_arg: false, kind: protocol
+  /* requirements */
+    // <stripped> base protocol
+    // <stripped> func method (instance|func_impl)
+    // <stripped> func method (instance|func_impl)
+    // <stripped> func method (instance|func_impl)
+    // <stripped> func method (instance|func_impl)
+    // <stripped> func method (instance|func_impl)
+    // <stripped> func method (instance|func_impl)
+    // <stripped> func method (instance|func_impl)
+    // <stripped> func method (instance|func_impl)
+    // <stripped> func method (instance|func_impl)
+    // <stripped> func method (instance|func_impl)
+    // <stripped> func method (instance|func_impl)
+    // <stripped> func method (instance|func_impl)
+    // <stripped> func method (instance|func_impl)
+    // <stripped> func method (instance|func_impl)
+    // <stripped> func method (instance|func_impl)
+    // <stripped> func method (instance|func_impl)
+    // <stripped> func method (instance|func_impl)
+    // <stripped> func method (instance|func_impl)
+}
+
+protocol XPPluginAPI.XPCodeSigningCertificateProtocol {
+  /* signature requirements */
+    A: XPPluginAPI.XPCertificateProtocol // key_arg: true, extra_arg: false, kind: protocol
+  /* requirements */
+    // <stripped> base protocol
+}
+
+protocol XPPluginAPI.XPConfigurationProfileProtocol {
+  /* signature requirements */
+    A: protocol descriptor for CustomStringConvertible // key_arg: true, extra_arg: false, kind: protocol
+  /* requirements */
+    // <stripped> base protocol
+    // <stripped> func getter (instance|func_impl)
+    // <stripped> func getter (instance|func_impl)
+    // <stripped> func method (instance|func_impl)
+    // <stripped> func method (instance|func_impl)
+}
+
+protocol XPPluginAPI.XProtectConfigProfilesAPIProtocol {
+  /* requirements */
+    // <stripped> func method (instance|func_impl)
+    // <stripped> func method (instance|func_impl)
+}
+
+protocol XPPluginAPI.XPEventDatabaseAPIProtocol {
+  /* requirements */
+    // <stripped> func method (instance|func_impl)
+    // <stripped> func method (instance|func_impl)
+}
+
+protocol XPPluginAPI.XPDatabaseProtocol {
+  /* requirements */
+    // <stripped> func getter (instance|func_impl)
+    // <stripped> func getter (instance|func_impl)
+    // <stripped> func getter (instance|func_impl)
+    // <stripped> func getter (instance|func_impl)
+    // <stripped> static func initializer (func_impl)
+    // <stripped> func method (instance|func_impl)
+}
+
+protocol XPPluginAPI.XPEventDatabaseProtocol {}
+
+protocol XPPluginAPI.XProtectPluginAPIEventsProtocol {
+  /* requirements */
+    // <stripped> func method (instance|func_impl)
+    // <stripped> func method (instance|func_impl)
+    // <stripped> func method (instance|func_impl)
+    // <stripped> func method (instance|func_impl)
+    // <stripped> func method (instance|func_impl)
+    // <stripped> func method (instance|func_impl)
+}
+
+protocol XPPluginAPI.XPEventProtocol {
+  /* requirements */
+    // <stripped> func method (instance|func_impl)
+}
+
+protocol XPPluginAPI.BastionPluginBehavioralDetectionEventProtocol {
+  /* signature requirements */
+    A: XPPluginAPI.XPEventProtocol // key_arg: true, extra_arg: false, kind: protocol
+  /* requirements */
+    // <stripped> base protocol
+    // <stripped> static func initializer (func_impl)
+}
+
+protocol XPPluginAPI.BastionPluginCompletionEventProtocol {
+  /* signature requirements */
+    A: XPPluginAPI.XPEventProtocol // key_arg: true, extra_arg: false, kind: protocol
+  /* requirements */
+    // <stripped> base protocol
+    // <stripped> func method (instance|func_impl)
+    // <stripped> func method (instance|func_impl)
+    // <stripped> func method (instance|func_impl)
+}
+
+protocol XPPluginAPI.BastionPathEventProtocol {
+  /* signature requirements */
+    A: XPPluginAPI.XPEventProtocol // key_arg: true, extra_arg: false, kind: protocol
+  /* requirements */
+    // <stripped> base protocol
+    // <stripped> static func initializer (func_impl)
+    // <stripped> func method (instance|func_impl)
+    // <stripped> func method (instance|func_impl)
+}
+
+protocol XPPluginAPI.BastionProvenanceEventProtocol {
+  /* signature requirements */
+    A: XPPluginAPI.XPEventProtocol // key_arg: true, extra_arg: false, kind: protocol
+  /* requirements */
+    // <stripped> base protocol
+    // <stripped> static func initializer (func_impl)
+}
+
+protocol XPPluginAPI.BastionProcessEventProtocol {
+  /* signature requirements */
+    A: XPPluginAPI.XPEventProtocol // key_arg: true, extra_arg: false, kind: protocol
+  /* requirements */
+    // <stripped> base protocol
+    // <stripped> static func initializer (func_impl)
+    // <stripped> func method (instance|func_impl)
+    // <stripped> func method (instance|func_impl)
+}
+
+protocol XPPluginAPI.BastionLaunchDaemonAgentEventProtocol {
+  /* signature requirements */
+    A: XPPluginAPI.XPEventProtocol // key_arg: true, extra_arg: false, kind: protocol
+  /* requirements */
+    // <stripped> base protocol
+    // <stripped> static func initializer (func_impl)
+    // <stripped> func method (instance|func_impl)
+    // <stripped> func method (instance|func_impl)
+}
+
+protocol XPPluginAPI.XPAlertGUIProtocol {
+  /* requirements */
+    // <stripped> func method (instance|func_impl)
+    // <stripped> func method (instance|func_impl)
+    // <stripped> func method (instance|func_impl)
+}
+
+protocol XPPluginAPI.XProtectPluginKeychainAPIProtocol {
+  /* requirements */
+    // <stripped> func method (instance|func_impl)
+    // <stripped> func method (instance|func_impl)
+    // <stripped> func method (instance|func_impl)
+    // <stripped> func method (instance|func_impl)
+}
+
+protocol XPPluginAPI.XPCertificateProtocol {
+  /* requirements */
+    // <stripped> func method (instance|func_impl)
+    // <stripped> func method (instance|func_impl)
+    // <stripped> func method (instance|func_impl)
+    // <stripped> func method (instance|func_impl)
+    // <stripped> func method (instance|func_impl)
+    // <stripped> func method (instance|func_impl)
+    // <stripped> func method (instance|func_impl)
+}
+
+protocol XPPluginAPI.XPLaunchServicesProtocol {
+  /* requirements */
+    // <stripped> func method (instance|func_impl)
+    // <stripped> func method (instance|func_impl)
+    // <stripped> func method (instance|func_impl)
+}
+
+protocol XPPluginAPI.XProtectLaunchdDaemonAgentProtocol {
+  /* requirements */
+    // <stripped> func method (instance|func_impl)
+    // <stripped> func method (instance|func_impl)
+    // <stripped> func method (instance|func_impl)
+    // <stripped> func method (instance|func_impl)
+    // <stripped> func method (instance|func_impl)
+    // <stripped> func method (instance|func_impl)
+    // <stripped> func method (instance|func_impl)
+    // <stripped> func method (instance|func_impl)
+    // <stripped> func method (instance|func_impl)
+    // <stripped> func method (instance|func_impl)
+    // <stripped> func method (instance|func_impl)
+    // <stripped> func method (instance|func_impl)
+    // <stripped> func method (instance|func_impl)
+    // <stripped> func method (instance|func_impl)
+    // <stripped> func getter (instance|func_impl)
+}
+
+protocol XPPluginAPI.XProtectPluginLaunchdAPIProtocol {
+  /* requirements */
+    // <stripped> func method (instance|func_impl)
+    // <stripped> func method (instance|func_impl)
+    // <stripped> func method (instance|func_impl)
+    // <stripped> func method (instance|func_impl)
+    // <stripped> func method (instance|func_impl)
+}
+
+protocol XPPluginAPI.XPPMemoryRegionViewProtocol {
+  /* requirements */
+    // <stripped> func method (instance|func_impl)
+    // <stripped> func method (instance|func_impl)
+    // <stripped> func method (instance|func_impl)
+    // <stripped> func method (instance|func_impl)
+    // <stripped> func method (instance|func_impl)
+    // <stripped> func method (instance|func_impl)
+    // <stripped> func method (instance|func_impl)
+}
+
+protocol XPPluginAPI.XPPMemoryAPIRegionsProtocol {
+  /* requirements */
+    // <stripped> func method (instance|func_impl)
+}
+
+protocol XPPluginAPI.XPProcessBinaryImageProtocol {
+  /* requirements */
+    // <stripped> func getter (instance|func_impl)
+    // <stripped> func getter (instance|func_impl)
+}
+
+protocol XPPluginAPI.XProtectPluginAPINetworkSettingsProtocol {
+  /* requirements */
+    // <stripped> func method (instance|func_impl)
+    // <stripped> func method (instance|func_impl)
+    // <stripped> func method (instance|func_impl)
+}
+
+protocol XPPluginAPI.XPProxyAutoConfigurationProtocol {
+  /* signature requirements */
+    A: XPPluginAPI.XPProxyProtocol // key_arg: true, extra_arg: false, kind: protocol
+  /* requirements */
+    // <stripped> base protocol
+    // <stripped> func method (instance|func_impl)
+    // <stripped> func method (instance|func_impl)
+}
+
+protocol XPPluginAPI.XPProxyProtocol {
+  /* signature requirements */
+    A: protocol descriptor for CustomStringConvertible // key_arg: true, extra_arg: false, kind: protocol
+  /* requirements */
+    // <stripped> base protocol
+    // <stripped> func method (instance|func_impl)
+    // <stripped> func method (instance|func_impl)
+    // <stripped> func method (instance|func_impl)
+    // <stripped> func method (instance|func_impl)
+    // <stripped> func method (instance|func_impl)
+    // <stripped> func method (instance|func_impl)
+}
+
+protocol XPPluginAPI.XPDNSServerProtocol {
+  /* requirements */
+    // <stripped> func method (instance|func_impl)
+    // <stripped> func method (instance|func_impl)
+    // <stripped> func method (instance|func_impl)
+}
+
+protocol XPPluginAPI.XPPluginPathProtocol {
+  /* signature requirements */
+    A: protocol descriptor for CustomStringConvertible // key_arg: true, extra_arg: false, kind: protocol
+  /* requirements */
+    // <stripped> base protocol
+    // <stripped> func method (instance|func_impl)
+    // <stripped> func method (instance|func_impl)
+    // <stripped> func method (instance|func_impl)
+    // <stripped> func method (instance|func_impl)
+    // <stripped> func method (instance|func_impl)
+    // <stripped> func method (instance|func_impl)
+    // <stripped> func method (instance|func_impl)
+    // <stripped> func method (instance|func_impl)
+    // <stripped> func method (instance|func_impl)
+    // <stripped> func method (instance|func_impl)
+    // <stripped> func method (instance|func_impl)
+    // <stripped> func method (instance|func_impl)
+    // <stripped> func method (instance|func_impl)
+    // <stripped> func method (instance|func_impl)
+    // <stripped> func method (instance|func_impl)
+    // <stripped> func method (instance|func_impl)
+    // <stripped> func method (instance|func_impl)
+    // <stripped> func method (instance|func_impl)
+    // <stripped> func method (instance|func_impl)
+    // <stripped> func method (instance|func_impl)
+    // <stripped> func method (instance|func_impl)
+    // <stripped> func method (instance|func_impl)
+    // <stripped> func method (instance|func_impl)
+    // <stripped> func method (instance|func_impl)
+    // <stripped> static func initializer (func_impl)
+}
+
+protocol XPPluginAPI.XPPluginDirectoryProtocol {
+  /* signature requirements */
+    A: XPPluginAPI.XPPluginPathProtocol // key_arg: true, extra_arg: false, kind: protocol
+  /* requirements */
+    // <stripped> base protocol
+    // <stripped> func method (instance|func_impl)
+    // <stripped> func method (instance|func_impl)
+}
+
+protocol XPPluginAPI.XPPluginBundleProtocol {
+  /* signature requirements */
+    A: XPPluginAPI.XPPluginDirectoryProtocol // key_arg: true, extra_arg: false, kind: protocol
+  /* requirements */
+    // <stripped> base protocol
+    // <stripped> func method (instance|func_impl)
+    // <stripped> func method (instance|func_impl)
+    // <stripped> func method (instance|func_impl)
+    // <stripped> func method (instance|func_impl)
+    // <stripped> func method (instance|func_impl)
+}
+
+protocol XPPluginAPI.XPPluginFileProtocol {
+  /* signature requirements */
+    A: XPPluginAPI.XPPluginPathProtocol // key_arg: true, extra_arg: false, kind: protocol
+  /* requirements */
+    // <stripped> base protocol
+    // <stripped> func method (instance|func_impl)
+    // <stripped> func method (instance|func_impl)
+    // <stripped> func method (instance|func_impl)
+    // <stripped> func method (instance|func_impl)
+    // <stripped> func method (instance|func_impl)
+    // <stripped> func method (instance|func_impl)
+}
+
+protocol XPPluginAPI.XPPluginMagicProtocol {
+  /* requirements */
+    // <stripped> func method (instance|func_impl)
+    // <stripped> func method (instance|func_impl)
+    // <stripped> func method (instance|func_impl)
+    // <stripped> func method (instance|func_impl)
+}
+
+protocol XPPluginAPI.XPFileDescriptorProtocol {
+  /* requirements */
+    // <stripped> func method (instance|func_impl)
+}
+
+protocol XPPluginAPI.XProtectPluginProcessAPIProtocol {
+  /* requirements */
+    // <stripped> func method (instance|func_impl)
+    // <stripped> func method (instance|func_impl)
+}
+
+protocol XPPluginAPI.XPProcessProtocol {
+  /* signature requirements */
+    A: protocol descriptor for CustomStringConvertible // key_arg: true, extra_arg: false, kind: protocol
+  /* requirements */
+    // <stripped> base protocol
+    // <stripped> static func initializer (func_impl)
+    // <stripped> func method (instance|func_impl)
+    // <stripped> func method (instance|func_impl)
+    // <stripped> func method (instance|func_impl)
+    // <stripped> func method (instance|func_impl)
+    // <stripped> func method (instance|func_impl)
+    // <stripped> func method (instance|func_impl)
+    // <stripped> func method (instance|func_impl)
+    // <stripped> func method (instance|func_impl)
+    // <stripped> func method (instance|func_impl)
+    // <stripped> func method (instance|func_impl)
+    // <stripped> func method (instance|func_impl)
+    // <stripped> func method (instance|func_impl)
+    // <stripped> func method (instance|func_impl)
+}
+
+protocol XPPluginAPI.XPProvenanceInfoProtocol {
+  /* requirements */
+    // <stripped> func getter (instance|func_impl)
+    // <stripped> func getter (instance|func_impl)
+    // <stripped> func getter (instance|func_impl)
+    // <stripped> func getter (instance|func_impl)
+    // <stripped> func getter (instance|func_impl)
+}
+
+protocol XPPluginAPI.XPSocketProtocol {
+  /* signature requirements */
+    A: protocol descriptor for CustomStringConvertible // key_arg: true, extra_arg: false, kind: protocol
+  /* requirements */
+    // <stripped> base protocol
+    // <stripped> func method (instance|func_impl)
+    // <stripped> func method (instance|func_impl)
+    // <stripped> func method (instance|func_impl)
+    // <stripped> func method (instance|func_impl)
+    // <stripped> func method (instance|func_impl)
+}
+
+protocol XPPluginAPI.XPInternetSocketProtocol {
+  /* signature requirements */
+    A: XPPluginAPI.XPSocketProtocol // key_arg: true, extra_arg: false, kind: protocol
+  /* requirements */
+    // <stripped> base protocol
+    // <stripped> func method (instance|func_impl)
+    // <stripped> func method (instance|func_impl)
+    // <stripped> func method (instance|func_impl)
+    // <stripped> func method (instance|func_impl)
+}
+
+protocol XPPluginAPI.XPTCPSocketProtocol {
+  /* signature requirements */
+    A: XPPluginAPI.XPInternetSocketProtocol // key_arg: true, extra_arg: false, kind: protocol
+  /* requirements */
+    // <stripped> base protocol
+    // <stripped> func method (instance|func_impl)
+}
+
+protocol XPPluginAPI.XPUnixSocketProtocol {
+  /* signature requirements */
+    A: XPPluginAPI.XPSocketProtocol // key_arg: true, extra_arg: false, kind: protocol
+  /* requirements */
+    // <stripped> base protocol
+    // <stripped> func method (instance|func_impl)
+}
+
+protocol XPPluginAPI.XPInternetHostnameProtocol {
+  /* signature requirements */
+    A: protocol descriptor for CustomStringConvertible // key_arg: true, extra_arg: false, kind: protocol
+  /* requirements */
+    // <stripped> base protocol
+    // <stripped> func method (instance|func_impl)
+    // <stripped> func method (instance|func_impl)
+}
+
+protocol XPPluginAPI.XPInternetAddressProtocol {
+  /* signature requirements */
+    A: protocol descriptor for CustomStringConvertible // key_arg: true, extra_arg: false, kind: protocol
+  /* requirements */
+    // <stripped> base protocol
+    // <stripped> func method (instance|func_impl)
+    // <stripped> func method (instance|func_impl)
+}
+
+protocol XPPluginAPI.VerifiableXPCConnectionProtocol {
+  /* requirements */
+    // <stripped> func method (instance|func_impl)
+    // <stripped> func method (instance|func_impl)
+}
+
+protocol XPPluginAPI.XPAPIHelpersProtocol {
+  /* signature requirements */
+    A: class // key_arg: false, extra_arg: false, kind: layout
+  /* requirements */
+    // <stripped> func getter (instance|func_impl)
+    // <stripped> func setter (instance|func_impl)
+    // <stripped> func modify coroutine (instance|func_impl)
+    // <stripped> func getter (instance|func_impl)
+    // <stripped> func setter (instance|func_impl)
+    // <stripped> func modify coroutine (instance|func_impl)
+    // <stripped> func getter (instance|func_impl)
+    // <stripped> func getter (instance|func_impl)
+    // <stripped> func getter (instance|func_impl)
+    // <stripped> func getter (instance|func_impl)
+    // <stripped> func getter (instance|func_impl)
+    // <stripped> func getter (instance|func_impl)
+    // <stripped> func getter (instance|func_impl)
+    // <stripped> func getter (instance|func_impl)
+    // <stripped> func getter (instance|func_impl)
+    // <stripped> func getter (instance|func_impl)
+    // <stripped> func getter (instance|func_impl)
+    // <stripped> func getter (instance|func_impl)
+    // <stripped> func getter (instance|func_impl)
+    // <stripped> func getter (instance|func_impl)
+    // <stripped> func getter (instance|func_impl)
+    // <stripped> func getter (instance|func_impl)
+}
+
+protocol XPPluginAPI.XProtectPluginProtocol {
+  /* signature requirements */
+    A: class // key_arg: false, extra_arg: false, kind: layout
+    A: protocol descriptor for CustomStringConvertible // key_arg: true, extra_arg: false, kind: protocol
+  /* requirements */
+    // <stripped> base protocol
+    // <stripped> func getter (instance|func_impl)
+    // <stripped> func setter (instance|func_impl)
+    // <stripped> func modify coroutine (instance|func_impl)
+    // <stripped> func getter (instance|func_impl)
+    // <stripped> func method (instance|func_impl)
+}
+
+protocol XPPluginAPI.XProtectPluginAPIYaraProtocol {
+  /* requirements */
+    // <stripped> func getter (instance|func_impl)
+    // <stripped> func setter (instance|func_impl)
+    // <stripped> func modify coroutine (instance|func_impl)
+    // <stripped> func method (instance|func_impl)
+    // <stripped> func method (instance|func_impl)
+}
+
+protocol XPPluginAPI.YaraMatcherProtocol {
+  /* signature requirements */
+    A: protocol descriptor for CustomStringConvertible // key_arg: true, extra_arg: false, kind: protocol
+  /* requirements */
+    // <stripped> base protocol
+    // <stripped> func getter (instance|func_impl)
+    // <stripped> static func initializer (func_impl)
+    // <stripped> func method (instance|func_impl)
+    // <stripped> func method (instance|func_impl)
+}
+
+protocol XPPluginAPI.YaraScanResultProtocol {
+  /* requirements */
+    // <stripped> func method (instance|func_impl)
+    // <stripped> func method (instance|func_impl)
+    // <stripped> func method (instance|func_impl)
+    // <stripped> func method (instance|func_impl)
+    // <stripped> func method (instance|func_impl)
+    // <stripped> func getter (instance|func_impl)
+}
+
+protocol XPPluginAPI.YaraRuleProtocol {
+  /* signature requirements */
+    A: protocol descriptor for CustomStringConvertible // key_arg: true, extra_arg: false, kind: protocol
+  /* requirements */
+    // <stripped> base protocol
+    // <stripped> func getter (instance|func_impl)
+    // <stripped> func getter (instance|func_impl)
+    // <stripped> func getter (instance|func_impl)
+}
+
+protocol XPPluginAPI.YaraMetaProtocol {
+  /* signature requirements */
+    A: protocol descriptor for CustomStringConvertible // key_arg: true, extra_arg: false, kind: protocol
+  /* requirements */
+    // <stripped> base protocol
+    // <stripped> func getter (instance|func_impl)
+    // <stripped> static func initializer (func_impl)
+    // <stripped> func getter (instance|func_impl)
+    // <stripped> func method (instance|func_impl)
+    // <stripped> func method (instance|func_impl)
+    // <stripped> func method (instance|func_impl)
+}
+
+protocol conformance XPPluginAPI.XPLogLevel : protocol descriptor for Equatable {
+  /* resilient witnesses */
+    method descriptor for static Equatable.== infix(_:_:)
+}
+
+protocol conformance XPPluginAPI.XPLogLevel : protocol descriptor for Hashable {
+  /* resilient witnesses */
+    base conformance descriptor for Hashable: Equatable
+    method descriptor for Hashable.hashValue.getter
+    method descriptor for Hashable.hash(into:)
+    method descriptor for Hashable._rawHashValue(seed:)
+}
+
+protocol conformance XPPluginAPI.XPLogLevel : protocol descriptor for RawRepresentable {
+  /* resilient witnesses */
+    associated type descriptor for RawRepresentable.RawValue
+    method descriptor for RawRepresentable.init(rawValue:)
+    method descriptor for RawRepresentable.rawValue.getter
+}
+
+protocol conformance __C_Synthesized.XProtectPluginCompletionStatus : protocol descriptor for Equatable {
+  /* resilient witnesses */
+    method descriptor for static Equatable.== infix(_:_:)
+}
+
+protocol conformance __C_Synthesized.XProtectPluginCompletionStatus : protocol descriptor for Error {
+  /* resilient witnesses */
+    method descriptor for Error._domain.getter
+    method descriptor for Error._code.getter
+    method descriptor for Error._userInfo.getter
+    method descriptor for Error._getEmbeddedNSError()
+}
+
+protocol conformance __C_Synthesized.XProtectPluginCompletionStatus : protocol descriptor for Hashable {
+  /* resilient witnesses */
+    base conformance descriptor for Hashable: Equatable
+    method descriptor for Hashable.hashValue.getter
+    method descriptor for Hashable.hash(into:)
+    method descriptor for Hashable._rawHashValue(seed:)
+}
+
+protocol conformance __C_Synthesized.XProtectPluginCompletionStatus : protocol descriptor for _ObjectiveCBridgeableError {
+  /* resilient witnesses */
+    base conformance descriptor for _ObjectiveCBridgeableError: Error
+    method descriptor for _ObjectiveCBridgeableError.init(_bridgedNSError:)
+}
+
+protocol conformance __C_Synthesized.XProtectPluginCompletionStatus : protocol descriptor for CustomNSError {
+  /* resilient witnesses */
+    base conformance descriptor for CustomNSError: Error
+    method descriptor for static CustomNSError.errorDomain.getter
+    method descriptor for CustomNSError.errorCode.getter
+    method descriptor for CustomNSError.errorUserInfo.getter
+}
+
+protocol conformance __C.Code : protocol descriptor for Equatable {
+  /* resilient witnesses */
+    method descriptor for static Equatable.== infix(_:_:)
+}
+
+protocol conformance __C.Code : protocol descriptor for _ErrorCodeProtocol {
+  /* resilient witnesses */
+    base conformance descriptor for _ErrorCodeProtocol: Equatable
+    associated conformance descriptor for _ErrorCodeProtocol._ErrorCodeProtocol._ErrorType: _BridgedStoredNSError
+    associated type descriptor for _ErrorCodeProtocol._ErrorType
+}
+
+protocol conformance __C.Code : protocol descriptor for RawRepresentable {
+  /* resilient witnesses */
+    associated type descriptor for RawRepresentable.RawValue
+    method descriptor for RawRepresentable.init(rawValue:)
+    method descriptor for RawRepresentable.rawValue.getter
+}
+
+protocol conformance __C.SecCSDigestAlgorithm : protocol descriptor for Hashable {
+  /* resilient witnesses */
+    base conformance descriptor for Hashable: Equatable
+    method descriptor for Hashable.hashValue.getter
+    method descriptor for Hashable.hash(into:)
+    method descriptor for Hashable._rawHashValue(seed:)
+}
+
+protocol conformance __C.SecCSDigestAlgorithm : protocol descriptor for Equatable {
+  /* resilient witnesses */
+    method descriptor for static Equatable.== infix(_:_:)
+}
+
+protocol conformance __C.SecCSDigestAlgorithm : protocol descriptor for RawRepresentable {
+  /* resilient witnesses */
+    associated type descriptor for RawRepresentable.RawValue
+    method descriptor for RawRepresentable.init(rawValue:)
+    method descriptor for RawRepresentable.rawValue.getter
+}
+
+protocol conformance __C_Synthesized.XProtectPluginCompletionStatus : protocol descriptor for _BridgedStoredNSError {
+  /* resilient witnesses */
+    base conformance descriptor for _BridgedStoredNSError: CustomNSError
+    base conformance descriptor for _BridgedStoredNSError: _ObjectiveCBridgeableError
+    base conformance descriptor for _BridgedStoredNSError: Hashable
+    associated conformance descriptor for _BridgedStoredNSError._BridgedStoredNSError.Code: _ErrorCodeProtocol
+    associated conformance descriptor for _BridgedStoredNSError._BridgedStoredNSError.Code: RawRepresentable
+    associated conformance descriptor for _BridgedStoredNSError._BridgedStoredNSError.Code.RawRepresentable.RawValue: FixedWidthInteger
+    associated type descriptor for _BridgedStoredNSError.Code
+    method descriptor for _BridgedStoredNSError._nsError.getter
+    method descriptor for _BridgedStoredNSError.init(_nsError:)
+}
+
+protocol conformance __C.CFString : protocol descriptor for Equatable: CoreFoundation {
+  /* resilient witnesses */
+    method descriptor for static Equatable.== infix(_:_:)
+}
+
+protocol conformance __C.FileAttributeKey : protocol descriptor for _HasCustomAnyHashableRepresentation: Foundation {
+  /* resilient witnesses */
+    method descriptor for _HasCustomAnyHashableRepresentation._toCustomAnyHashable()
+}
+
+protocol conformance __C.FileAttributeKey : protocol descriptor for RawRepresentable: Foundation {
+  /* resilient witnesses */
+    associated type descriptor for RawRepresentable.RawValue
+    method descriptor for RawRepresentable.init(rawValue:)
+    method descriptor for RawRepresentable.rawValue.getter
+}
+
+protocol conformance __C.FileAttributeKey : protocol descriptor for _SwiftNewtypeWrapper: Foundation {
+  /* resilient witnesses */
+    base conformance descriptor for _SwiftNewtypeWrapper: RawRepresentable
+    base conformance descriptor for _SwiftNewtypeWrapper: _HasCustomAnyHashableRepresentation
+}
+
+protocol conformance __C.FileAttributeKey : protocol descriptor for Equatable: Foundation {
+  /* resilient witnesses */
+    method descriptor for static Equatable.== infix(_:_:)
+}
+
+protocol conformance __C.FileAttributeKey : protocol descriptor for _ObjectiveCBridgeable: Foundation {
+  /* resilient witnesses */
+    associated type descriptor for _ObjectiveCBridgeable._ObjectiveCType
+    method descriptor for _ObjectiveCBridgeable._bridgeToObjectiveC()
+    method descriptor for static _ObjectiveCBridgeable._forceBridgeFromObjectiveC(_:result:)
+    method descriptor for static _ObjectiveCBridgeable._conditionallyBridgeFromObjectiveC(_:result:)
+    method descriptor for static _ObjectiveCBridgeable._unconditionallyBridgeFromObjectiveC(_:)
+}
+
+protocol conformance __C.URLResourceKey : protocol descriptor for _HasCustomAnyHashableRepresentation: Foundation {
+  /* resilient witnesses */
+    method descriptor for _HasCustomAnyHashableRepresentation._toCustomAnyHashable()
+}
+
+protocol conformance __C.URLResourceKey : protocol descriptor for RawRepresentable: Foundation {
+  /* resilient witnesses */
+    associated type descriptor for RawRepresentable.RawValue
+    method descriptor for RawRepresentable.init(rawValue:)
+    method descriptor for RawRepresentable.rawValue.getter
+}
+
+protocol conformance __C.URLResourceKey : protocol descriptor for _SwiftNewtypeWrapper: Foundation {
+  /* resilient witnesses */
+    base conformance descriptor for _SwiftNewtypeWrapper: RawRepresentable
+    base conformance descriptor for _SwiftNewtypeWrapper: _HasCustomAnyHashableRepresentation
+}
+
+protocol conformance __C.URLResourceKey : protocol descriptor for Equatable: Foundation {
+  /* resilient witnesses */
+    method descriptor for static Equatable.== infix(_:_:)
+}
+
+protocol conformance __C.URLResourceKey : protocol descriptor for Hashable: Foundation {
+  /* resilient witnesses */
+    base conformance descriptor for Hashable: Equatable
+    method descriptor for Hashable.hashValue.getter
+    method descriptor for Hashable.hash(into:)
+    method descriptor for Hashable._rawHashValue(seed:)
+}
+
+protocol conformance __C.URLResourceKey : protocol descriptor for _ObjectiveCBridgeable: Foundation {
+  /* resilient witnesses */
+    associated type descriptor for _ObjectiveCBridgeable._ObjectiveCType
+    method descriptor for _ObjectiveCBridgeable._bridgeToObjectiveC()
+    method descriptor for static _ObjectiveCBridgeable._forceBridgeFromObjectiveC(_:result:)
+    method descriptor for static _ObjectiveCBridgeable._conditionallyBridgeFromObjectiveC(_:result:)
+    method descriptor for static _ObjectiveCBridgeable._unconditionallyBridgeFromObjectiveC(_:)
+}
+
+protocol conformance __C.FileAttributeKey : protocol descriptor for Hashable: Foundation {
+  /* resilient witnesses */
+    base conformance descriptor for Hashable: Equatable
+    method descriptor for Hashable.hashValue.getter
+    method descriptor for Hashable.hash(into:)
+    method descriptor for Hashable._rawHashValue(seed:)
+}
+
+protocol conformance __C.CFString : protocol descriptor for _CFObject: CoreFoundation {
+  /* resilient witnesses */
+    base conformance descriptor for _CFObject: Hashable
+}
+
+protocol conformance __C.CFString : protocol descriptor for Hashable: CoreFoundation {
+  /* resilient witnesses */
+    base conformance descriptor for Hashable: Equatable
+    method descriptor for Hashable.hashValue.getter
+    method descriptor for Hashable.hash(into:)
+    method descriptor for Hashable._rawHashValue(seed:)
+}
+
+protocol conformance XPPluginAPI.XPCodeSignatureArchitecture : protocol descriptor for Equatable {
+  /* resilient witnesses */
+    method descriptor for static Equatable.== infix(_:_:)
+}
+
+protocol conformance XPPluginAPI.XPCodeSignatureArchitecture : protocol descriptor for Hashable {
+  /* resilient witnesses */
+    base conformance descriptor for Hashable: Equatable
+    method descriptor for Hashable.hashValue.getter
+    method descriptor for Hashable.hash(into:)
+    method descriptor for Hashable._rawHashValue(seed:)
+}
+
+protocol conformance XPPluginAPI.XPCodeSignatureArchitecture : protocol descriptor for RawRepresentable {
+  /* resilient witnesses */
+    associated type descriptor for RawRepresentable.RawValue
+    method descriptor for RawRepresentable.init(rawValue:)
+    method descriptor for RawRepresentable.rawValue.getter
+}
+
+protocol conformance XPPluginAPI.XPCodeSignatureArchitecture : protocol descriptor for CaseIterable {
+  /* resilient witnesses */
+    associated conformance descriptor for CaseIterable.CaseIterable.AllCases: Collection
+    associated type descriptor for CaseIterable.AllCases
+    method descriptor for static CaseIterable.allCases.getter
+}
+
+protocol conformance XPPluginAPI.XPCodeSignatureError : protocol descriptor for Equatable {
+  /* resilient witnesses */
+    method descriptor for static Equatable.== infix(_:_:)
+}
+
+protocol conformance XPPluginAPI.XPCodeSignatureError : protocol descriptor for Hashable {
+  /* resilient witnesses */
+    base conformance descriptor for Hashable: Equatable
+    method descriptor for Hashable.hashValue.getter
+    method descriptor for Hashable.hash(into:)
+    method descriptor for Hashable._rawHashValue(seed:)
+}
+
+protocol conformance XPPluginAPI.XPCodeSignatureError : protocol descriptor for CustomNSError {
+  /* resilient witnesses */
+    base conformance descriptor for CustomNSError: Error
+    method descriptor for static CustomNSError.errorDomain.getter
+    method descriptor for CustomNSError.errorCode.getter
+    method descriptor for CustomNSError.errorUserInfo.getter
+}
+
+protocol conformance XPPluginAPI.XPCodeSignatureError : protocol descriptor for Error {
+  /* resilient witnesses */
+    method descriptor for Error._domain.getter
+    method descriptor for Error._code.getter
+    method descriptor for Error._userInfo.getter
+    method descriptor for Error._getEmbeddedNSError()
+}
+
+protocol conformance XPPluginAPI.XPCDHash : protocol descriptor for CustomStringConvertible {
+  /* resilient witnesses */
+    method descriptor for CustomStringConvertible.description.getter
+}
+
+protocol conformance XPPluginAPI.XPCodeSigningCertificate : XPPluginAPI.XPCodeSigningCertificateProtocol {
+}
+
+protocol conformance XPPluginAPI.XPStaticCodeSignature : protocol descriptor for CustomStringConvertible {
+  /* resilient witnesses */
+    method descriptor for CustomStringConvertible.description.getter
+}
+
+protocol conformance XPPluginAPI.XPStaticCodeSignature : XPPluginAPI.XPCodeSignatureProtocol {
+}
+
+protocol conformance XPPluginAPI.XProtectPluginCodeSignatureAPI : XPPluginAPI.XProtectPluginCodeSignatureAPIProtocol {
+}
+
+protocol conformance XPPluginAPI.ConfigProfileType : protocol descriptor for Equatable {
+  /* resilient witnesses */
+    method descriptor for static Equatable.== infix(_:_:)
+}
+
+protocol conformance XPPluginAPI.ConfigProfileType : protocol descriptor for Hashable {
+  /* resilient witnesses */
+    base conformance descriptor for Hashable: Equatable
+    method descriptor for Hashable.hashValue.getter
+    method descriptor for Hashable.hash(into:)
+    method descriptor for Hashable._rawHashValue(seed:)
+}
+
+protocol conformance XPPluginAPI.XProtectConfigurationProfiles : XPPluginAPI.XProtectConfigProfilesAPIProtocol {
+}
+
+protocol conformance XPPluginAPI.XPConfigurationProfile : protocol descriptor for CustomStringConvertible {
+  /* resilient witnesses */
+    method descriptor for CustomStringConvertible.description.getter
+}
+
+protocol conformance XPPluginAPI.XPConfigurationProfile : XPPluginAPI.XPConfigurationProfileProtocol {
+}
+
+protocol conformance XPPluginAPI.XPConfigProfileError : protocol descriptor for Error {
+  /* resilient witnesses */
+    method descriptor for Error._domain.getter
+    method descriptor for Error._code.getter
+    method descriptor for Error._userInfo.getter
+    method descriptor for Error._getEmbeddedNSError()
+}
+
+protocol conformance XPPluginAPI.XPEventDatabaseAPI : XPPluginAPI.XPEventDatabaseAPIProtocol {
+}
+
+protocol conformance XPPluginAPI.XPEventDb : XPPluginAPI.XPEventDatabaseProtocol {
+}
+
+protocol conformance XPPluginAPI.XPDb : XPPluginAPI.XPDatabaseProtocol {
+}
+
+protocol conformance XPPluginAPI.BastionPathEventAction : protocol descriptor for Equatable {
+  /* resilient witnesses */
+    method descriptor for static Equatable.== infix(_:_:)
+}
+
+protocol conformance XPPluginAPI.BastionPathEventAction : protocol descriptor for Hashable {
+  /* resilient witnesses */
+    base conformance descriptor for Hashable: Equatable
+    method descriptor for Hashable.hashValue.getter
+    method descriptor for Hashable.hash(into:)
+    method descriptor for Hashable._rawHashValue(seed:)
+}
+
+protocol conformance XPPluginAPI.BastionPathEventAction : protocol descriptor for RawRepresentable {
+  /* resilient witnesses */
+    associated type descriptor for RawRepresentable.RawValue
+    method descriptor for RawRepresentable.init(rawValue:)
+    method descriptor for RawRepresentable.rawValue.getter
+}
+
+protocol conformance XPPluginAPI.BastionProcessEventAction : protocol descriptor for Equatable {
+  /* resilient witnesses */
+    method descriptor for static Equatable.== infix(_:_:)
+}
+
+protocol conformance XPPluginAPI.BastionProcessEventAction : protocol descriptor for Hashable {
+  /* resilient witnesses */
+    base conformance descriptor for Hashable: Equatable
+    method descriptor for Hashable.hashValue.getter
+    method descriptor for Hashable.hash(into:)
+    method descriptor for Hashable._rawHashValue(seed:)
+}
+
+protocol conformance XPPluginAPI.BastionProcessEventAction : protocol descriptor for RawRepresentable {
+  /* resilient witnesses */
+    associated type descriptor for RawRepresentable.RawValue
+    method descriptor for RawRepresentable.init(rawValue:)
+    method descriptor for RawRepresentable.rawValue.getter
+}
+
+protocol conformance XPPluginAPI.BastionLaunchDaemonAgentEventAction : protocol descriptor for Equatable {
+  /* resilient witnesses */
+    method descriptor for static Equatable.== infix(_:_:)
+}
+
+protocol conformance XPPluginAPI.BastionLaunchDaemonAgentEventAction : protocol descriptor for Hashable {
+  /* resilient witnesses */
+    base conformance descriptor for Hashable: Equatable
+    method descriptor for Hashable.hashValue.getter
+    method descriptor for Hashable.hash(into:)
+    method descriptor for Hashable._rawHashValue(seed:)
+}
+
+protocol conformance XPPluginAPI.BastionLaunchDaemonAgentEventAction : protocol descriptor for RawRepresentable {
+  /* resilient witnesses */
+    associated type descriptor for RawRepresentable.RawValue
+    method descriptor for RawRepresentable.init(rawValue:)
+    method descriptor for RawRepresentable.rawValue.getter
+}
+
+protocol conformance XPPluginAPI.BastionLaunchDaemonAgentEvent : protocol descriptor for Encodable {
+  /* resilient witnesses */
+    method descriptor for Encodable.encode(to:)
+}
+
+protocol conformance XPPluginAPI.BastionProcessEvent : protocol descriptor for Encodable {
+  /* resilient witnesses */
+    method descriptor for Encodable.encode(to:)
+}
+
+protocol conformance XPPluginAPI.BastionProcessEvent : XPPluginAPI.BastionProcessEventProtocol {
+}
+
+protocol conformance XPPluginAPI.BastionPathEvent : protocol descriptor for Encodable {
+  /* resilient witnesses */
+    method descriptor for Encodable.encode(to:)
+}
+
+protocol conformance XPPluginAPI.BastionPathEvent : XPPluginAPI.BastionPathEventProtocol {
+}
+
+protocol conformance XPPluginAPI.BastionProvenanceEvent : XPPluginAPI.BastionProvenanceEventProtocol {
+}
+
+protocol conformance XPPluginAPI.BastionPluginCompletionEvent : protocol descriptor for Encodable {
+  /* resilient witnesses */
+    method descriptor for Encodable.encode(to:)
+}
+
+protocol conformance XPPluginAPI.BastionPluginCompletionEvent : XPPluginAPI.BastionPluginCompletionEventProtocol {
+}
+
+protocol conformance XPPluginAPI.BastionPluginBehavioralDetectionEvent : XPPluginAPI.BastionPluginBehavioralDetectionEventProtocol {
+}
+
+protocol conformance XPPluginAPI.XPEventCoreAnalytics : protocol descriptor for CustomStringConvertible {
+  /* resilient witnesses */
+    method descriptor for CustomStringConvertible.description.getter
+}
+
+protocol conformance XPPluginAPI.XPEventCoreAnalytics : XPPluginAPI.XPEventProtocol {
+}
+
+protocol conformance XPPluginAPI.XProtectPluginAPIEvents : XPPluginAPI.XProtectPluginAPIEventsProtocol {
+}
+
+protocol conformance XPPluginAPI.BastionLaunchDaemonAgentEvent : XPPluginAPI.BastionLaunchDaemonAgentEventProtocol {
+}
+
+protocol conformance BastionLaunchDaemonAgentEvent.CodingKeys : protocol descriptor for CustomStringConvertible {
+  /* resilient witnesses */
+    method descriptor for CustomStringConvertible.description.getter
+}
+
+protocol conformance BastionLaunchDaemonAgentEvent.CodingKeys : protocol descriptor for CustomDebugStringConvertible {
+  /* resilient witnesses */
+    method descriptor for CustomDebugStringConvertible.debugDescription.getter
+}
+
+protocol conformance BastionLaunchDaemonAgentEvent.CodingKeys : protocol descriptor for RawRepresentable {
+  /* resilient witnesses */
+    associated type descriptor for RawRepresentable.RawValue
+    method descriptor for RawRepresentable.init(rawValue:)
+    method descriptor for RawRepresentable.rawValue.getter
+}
+
+protocol conformance BastionLaunchDaemonAgentEvent.CodingKeys : protocol descriptor for Hashable {
+  /* resilient witnesses */
+    base conformance descriptor for Hashable: Equatable
+    method descriptor for Hashable.hashValue.getter
+    method descriptor for Hashable.hash(into:)
+    method descriptor for Hashable._rawHashValue(seed:)
+}
+
+protocol conformance BastionLaunchDaemonAgentEvent.CodingKeys : protocol descriptor for Equatable {
+  /* resilient witnesses */
+    method descriptor for static Equatable.== infix(_:_:)
+}
+
+protocol conformance BastionProcessEvent.CodingKeys : protocol descriptor for CustomStringConvertible {
+  /* resilient witnesses */
+    method descriptor for CustomStringConvertible.description.getter
+}
+
+protocol conformance BastionProcessEvent.CodingKeys : protocol descriptor for CustomDebugStringConvertible {
+  /* resilient witnesses */
+    method descriptor for CustomDebugStringConvertible.debugDescription.getter
+}
+
+protocol conformance BastionProcessEvent.CodingKeys : protocol descriptor for RawRepresentable {
+  /* resilient witnesses */
+    associated type descriptor for RawRepresentable.RawValue
+    method descriptor for RawRepresentable.init(rawValue:)
+    method descriptor for RawRepresentable.rawValue.getter
+}
+
+protocol conformance BastionProcessEvent.CodingKeys : protocol descriptor for Hashable {
+  /* resilient witnesses */
+    base conformance descriptor for Hashable: Equatable
+    method descriptor for Hashable.hashValue.getter
+    method descriptor for Hashable.hash(into:)
+    method descriptor for Hashable._rawHashValue(seed:)
+}
+
+protocol conformance BastionProcessEvent.CodingKeys : protocol descriptor for Equatable {
+  /* resilient witnesses */
+    method descriptor for static Equatable.== infix(_:_:)
+}
+
+protocol conformance BastionPathEvent.CodingKeys : protocol descriptor for CustomStringConvertible {
+  /* resilient witnesses */
+    method descriptor for CustomStringConvertible.description.getter
+}
+
+protocol conformance BastionPathEvent.CodingKeys : protocol descriptor for CustomDebugStringConvertible {
+  /* resilient witnesses */
+    method descriptor for CustomDebugStringConvertible.debugDescription.getter
+}
+
+protocol conformance BastionPathEvent.CodingKeys : protocol descriptor for RawRepresentable {
+  /* resilient witnesses */
+    associated type descriptor for RawRepresentable.RawValue
+    method descriptor for RawRepresentable.init(rawValue:)
+    method descriptor for RawRepresentable.rawValue.getter
+}
+
+protocol conformance BastionPathEvent.CodingKeys : protocol descriptor for Hashable {
+  /* resilient witnesses */
+    base conformance descriptor for Hashable: Equatable
+    method descriptor for Hashable.hashValue.getter
+    method descriptor for Hashable.hash(into:)
+    method descriptor for Hashable._rawHashValue(seed:)
+}
+
+protocol conformance BastionPathEvent.CodingKeys : protocol descriptor for Equatable {
+  /* resilient witnesses */
+    method descriptor for static Equatable.== infix(_:_:)
+}
+
+protocol conformance BastionPluginCompletionEvent.CodingKeys : protocol descriptor for CustomStringConvertible {
+  /* resilient witnesses */
+    method descriptor for CustomStringConvertible.description.getter
+}
+
+protocol conformance BastionPluginCompletionEvent.CodingKeys : protocol descriptor for CustomDebugStringConvertible {
+  /* resilient witnesses */
+    method descriptor for CustomDebugStringConvertible.debugDescription.getter
+}
+
+protocol conformance BastionPluginCompletionEvent.CodingKeys : protocol descriptor for RawRepresentable {
+  /* resilient witnesses */
+    associated type descriptor for RawRepresentable.RawValue
+    method descriptor for RawRepresentable.init(rawValue:)
+    method descriptor for RawRepresentable.rawValue.getter
+}
+
+protocol conformance BastionPluginCompletionEvent.CodingKeys : protocol descriptor for Hashable {
+  /* resilient witnesses */
+    base conformance descriptor for Hashable: Equatable
+    method descriptor for Hashable.hashValue.getter
+    method descriptor for Hashable.hash(into:)
+    method descriptor for Hashable._rawHashValue(seed:)
+}
+
+protocol conformance BastionPluginCompletionEvent.CodingKeys : protocol descriptor for Equatable {
+  /* resilient witnesses */
+    method descriptor for static Equatable.== infix(_:_:)
+}
+
+protocol conformance BastionPluginCompletionEvent.CodingKeys : protocol descriptor for CodingKey {
+  /* resilient witnesses */
+    base conformance descriptor for CodingKey: CustomDebugStringConvertible
+    base conformance descriptor for CodingKey: CustomStringConvertible
+    method descriptor for CodingKey.stringValue.getter
+    method descriptor for CodingKey.init(stringValue:)
+    method descriptor for CodingKey.intValue.getter
+    method descriptor for CodingKey.init(intValue:)
+}
+
+protocol conformance BastionPathEvent.CodingKeys : protocol descriptor for CodingKey {
+  /* resilient witnesses */
+    base conformance descriptor for CodingKey: CustomDebugStringConvertible
+    base conformance descriptor for CodingKey: CustomStringConvertible
+    method descriptor for CodingKey.stringValue.getter
+    method descriptor for CodingKey.init(stringValue:)
+    method descriptor for CodingKey.intValue.getter
+    method descriptor for CodingKey.init(intValue:)
+}
+
+protocol conformance BastionProcessEvent.CodingKeys : protocol descriptor for CodingKey {
+  /* resilient witnesses */
+    base conformance descriptor for CodingKey: CustomDebugStringConvertible
+    base conformance descriptor for CodingKey: CustomStringConvertible
+    method descriptor for CodingKey.stringValue.getter
+    method descriptor for CodingKey.init(stringValue:)
+    method descriptor for CodingKey.intValue.getter
+    method descriptor for CodingKey.init(intValue:)
+}
+
+protocol conformance BastionLaunchDaemonAgentEvent.CodingKeys : protocol descriptor for CodingKey {
+  /* resilient witnesses */
+    base conformance descriptor for CodingKey: CustomDebugStringConvertible
+    base conformance descriptor for CodingKey: CustomStringConvertible
+    method descriptor for CodingKey.stringValue.getter
+    method descriptor for CodingKey.init(stringValue:)
+    method descriptor for CodingKey.intValue.getter
+    method descriptor for CodingKey.init(intValue:)
+}
+
+protocol conformance XPPluginAPI.XPAlertWindow : XPPluginAPI.XPAlertGUIProtocol {
+}
+
+protocol conformance XPPluginAPI.XPKeychainError : protocol descriptor for Equatable {
+  /* resilient witnesses */
+    method descriptor for static Equatable.== infix(_:_:)
+}
+
+protocol conformance XPPluginAPI.XPKeychainError : protocol descriptor for Hashable {
+  /* resilient witnesses */
+    base conformance descriptor for Hashable: Equatable
+    method descriptor for Hashable.hashValue.getter
+    method descriptor for Hashable.hash(into:)
+    method descriptor for Hashable._rawHashValue(seed:)
+}
+
+protocol conformance XPPluginAPI.XPKeychainError : protocol descriptor for Error {
+  /* resilient witnesses */
+    method descriptor for Error._domain.getter
+    method descriptor for Error._code.getter
+    method descriptor for Error._userInfo.getter
+    method descriptor for Error._getEmbeddedNSError()
+}
+
+protocol conformance XPPluginAPI.XProtectPluginKeychainAPI : XPPluginAPI.XProtectPluginKeychainAPIProtocol {
+}
+
+protocol conformance XPPluginAPI.XPCertificate : protocol descriptor for CustomStringConvertible {
+  /* resilient witnesses */
+    method descriptor for CustomStringConvertible.description.getter
+}
+
+protocol conformance XPPluginAPI.XPCertificate : XPPluginAPI.XPCertificateProtocol {
+}
+
+protocol conformance XPPluginAPI.XPLaunchServices : XPPluginAPI.XPLaunchServicesProtocol {
+}
+
+protocol conformance XPPluginAPI.XPLaunchdError : protocol descriptor for Error {
+  /* resilient witnesses */
+    method descriptor for Error._domain.getter
+    method descriptor for Error._code.getter
+    method descriptor for Error._userInfo.getter
+    method descriptor for Error._getEmbeddedNSError()
+}
+
+protocol conformance XPPluginAPI.XPLaunchDaemonAgentEncoder : protocol descriptor for Encodable {
+  /* resilient witnesses */
+    method descriptor for Encodable.encode(to:)
+}
+
+protocol conformance XPPluginAPI.XProtectLaunchdDaemonAgent : XPPluginAPI.XProtectLaunchdDaemonAgentProtocol {
+}
+
+protocol conformance XPPluginAPI.XProtectPluginLaunchdAPI : XPPluginAPI.XProtectPluginLaunchdAPIProtocol {
+}
+
+protocol conformance CodingKeys : protocol descriptor for CustomStringConvertible {
+  /* resilient witnesses */
+    method descriptor for CustomStringConvertible.description.getter
+}
+
+protocol conformance CodingKeys : protocol descriptor for CustomDebugStringConvertible {
+  /* resilient witnesses */
+    method descriptor for CustomDebugStringConvertible.debugDescription.getter
+}
+
+protocol conformance CodingKeys : protocol descriptor for Hashable {
+  /* resilient witnesses */
+    base conformance descriptor for Hashable: Equatable
+    method descriptor for Hashable.hashValue.getter
+    method descriptor for Hashable.hash(into:)
+    method descriptor for Hashable._rawHashValue(seed:)
+}
+
+protocol conformance CodingKeys : protocol descriptor for Equatable {
+  /* resilient witnesses */
+    method descriptor for static Equatable.== infix(_:_:)
+}
+
+protocol conformance CodingKeys : protocol descriptor for CodingKey {
+  /* resilient witnesses */
+    base conformance descriptor for CodingKey: CustomDebugStringConvertible
+    base conformance descriptor for CodingKey: CustomStringConvertible
+    method descriptor for CodingKey.stringValue.getter
+    method descriptor for CodingKey.init(stringValue:)
+    method descriptor for CodingKey.intValue.getter
+    method descriptor for CodingKey.init(intValue:)
+}
+
+protocol conformance XPPluginAPI.MemErr : protocol descriptor for Equatable {
+  /* resilient witnesses */
+    method descriptor for static Equatable.== infix(_:_:)
+}
+
+protocol conformance XPPluginAPI.MemErr : protocol descriptor for Hashable {
+  /* resilient witnesses */
+    base conformance descriptor for Hashable: Equatable
+    method descriptor for Hashable.hashValue.getter
+    method descriptor for Hashable.hash(into:)
+    method descriptor for Hashable._rawHashValue(seed:)
+}
+
+protocol conformance XPPluginAPI.MemErr : protocol descriptor for Error {
+  /* resilient witnesses */
+    method descriptor for Error._domain.getter
+    method descriptor for Error._code.getter
+    method descriptor for Error._userInfo.getter
+    method descriptor for Error._getEmbeddedNSError()
+}
+
+protocol conformance XPPluginAPI.Protection : protocol descriptor for OptionSet {
+  /* resilient witnesses */
+    base conformance descriptor for OptionSet: RawRepresentable
+    base conformance descriptor for OptionSet: SetAlgebra
+    method descriptor for OptionSet.init(rawValue:)
+}
+
+protocol conformance XPPluginAPI.Protection : protocol descriptor for RawRepresentable {
+  /* resilient witnesses */
+    associated type descriptor for RawRepresentable.RawValue
+    method descriptor for RawRepresentable.init(rawValue:)
+    method descriptor for RawRepresentable.rawValue.getter
+}
+
+protocol conformance XPPluginAPI.Protection : protocol descriptor for SetAlgebra {
+  /* resilient witnesses */
+    base conformance descriptor for SetAlgebra: Equatable
+    base conformance descriptor for SetAlgebra: ExpressibleByArrayLiteral
+    associated type descriptor for SetAlgebra.Element
+    method descriptor for SetAlgebra.init()
+    method descriptor for SetAlgebra.contains(_:)
+    method descriptor for SetAlgebra.union(_:)
+    method descriptor for SetAlgebra.intersection(_:)
+    method descriptor for SetAlgebra.symmetricDifference(_:)
+    method descriptor for SetAlgebra.insert(_:)
+    method descriptor for SetAlgebra.remove(_:)
+    method descriptor for SetAlgebra.update(with:)
+    method descriptor for SetAlgebra.formUnion(_:)
+    method descriptor for SetAlgebra.formIntersection(_:)
+    method descriptor for SetAlgebra.formSymmetricDifference(_:)
+    method descriptor for SetAlgebra.subtracting(_:)
+    method descriptor for SetAlgebra.isSubset(of:)
+    method descriptor for SetAlgebra.isDisjoint(with:)
+    method descriptor for SetAlgebra.isSuperset(of:)
+    method descriptor for SetAlgebra.isEmpty.getter
+    method descriptor for SetAlgebra.init<A>(_:)
+    method descriptor for SetAlgebra.subtract(_:)
+}
+
+protocol conformance XPPluginAPI.Protection : protocol descriptor for Equatable {
+  /* resilient witnesses */
+    method descriptor for static Equatable.== infix(_:_:)
+}
+
+protocol conformance XPPluginAPI.Protection : protocol descriptor for ExpressibleByArrayLiteral {
+  /* resilient witnesses */
+    associated type descriptor for ExpressibleByArrayLiteral.ArrayLiteralElement
+    method descriptor for ExpressibleByArrayLiteral.init(arrayLiteral:)
+}
+
+protocol conformance XPPluginAPI.Protection : protocol descriptor for CustomStringConvertible {
+  /* resilient witnesses */
+    method descriptor for CustomStringConvertible.description.getter
+}
+
+protocol conformance XPPluginAPI.XPProcessBinaryImage : XPPluginAPI.XPProcessBinaryImageProtocol {
+}
+
+protocol conformance XPPluginAPI.XPProcessMemoryRegions : protocol descriptor for Sequence {
+  /* resilient witnesses */
+    associated conformance descriptor for Sequence.Sequence.Iterator: IteratorProtocol
+    associated type descriptor for Sequence.Element
+    associated type descriptor for Sequence.Iterator
+    method descriptor for Sequence.makeIterator()
+    method descriptor for Sequence.underestimatedCount.getter
+    method descriptor for Sequence._customContainsEquatableElement(_:)
+    method descriptor for Sequence._copyToContiguousArray()
+    method descriptor for Sequence._copyContents(initializing:)
+    method descriptor for Sequence.withContiguousStorageIfAvailable<A>(_:)
+}
+
+protocol conformance XPPluginAPI.XPProcessMemoryRegions : protocol descriptor for IteratorProtocol {
+  /* resilient witnesses */
+    associated type descriptor for IteratorProtocol.Element
+    method descriptor for IteratorProtocol.next()
+}
+
+protocol conformance XPPluginAPI.XPProcessMemoryRegions : XPPluginAPI.XPPMemoryAPIRegionsProtocol {
+}
+
+protocol conformance XPPluginAPI.XPMemoryRegion : XPPluginAPI.XPPMemoryRegionViewProtocol {
+}
+
+protocol conformance XPPluginAPI.XPProxyType : protocol descriptor for Equatable {
+  /* resilient witnesses */
+    method descriptor for static Equatable.== infix(_:_:)
+}
+
+protocol conformance XPPluginAPI.XPProxyType : protocol descriptor for Hashable {
+  /* resilient witnesses */
+    base conformance descriptor for Hashable: Equatable
+    method descriptor for Hashable.hashValue.getter
+    method descriptor for Hashable.hash(into:)
+    method descriptor for Hashable._rawHashValue(seed:)
+}
+
+protocol conformance XPPluginAPI.XPProxyAutoConfiguration : protocol descriptor for CustomStringConvertible {
+  /* resilient witnesses */
+    method descriptor for CustomStringConvertible.description.getter
+}
+
+protocol conformance XPPluginAPI.XPProxyAutoConfiguration : XPPluginAPI.XPProxyProtocol {
+}
+
+protocol conformance XPPluginAPI.XPProxyAutoConfiguration : XPPluginAPI.XPProxyAutoConfigurationProtocol {
+}
+
+protocol conformance XPPluginAPI.XPDNSServer : protocol descriptor for CustomStringConvertible {
+  /* resilient witnesses */
+    method descriptor for CustomStringConvertible.description.getter
+}
+
+protocol conformance XPPluginAPI.XPDNSServer : XPPluginAPI.XPDNSServerProtocol {
+}
+
+protocol conformance XPPluginAPI.XPSOCKSProxy : protocol descriptor for CustomStringConvertible {
+  /* resilient witnesses */
+    method descriptor for CustomStringConvertible.description.getter
+}
+
+protocol conformance XPPluginAPI.XPSOCKSProxy : XPPluginAPI.XPProxyProtocol {
+}
+
+protocol conformance XPPluginAPI.XPHTTPSProxySetting : protocol descriptor for CustomStringConvertible {
+  /* resilient witnesses */
+    method descriptor for CustomStringConvertible.description.getter
+}
+
+protocol conformance XPPluginAPI.XPHTTPSProxySetting : XPPluginAPI.XPProxyProtocol {
+}
+
+protocol conformance XPPluginAPI.XPHTTPProxySetting : protocol descriptor for CustomStringConvertible {
+  /* resilient witnesses */
+    method descriptor for CustomStringConvertible.description.getter
+}
+
+protocol conformance XPPluginAPI.XPHTTPProxySetting : XPPluginAPI.XPProxyProtocol {
+}
+
+protocol conformance XPPluginAPI.XProtectPluginAPINetworSettingsAPI : XPPluginAPI.XProtectPluginAPINetworkSettingsProtocol {
+}
+
+protocol conformance XPPluginAPI.XPImmutableFlags : protocol descriptor for OptionSet {
+  /* resilient witnesses */
+    base conformance descriptor for OptionSet: RawRepresentable
+    base conformance descriptor for OptionSet: SetAlgebra
+    method descriptor for OptionSet.init(rawValue:)
+}
+
+protocol conformance XPPluginAPI.XPImmutableFlags : protocol descriptor for RawRepresentable {
+  /* resilient witnesses */
+    associated type descriptor for RawRepresentable.RawValue
+    method descriptor for RawRepresentable.init(rawValue:)
+    method descriptor for RawRepresentable.rawValue.getter
+}
+
+protocol conformance XPPluginAPI.XPImmutableFlags : protocol descriptor for SetAlgebra {
+  /* resilient witnesses */
+    base conformance descriptor for SetAlgebra: Equatable
+    base conformance descriptor for SetAlgebra: ExpressibleByArrayLiteral
+    associated type descriptor for SetAlgebra.Element
+    method descriptor for SetAlgebra.init()
+    method descriptor for SetAlgebra.contains(_:)
+    method descriptor for SetAlgebra.union(_:)
+    method descriptor for SetAlgebra.intersection(_:)
+    method descriptor for SetAlgebra.symmetricDifference(_:)
+    method descriptor for SetAlgebra.insert(_:)
+    method descriptor for SetAlgebra.remove(_:)
+    method descriptor for SetAlgebra.update(with:)
+    method descriptor for SetAlgebra.formUnion(_:)
+    method descriptor for SetAlgebra.formIntersection(_:)
+    method descriptor for SetAlgebra.formSymmetricDifference(_:)
+    method descriptor for SetAlgebra.subtracting(_:)
+    method descriptor for SetAlgebra.isSubset(of:)
+    method descriptor for SetAlgebra.isDisjoint(with:)
+    method descriptor for SetAlgebra.isSuperset(of:)
+    method descriptor for SetAlgebra.isEmpty.getter
+    method descriptor for SetAlgebra.init<A>(_:)
+    method descriptor for SetAlgebra.subtract(_:)
+}
+
+protocol conformance XPPluginAPI.XPImmutableFlags : protocol descriptor for Equatable {
+  /* resilient witnesses */
+    method descriptor for static Equatable.== infix(_:_:)
+}
+
+protocol conformance XPPluginAPI.XPImmutableFlags : protocol descriptor for ExpressibleByArrayLiteral {
+  /* resilient witnesses */
+    associated type descriptor for ExpressibleByArrayLiteral.ArrayLiteralElement
+    method descriptor for ExpressibleByArrayLiteral.init(arrayLiteral:)
+}
+
+protocol conformance XPPluginAPI.XPPluginFileError : protocol descriptor for CustomNSError {
+  /* resilient witnesses */
+    base conformance descriptor for CustomNSError: Error
+    method descriptor for static CustomNSError.errorDomain.getter
+    method descriptor for CustomNSError.errorCode.getter
+    method descriptor for CustomNSError.errorUserInfo.getter
+}
+
+protocol conformance XPPluginAPI.XPPluginFileError : protocol descriptor for Error {
+  /* resilient witnesses */
+    method descriptor for Error._domain.getter
+    method descriptor for Error._code.getter
+    method descriptor for Error._userInfo.getter
+    method descriptor for Error._getEmbeddedNSError()
+}
+
+protocol conformance XPPluginAPI.XPPluginPathType : protocol descriptor for Equatable {
+  /* resilient witnesses */
+    method descriptor for static Equatable.== infix(_:_:)
+}
+
+protocol conformance XPPluginAPI.XPPluginPathType : protocol descriptor for Hashable {
+  /* resilient witnesses */
+    base conformance descriptor for Hashable: Equatable
+    method descriptor for Hashable.hashValue.getter
+    method descriptor for Hashable.hash(into:)
+    method descriptor for Hashable._rawHashValue(seed:)
+}
+
+protocol conformance XPPluginAPI.XPPluginPathEncoded : protocol descriptor for Encodable {
+  /* resilient witnesses */
+    method descriptor for Encodable.encode(to:)
+}
+
+protocol conformance XPPluginAPI.QuarantineFlag : protocol descriptor for Equatable {
+  /* resilient witnesses */
+    method descriptor for static Equatable.== infix(_:_:)
+}
+
+protocol conformance XPPluginAPI.QuarantineFlag : protocol descriptor for Hashable {
+  /* resilient witnesses */
+    base conformance descriptor for Hashable: Equatable
+    method descriptor for Hashable.hashValue.getter
+    method descriptor for Hashable.hash(into:)
+    method descriptor for Hashable._rawHashValue(seed:)
+}
+
+protocol conformance XPPluginAPI.QuarantineFlag : protocol descriptor for RawRepresentable {
+  /* resilient witnesses */
+    associated type descriptor for RawRepresentable.RawValue
+    method descriptor for RawRepresentable.init(rawValue:)
+    method descriptor for RawRepresentable.rawValue.getter
+}
+
+protocol conformance XPPluginPathEncoded.CodingKeys : protocol descriptor for CustomStringConvertible {
+  /* resilient witnesses */
+    method descriptor for CustomStringConvertible.description.getter
+}
+
+protocol conformance XPPluginPathEncoded.CodingKeys : protocol descriptor for CustomDebugStringConvertible {
+  /* resilient witnesses */
+    method descriptor for CustomDebugStringConvertible.debugDescription.getter
+}
+
+protocol conformance XPPluginPathEncoded.CodingKeys : protocol descriptor for RawRepresentable {
+  /* resilient witnesses */
+    associated type descriptor for RawRepresentable.RawValue
+    method descriptor for RawRepresentable.init(rawValue:)
+    method descriptor for RawRepresentable.rawValue.getter
+}
+
+protocol conformance XPPluginPathEncoded.CodingKeys : protocol descriptor for Hashable {
+  /* resilient witnesses */
+    base conformance descriptor for Hashable: Equatable
+    method descriptor for Hashable.hashValue.getter
+    method descriptor for Hashable.hash(into:)
+    method descriptor for Hashable._rawHashValue(seed:)
+}
+
+protocol conformance XPPluginPathEncoded.CodingKeys : protocol descriptor for Equatable {
+  /* resilient witnesses */
+    method descriptor for static Equatable.== infix(_:_:)
+}
+
+protocol conformance XPPluginAPI.XPPluginBundle : XPPluginAPI.XPPluginBundleProtocol {
+}
+
+protocol conformance XPPluginAPI.XPPluginDirectory : XPPluginAPI.XPPluginDirectoryProtocol {
+}
+
+protocol conformance XPPluginAPI.XPPluginPath : protocol descriptor for CustomStringConvertible {
+  /* resilient witnesses */
+    method descriptor for CustomStringConvertible.description.getter
+}
+
+protocol conformance XPPluginAPI.XPFileDescriptor : protocol descriptor for CustomStringConvertible {
+  /* resilient witnesses */
+    method descriptor for CustomStringConvertible.description.getter
+}
+
+protocol conformance XPPluginAPI.XPFileDescriptor : XPPluginAPI.XPFileDescriptorProtocol {
+}
+
+protocol conformance XProtectPluginAPIPath.APIError : protocol descriptor for CustomStringConvertible {
+  /* resilient witnesses */
+    method descriptor for CustomStringConvertible.description.getter
+}
+
+protocol conformance XPPluginPathEncoded.CodingKeys : protocol descriptor for CodingKey {
+  /* resilient witnesses */
+    base conformance descriptor for CodingKey: CustomDebugStringConvertible
+    base conformance descriptor for CodingKey: CustomStringConvertible
+    method descriptor for CodingKey.stringValue.getter
+    method descriptor for CodingKey.init(stringValue:)
+    method descriptor for CodingKey.intValue.getter
+    method descriptor for CodingKey.init(intValue:)
+}
+
+protocol conformance XPPluginAPI.XPPluginFile : XPPluginAPI.XPPluginFileProtocol {
+}
+
+protocol conformance XPPluginAPI.XPPluginMagic : XPPluginAPI.XPPluginMagicProtocol {
+}
+
+protocol conformance XPPluginAPI.XPPluginPath : XPPluginAPI.XPPluginPathProtocol {
+}
+
+protocol conformance XProtectPluginAPIPath.APIError : protocol descriptor for Hashable {
+  /* resilient witnesses */
+    base conformance descriptor for Hashable: Equatable
+    method descriptor for Hashable.hashValue.getter
+    method descriptor for Hashable.hash(into:)
+    method descriptor for Hashable._rawHashValue(seed:)
+}
+
+protocol conformance XProtectPluginAPIPath.APIError : protocol descriptor for Equatable {
+  /* resilient witnesses */
+    method descriptor for static Equatable.== infix(_:_:)
+}
+
+protocol conformance XPPluginAPI.XPMagicError : protocol descriptor for Hashable {
+  /* resilient witnesses */
+    base conformance descriptor for Hashable: Equatable
+    method descriptor for Hashable.hashValue.getter
+    method descriptor for Hashable.hash(into:)
+    method descriptor for Hashable._rawHashValue(seed:)
+}
+
+protocol conformance XPPluginAPI.XPMagicError : protocol descriptor for Equatable {
+  /* resilient witnesses */
+    method descriptor for static Equatable.== infix(_:_:)
+}
+
+protocol conformance XProtectPluginAPIPath.APIError : protocol descriptor for Error {
+  /* resilient witnesses */
+    method descriptor for Error._domain.getter
+    method descriptor for Error._code.getter
+    method descriptor for Error._userInfo.getter
+    method descriptor for Error._getEmbeddedNSError()
+}
+
+protocol conformance XPPluginAPI.XPMagicError : protocol descriptor for Error {
+  /* resilient witnesses */
+    method descriptor for Error._domain.getter
+    method descriptor for Error._code.getter
+    method descriptor for Error._userInfo.getter
+    method descriptor for Error._getEmbeddedNSError()
+}
+
+protocol conformance XPPluginAPI.XPProcessError : protocol descriptor for Equatable {
+  /* resilient witnesses */
+    method descriptor for static Equatable.== infix(_:_:)
+}
+
+protocol conformance XPPluginAPI.XPProcessError : protocol descriptor for Hashable {
+  /* resilient witnesses */
+    base conformance descriptor for Hashable: Equatable
+    method descriptor for Hashable.hashValue.getter
+    method descriptor for Hashable.hash(into:)
+    method descriptor for Hashable._rawHashValue(seed:)
+}
+
+protocol conformance XPPluginAPI.XPProcessError : protocol descriptor for Error {
+  /* resilient witnesses */
+    method descriptor for Error._domain.getter
+    method descriptor for Error._code.getter
+    method descriptor for Error._userInfo.getter
+    method descriptor for Error._getEmbeddedNSError()
+}
+
+protocol conformance XPPluginAPI.XPProcessEncoder : protocol descriptor for Encodable {
+  /* resilient witnesses */
+    method descriptor for Encodable.encode(to:)
+}
+
+protocol conformance CodingKeys : protocol descriptor for CustomStringConvertible {
+  /* resilient witnesses */
+    method descriptor for CustomStringConvertible.description.getter
+}
+
+protocol conformance CodingKeys : protocol descriptor for CustomDebugStringConvertible {
+  /* resilient witnesses */
+    method descriptor for CustomDebugStringConvertible.debugDescription.getter
+}
+
+protocol conformance CodingKeys : protocol descriptor for Hashable {
+  /* resilient witnesses */
+    base conformance descriptor for Hashable: Equatable
+    method descriptor for Hashable.hashValue.getter
+    method descriptor for Hashable.hash(into:)
+    method descriptor for Hashable._rawHashValue(seed:)
+}
+
+protocol conformance CodingKeys : protocol descriptor for Equatable {
+  /* resilient witnesses */
+    method descriptor for static Equatable.== infix(_:_:)
+}
+
+protocol conformance XPPluginAPI.XPProcess : protocol descriptor for CustomStringConvertible {
+  /* resilient witnesses */
+    method descriptor for CustomStringConvertible.description.getter
+}
+
+protocol conformance XPPluginAPI.XPProcess : XPPluginAPI.XPProcessProtocol {
+}
+
+protocol conformance XPPluginAPI.XProtectPluginProcessAPI : XPPluginAPI.XProtectPluginProcessAPIProtocol {
+}
+
+protocol conformance CodingKeys : protocol descriptor for CodingKey {
+  /* resilient witnesses */
+    base conformance descriptor for CodingKey: CustomDebugStringConvertible
+    base conformance descriptor for CodingKey: CustomStringConvertible
+    method descriptor for CodingKey.stringValue.getter
+    method descriptor for CodingKey.init(stringValue:)
+    method descriptor for CodingKey.intValue.getter
+    method descriptor for CodingKey.init(intValue:)
+}
+
+protocol conformance XPPluginAPI.XPProvenanceInfo : XPPluginAPI.XPProvenanceInfoProtocol {
+}
+
+protocol conformance XPPluginAPI.XPSocketError : protocol descriptor for Equatable {
+  /* resilient witnesses */
+    method descriptor for static Equatable.== infix(_:_:)
+}
+
+protocol conformance XPPluginAPI.XPSocketError : protocol descriptor for Hashable {
+  /* resilient witnesses */
+    base conformance descriptor for Hashable: Equatable
+    method descriptor for Hashable.hashValue.getter
+    method descriptor for Hashable.hash(into:)
+    method descriptor for Hashable._rawHashValue(seed:)
+}
+
+protocol conformance XPPluginAPI.XPSocketError : protocol descriptor for Error {
+  /* resilient witnesses */
+    method descriptor for Error._domain.getter
+    method descriptor for Error._code.getter
+    method descriptor for Error._userInfo.getter
+    method descriptor for Error._getEmbeddedNSError()
+}
+
+protocol conformance XPPluginAPI.XPSocketType : protocol descriptor for Equatable {
+  /* resilient witnesses */
+    method descriptor for static Equatable.== infix(_:_:)
+}
+
+protocol conformance XPPluginAPI.XPSocketType : protocol descriptor for Hashable {
+  /* resilient witnesses */
+    base conformance descriptor for Hashable: Equatable
+    method descriptor for Hashable.hashValue.getter
+    method descriptor for Hashable.hash(into:)
+    method descriptor for Hashable._rawHashValue(seed:)
+}
+
+protocol conformance XPPluginAPI.XPSocketProtocolType : protocol descriptor for Equatable {
+  /* resilient witnesses */
+    method descriptor for static Equatable.== infix(_:_:)
+}
+
+protocol conformance XPPluginAPI.XPSocketProtocolType : protocol descriptor for Hashable {
+  /* resilient witnesses */
+    base conformance descriptor for Hashable: Equatable
+    method descriptor for Hashable.hashValue.getter
+    method descriptor for Hashable.hash(into:)
+    method descriptor for Hashable._rawHashValue(seed:)
+}
+
+protocol conformance XPPluginAPI.XPSocketState : protocol descriptor for Equatable {
+  /* resilient witnesses */
+    method descriptor for static Equatable.== infix(_:_:)
+}
+
+protocol conformance XPPluginAPI.XPSocketState : protocol descriptor for Hashable {
+  /* resilient witnesses */
+    base conformance descriptor for Hashable: Equatable
+    method descriptor for Hashable.hashValue.getter
+    method descriptor for Hashable.hash(into:)
+    method descriptor for Hashable._rawHashValue(seed:)
+}
+
+protocol conformance XPPluginAPI.XPUnixSocket : XPPluginAPI.XPUnixSocketProtocol {
+}
+
+protocol conformance XPPluginAPI.XPInternetAddress : protocol descriptor for CustomStringConvertible {
+  /* resilient witnesses */
+    method descriptor for CustomStringConvertible.description.getter
+}
+
+protocol conformance XPPluginAPI.XPInternetAddress : XPPluginAPI.XPInternetAddressProtocol {
+}
+
+protocol conformance XPPluginAPI.XPInternetHostname : protocol descriptor for CustomStringConvertible {
+  /* resilient witnesses */
+    method descriptor for CustomStringConvertible.description.getter
+}
+
+protocol conformance XPPluginAPI.XPInternetHostname : XPPluginAPI.XPInternetHostnameProtocol {
+}
+
+protocol conformance XPPluginAPI.XPInternetTCPSocket : XPPluginAPI.XPTCPSocketProtocol {
+}
+
+protocol conformance XPPluginAPI.XPInternetSocket : XPPluginAPI.XPInternetSocketProtocol {
+}
+
+protocol conformance XPPluginAPI.XPSocket : protocol descriptor for CustomStringConvertible {
+  /* resilient witnesses */
+    method descriptor for CustomStringConvertible.description.getter
+}
+
+protocol conformance XPPluginAPI.XPSocket : XPPluginAPI.XPSocketProtocol {
+}
+
+protocol conformance XPPluginAPI.XPObfuscatedString : protocol descriptor for ExpressibleByStringLiteral {
+  /* resilient witnesses */
+    base conformance descriptor for ExpressibleByStringLiteral: ExpressibleByExtendedGraphemeClusterLiteral
+    associated conformance descriptor for ExpressibleByStringLiteral.ExpressibleByStringLiteral.StringLiteralType: _ExpressibleByBuiltinStringLiteral
+    associated type descriptor for ExpressibleByStringLiteral.StringLiteralType
+    method descriptor for ExpressibleByStringLiteral.init(stringLiteral:)
+}
+
+protocol conformance XPPluginAPI.XPObfuscatedString : protocol descriptor for ExpressibleByArrayLiteral {
+  /* resilient witnesses */
+    associated type descriptor for ExpressibleByArrayLiteral.ArrayLiteralElement
+    method descriptor for ExpressibleByArrayLiteral.init(arrayLiteral:)
+}
+
+protocol conformance XPPluginAPI.XPObfuscatedString : protocol descriptor for Equatable {
+  /* resilient witnesses */
+    method descriptor for static Equatable.== infix(_:_:)
+}
+
+protocol conformance XPPluginAPI.XPObfuscatedString : protocol descriptor for ExpressibleByExtendedGraphemeClusterLiteral {
+  /* resilient witnesses */
+    base conformance descriptor for ExpressibleByExtendedGraphemeClusterLiteral: ExpressibleByUnicodeScalarLiteral
+    associated conformance descriptor for ExpressibleByExtendedGraphemeClusterLiteral.ExpressibleByExtendedGraphemeClusterLiteral.ExtendedGraphemeClusterLiteralType: _ExpressibleByBuiltinExtendedGraphemeClusterLiteral
+    associated type descriptor for ExpressibleByExtendedGraphemeClusterLiteral.ExtendedGraphemeClusterLiteralType
+    method descriptor for ExpressibleByExtendedGraphemeClusterLiteral.init(extendedGraphemeClusterLiteral:)
+}
+
+protocol conformance XPPluginAPI.XPObfuscatedString : protocol descriptor for ExpressibleByUnicodeScalarLiteral {
+  /* resilient witnesses */
+    associated conformance descriptor for ExpressibleByUnicodeScalarLiteral.ExpressibleByUnicodeScalarLiteral.UnicodeScalarLiteralType: _ExpressibleByBuiltinUnicodeScalarLiteral
+    associated type descriptor for ExpressibleByUnicodeScalarLiteral.UnicodeScalarLiteralType
+    method descriptor for ExpressibleByUnicodeScalarLiteral.init(unicodeScalarLiteral:)
+}
+
+protocol conformance XPPluginAPI.XPSystemPreferencesError : protocol descriptor for Hashable {
+  /* resilient witnesses */
+    base conformance descriptor for Hashable: Equatable
+    method descriptor for Hashable.hashValue.getter
+    method descriptor for Hashable.hash(into:)
+    method descriptor for Hashable._rawHashValue(seed:)
+}
+
+protocol conformance XPPluginAPI.XPSystemPreferencesError : protocol descriptor for Equatable {
+  /* resilient witnesses */
+    method descriptor for static Equatable.== infix(_:_:)
+}
+
+protocol conformance XPPluginAPI.XPSystemPreferencesError : protocol descriptor for Error {
+  /* resilient witnesses */
+    method descriptor for Error._domain.getter
+    method descriptor for Error._code.getter
+    method descriptor for Error._userInfo.getter
+    method descriptor for Error._getEmbeddedNSError()
+}
+
+protocol conformance NSXPCConnection : XPPluginAPI.VerifiableXPCConnectionProtocol {
+}
+
+protocol conformance XPPluginAPI.XPAPIHelpers : XPPluginAPI.XPAPIHelpersProtocol {
+}
+
+protocol conformance __C_Synthesized.XProtectPluginCompletionStatus : protocol descriptor for CustomStringConvertible: XPPluginAPI {
+  /* resilient witnesses */
+    method descriptor for CustomStringConvertible.description.getter
+}
+
+protocol conformance __C_Synthesized.XProtectPluginCompletionStatus : protocol descriptor for Encodable: XPPluginAPI {
+  /* resilient witnesses */
+    method descriptor for Encodable.encode(to:)
+}
+
+protocol conformance CodingKeys : protocol descriptor for CustomStringConvertible {
+  /* resilient witnesses */
+    method descriptor for CustomStringConvertible.description.getter
+}
+
+protocol conformance CodingKeys : protocol descriptor for CustomDebugStringConvertible {
+  /* resilient witnesses */
+    method descriptor for CustomDebugStringConvertible.debugDescription.getter
+}
+
+protocol conformance CodingKeys : protocol descriptor for RawRepresentable {
+  /* resilient witnesses */
+    associated type descriptor for RawRepresentable.RawValue
+    method descriptor for RawRepresentable.init(rawValue:)
+    method descriptor for RawRepresentable.rawValue.getter
+}
+
+protocol conformance CodingKeys : protocol descriptor for Hashable {
+  /* resilient witnesses */
+    base conformance descriptor for Hashable: Equatable
+    method descriptor for Hashable.hashValue.getter
+    method descriptor for Hashable.hash(into:)
+    method descriptor for Hashable._rawHashValue(seed:)
+}
+
+protocol conformance CodingKeys : protocol descriptor for Equatable {
+  /* resilient witnesses */
+    method descriptor for static Equatable.== infix(_:_:)
+}
+
+protocol conformance CodingKeys : protocol descriptor for CodingKey {
+  /* resilient witnesses */
+    base conformance descriptor for CodingKey: CustomDebugStringConvertible
+    base conformance descriptor for CodingKey: CustomStringConvertible
+    method descriptor for CodingKey.stringValue.getter
+    method descriptor for CodingKey.init(stringValue:)
+    method descriptor for CodingKey.intValue.getter
+    method descriptor for CodingKey.init(intValue:)
+}
+
+protocol conformance XPPluginAPI.XProtectPluginAPIYara : XPPluginAPI.XProtectPluginAPIYaraProtocol {
+}
+
+protocol conformance XPPluginAPI.YaraError : protocol descriptor for CustomNSError {
+  /* resilient witnesses */
+    base conformance descriptor for CustomNSError: Error
+    method descriptor for static CustomNSError.errorDomain.getter
+    method descriptor for CustomNSError.errorCode.getter
+    method descriptor for CustomNSError.errorUserInfo.getter
+}
+
+protocol conformance XPPluginAPI.YaraError : protocol descriptor for Error {
+  /* resilient witnesses */
+    method descriptor for Error._domain.getter
+    method descriptor for Error._code.getter
+    method descriptor for Error._userInfo.getter
+    method descriptor for Error._getEmbeddedNSError()
+}
+
+protocol conformance XPPluginAPI.YaraMetaType : protocol descriptor for Equatable {
+  /* resilient witnesses */
+    method descriptor for static Equatable.== infix(_:_:)
+}
+
+protocol conformance XPPluginAPI.YaraMetaType : protocol descriptor for Hashable {
+  /* resilient witnesses */
+    base conformance descriptor for Hashable: Equatable
+    method descriptor for Hashable.hashValue.getter
+    method descriptor for Hashable.hash(into:)
+    method descriptor for Hashable._rawHashValue(seed:)
+}
+
+protocol conformance XPPluginAPI.YaraMetaType : protocol descriptor for CustomStringConvertible {
+  /* resilient witnesses */
+    method descriptor for CustomStringConvertible.description.getter
+}
+
+protocol conformance XPPluginAPI.YaraMeta : XPPluginAPI.YaraMetaProtocol {
+}
+
+protocol conformance XPPluginAPI.YaraMeta : protocol descriptor for CustomStringConvertible {
+  /* resilient witnesses */
+    method descriptor for CustomStringConvertible.description.getter
+}
+
+protocol conformance YaraRuleVariable.VariableType : protocol descriptor for Equatable {
+  /* resilient witnesses */
+    method descriptor for static Equatable.== infix(_:_:)
+}
+
+protocol conformance YaraRuleVariable.VariableType : protocol descriptor for Hashable {
+  /* resilient witnesses */
+    base conformance descriptor for Hashable: Equatable
+    method descriptor for Hashable.hashValue.getter
+    method descriptor for Hashable.hash(into:)
+    method descriptor for Hashable._rawHashValue(seed:)
+}
+
+protocol conformance XPPluginAPI.YaraRuleVariable : protocol descriptor for CustomStringConvertible {
+  /* resilient witnesses */
+    method descriptor for CustomStringConvertible.description.getter
+}
+
+protocol conformance XPPluginAPI.YaraMatcher : protocol descriptor for CustomStringConvertible {
+  /* resilient witnesses */
+    method descriptor for CustomStringConvertible.description.getter
+}
+
+protocol conformance XPPluginAPI.YaraRule : protocol descriptor for CustomStringConvertible {
+  /* resilient witnesses */
+    method descriptor for CustomStringConvertible.description.getter
+}
+
+protocol conformance XPPluginAPI.YaraRule : XPPluginAPI.YaraRuleProtocol {
+}
+
+protocol conformance XPPluginAPI.YaraScanResult : XPPluginAPI.YaraScanResultProtocol {
+}
+
+protocol conformance XPPluginAPI.YaraMatcher : XPPluginAPI.YaraMatcherProtocol {
+}
+
+protocol conformance AdloadPlugin.AdloadPlugin : XPPluginAPI.XProtectPluginProtocol {
+}
+
+protocol conformance AdloadPlugin.AdloadPlugin : protocol descriptor for CustomStringConvertible {
+  /* resilient witnesses */
+    method descriptor for CustomStringConvertible.description.getter
+}
+
+extension XPPluginAPI.XPLogLevel: RawRepresentable {
+    typealias RawValue = String
+}
+
+extension __C.Code: _ErrorCodeProtocol {
+    typealias _ErrorType = __C_Synthesized.XProtectPluginCompletionStatus
+}
+
+extension __C.Code: RawRepresentable {
+    typealias RawValue = Int
+}
+
+extension __C.SecCSDigestAlgorithm: RawRepresentable {
+    typealias RawValue = (private)
+}
+
+extension __C_Synthesized.XProtectPluginCompletionStatus: _BridgedStoredNSError {
+    typealias Code = __C.Code
+}
+
+extension __C.FileAttributeKey: RawRepresentable {
+    typealias RawValue = String
+}
+
+extension __C.FileAttributeKey: _ObjectiveCBridgeable {
+    typealias _ObjectiveCType = NSString
+}
+
+extension __C.URLResourceKey: RawRepresentable {
+    typealias RawValue = String
+}
+
+extension __C.URLResourceKey: _ObjectiveCBridgeable {
+    typealias _ObjectiveCType = NSString
+}
+
+extension XPPluginAPI.XPCodeSignatureArchitecture: RawRepresentable {
+    typealias RawValue = String
+}
+
+extension XPPluginAPI.XPCodeSignatureArchitecture: CaseIterable {
+    typealias AllCases = Array -> XPPluginAPI.XPCodeSignatureArchitecture
+}
+
+extension XPPluginAPI.BastionPathEventAction: RawRepresentable {
+    typealias RawValue = String
+}
+
+extension XPPluginAPI.BastionProcessEventAction: RawRepresentable {
+    typealias RawValue = String
+}
+
+extension XPPluginAPI.BastionLaunchDaemonAgentEventAction: RawRepresentable {
+    typealias RawValue = String
+}
+
+extension XPPluginAPI.BastionLaunchDaemonAgentEvent.CodingKeys: RawRepresentable {
+    typealias RawValue = String
+}
+
+extension XPPluginAPI.BastionProcessEvent.CodingKeys: RawRepresentable {
+    typealias RawValue = String
+}
+
+extension XPPluginAPI.BastionPathEvent.CodingKeys: RawRepresentable {
+    typealias RawValue = String
+}
+
+extension XPPluginAPI.BastionPluginCompletionEvent.CodingKeys: RawRepresentable {
+    typealias RawValue = String
+}
+
+extension XPPluginAPI.Protection: OptionSet {
+    typealias Element = XPPluginAPI.Protection
+}
+
+extension XPPluginAPI.Protection: RawRepresentable {
+    typealias RawValue = (private)
+}
+
+extension XPPluginAPI.Protection: SetAlgebra {
+    typealias Element = XPPluginAPI.Protection
+}
+
+extension XPPluginAPI.Protection: ExpressibleByArrayLiteral {
+    typealias ArrayLiteralElement = XPPluginAPI.Protection
+}
+
+extension XPPluginAPI.XPProcessMemoryRegions: Sequence {
+    typealias Element = XPPluginAPI.XPMemoryRegion
+    typealias Iterator = XPPluginAPI.XPProcessMemoryRegions
+}
+
+extension XPPluginAPI.XPProcessMemoryRegions: IteratorProtocol {
+    typealias Element = XPPluginAPI.XPMemoryRegion
+}
+
+extension XPPluginAPI.XPImmutableFlags: OptionSet {
+    typealias Element = XPPluginAPI.XPImmutableFlags
+}
+
+extension XPPluginAPI.XPImmutableFlags: RawRepresentable {
+    typealias RawValue = Int
+}
+
+extension XPPluginAPI.XPImmutableFlags: SetAlgebra {
+    typealias Element = XPPluginAPI.XPImmutableFlags
+}
+
+extension XPPluginAPI.XPImmutableFlags: ExpressibleByArrayLiteral {
+    typealias ArrayLiteralElement = XPPluginAPI.XPImmutableFlags
+}
+
+extension XPPluginAPI.QuarantineFlag: RawRepresentable {
+    typealias RawValue = (private)
+}
+
+extension XPPluginAPI.XPPluginPathEncoded.CodingKeys: RawRepresentable {
+    typealias RawValue = String
+}
+
+extension XPPluginAPI.XPObfuscatedString: ExpressibleByStringLiteral {
+    typealias StringLiteralType = (private)
+}
+
+extension XPPluginAPI.XPObfuscatedString: ExpressibleByArrayLiteral {
+    typealias ArrayLiteralElement = (private)
+}
+
+extension XPPluginAPI.XPObfuscatedString: ExpressibleByExtendedGraphemeClusterLiteral {
+    typealias ExtendedGraphemeClusterLiteralType = (private)
+}
+
+extension XPPluginAPI.XPObfuscatedString: ExpressibleByUnicodeScalarLiteral {
+    typealias UnicodeScalarLiteralType = (private)
+}
+
+extension XPPluginAPI.CodingKeys: RawRepresentable {
+    typealias RawValue = String
+}

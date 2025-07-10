@@ -1,0 +1,109 @@
+protocol XPPluginAPI.XProtectLaunchdDaemonAgentProtocol {
+  /* requirements */
+    // <stripped> func method (instance|func_impl)
+    // <stripped> func method (instance|func_impl)
+    // <stripped> func method (instance|func_impl)
+    // <stripped> func method (instance|func_impl)
+    // <stripped> func method (instance|func_impl)
+    // <stripped> func method (instance|func_impl)
+    // <stripped> func method (instance|func_impl)
+    // <stripped> func method (instance|func_impl)
+    // <stripped> func method (instance|func_impl)
+    // <stripped> func method (instance|func_impl)
+    // <stripped> func method (instance|func_impl)
+    // <stripped> func method (instance|func_impl)
+    // <stripped> func method (instance|func_impl)
+    // <stripped> func method (instance|func_impl)
+    // <stripped> func getter (instance|func_impl)
+}
+
+protocol XPPluginAPI.XPProcessProtocol {
+  /* signature requirements */
+    A: protocol descriptor for CustomStringConvertible // key_arg: true, extra_arg: false, kind: protocol
+  /* requirements */
+    // <stripped> base protocol
+    // <stripped> static func initializer (func_impl)
+    // <stripped> func method (instance|func_impl)
+    // <stripped> func method (instance|func_impl)
+    // <stripped> func method (instance|func_impl)
+    // <stripped> func method (instance|func_impl)
+    // <stripped> func method (instance|func_impl)
+    // <stripped> func method (instance|func_impl)
+    // <stripped> func method (instance|func_impl)
+    // <stripped> func method (instance|func_impl)
+    // <stripped> func method (instance|func_impl)
+    // <stripped> func method (instance|func_impl)
+    // <stripped> func method (instance|func_impl)
+    // <stripped> func method (instance|func_impl)
+    // <stripped> func method (instance|func_impl)
+}
+
+protocol XPPluginAPI.XPPluginPathProtocol {
+  /* signature requirements */
+    A: protocol descriptor for CustomStringConvertible // key_arg: true, extra_arg: false, kind: protocol
+  /* requirements */
+    // <stripped> base protocol
+    // <stripped> func method (instance|func_impl)
+    // <stripped> func method (instance|func_impl)
+    // <stripped> func method (instance|func_impl)
+    // <stripped> func method (instance|func_impl)
+    // <stripped> func method (instance|func_impl)
+    // <stripped> func method (instance|func_impl)
+    // <stripped> func method (instance|func_impl)
+    // <stripped> func method (instance|func_impl)
+    // <stripped> func method (instance|func_impl)
+    // <stripped> func method (instance|func_impl)
+    // <stripped> func method (instance|func_impl)
+    // <stripped> func method (instance|func_impl)
+    // <stripped> func method (instance|func_impl)
+    // <stripped> func method (instance|func_impl)
+    // <stripped> func method (instance|func_impl)
+    // <stripped> func method (instance|func_impl)
+    // <stripped> func method (instance|func_impl)
+    // <stripped> func method (instance|func_impl)
+    // <stripped> func method (instance|func_impl)
+    // <stripped> func method (instance|func_impl)
+    // <stripped> func method (instance|func_impl)
+    // <stripped> func method (instance|func_impl)
+    // <stripped> func method (instance|func_impl)
+    // <stripped> func method (instance|func_impl)
+    // <stripped> static func initializer (func_impl)
+}
+
+struct XPPluginAPI.XPRegisteredPlugin {
+    var bundleIdentifier: String
+    var url: XPPluginAPI.XPPluginPathProtocol
+}
+
+protocol XPPluginAPI.YaraMatcherProtocol {
+  /* signature requirements */
+    A: protocol descriptor for CustomStringConvertible // key_arg: true, extra_arg: false, kind: protocol
+  /* requirements */
+    // <stripped> base protocol
+    // <stripped> func getter (instance|func_impl)
+    // <stripped> static func initializer (func_impl)
+    // <stripped> func method (instance|func_impl)
+    // <stripped> func method (instance|func_impl)
+}
+
+class XPPluginAPI.XPLogger {
+  /* fields */
+    var logger: OS_os_log?
+  /* methods */
+    func logger.getter.sub_1000046b0
+    func logger.setter.sub_1000046f0
+    func logger.modify.sub_100004730
+    static func sub_100004770 // init
+    static func sub_100004900 // init
+    func sub_1000049a0 // method (instance)
+    func sub_100004c40 // method (instance)
+    func sub_100004c50 // method (instance)
+    func sub_100004c70 // method (instance)
+    func sub_100004c80 // method (instance)
+    func sub_100004ca0 // method (instance)
+    func sub_100004cc0 // method (instance)
+    func sub_10000fdc0 // method (instance)
+    func sub_100004ce0 // method (instance)
+    func sub_100004e10 // method (instance)
+    func sub_100004e30 // method (instance)
+}
